@@ -12,7 +12,7 @@
         <p>note: When you run the code, there will be several execution results.
                 Please only refer to the <term>last</term> execution result that displays the entries.</p>
       </statement>
-      <program xml:id="hparsons_lg_sql_intro_and_editor" interactive="activecode" language="sql">
+      <program label="hparsons_lg_sql_intro_and_editor" interactive="activecode" language="sql">
         <code>
 DROP TABLE IF EXISTS bookkeeping;
 create table "bookkeeping" ("date" DATE, "category" TEXT, "item" TEXT, "price" FLOAT);
@@ -39,7 +39,7 @@ SELECT date, item, price FROM bookkeeping WHERE category = "food_drink" AND pric
         <p>note: When you run the code, there will be several execution results.
                 Please only refer to the <term>last</term> execution result that displays the table.</p>
       </statement>
-      <program xml:id="hparsons_lg_sql_intro_update_editor" interactive="activecode" language="sql">
+      <program label="hparsons_lg_sql_intro_update_editor" interactive="activecode" language="sql">
         <code>
 DROP TABLE IF EXISTS bookkeeping;
 create table "bookkeeping" ("date" DATE, "category" TEXT, "item" TEXT, "price" FLOAT);
@@ -74,7 +74,7 @@ SELECT * FROM bookkeeping
         <p>note: When you run the code, there will be several execution results.
                 Please only refer to the display of the entries.</p>
       </statement>
-      <program xml:id="hparsons_lg_sql_intro_join_editor" interactive="activecode" language="sql">
+      <program label="hparsons_lg_sql_intro_join_editor" interactive="activecode" language="sql">
         <code>
 DROP TABLE IF EXISTS authors;
 create table "authors" ("id" INTEGER, "name" TEXT, "nationality" TEXT);

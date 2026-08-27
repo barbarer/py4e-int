@@ -22,7 +22,7 @@
   <p>The function <c>dict</c> creates a new dictionary with no items.
             Because <c>dict</c> is the name of a built-in function, you should
             avoid using it as a variable name.</p>
-  <program xml:id="dict_print_new_dict" interactive="activecode" language="python">
+  <program label="dict_print_new_dict" interactive="activecode" language="python">
     <code>
 d1 = dict()
 print(d1)
@@ -41,7 +41,7 @@ print(d2)
     <statement>
       <p>Write code that adds the key &#x2018;two' with a value of &#x2018;dos' to the dictionary eng2sp.</p>
     </statement>
-    <program xml:id="dict_example1_editor" interactive="activecode" language="python">
+    <program label="dict_example1_editor" interactive="activecode" language="python">
       <code>
 eng2sp = {'one':'uno'}
 
@@ -69,7 +69,7 @@ print(eng2sp)
   </program>
   <p>This output format is also an input format. For example, you can create
             a new dictionary with three items.  But if you print <c>eng2sp</c>, you might be surprised:</p>
-  <program xml:id="Dict_example2" interactive="activecode" language="python">
+  <program label="Dict_example2" interactive="activecode" language="python">
     <code>
 eng2sp = {'one': 'uno', 'two': 'dos', 'three': 'tres'}
 print(eng2sp)
@@ -117,7 +117,7 @@ False
   </program>
   <activity label="question9_1_2">
     <statement>
-      <p>Q-4: What is printed after the following code is run?</p>
+      <p> What is printed after the following code is run?</p>
       <program language="python">
         <code>
 pokemon_name_n_type = {'Squirtle': 'Water', 'Charmander': 'Fire', 'Bulbasaur' : 'Grass'}
@@ -165,7 +165,7 @@ True
             <url href="https://wikipedia.org/wiki/Hash_table" visual="https://wikipedia.org/wiki/Hash_table">wikipedia.org/wiki/Hash_table</url>.</p>
   <activity label="question9_1_3">
     <statement>
-      <p>Q-5: What is the value of fruits[&#x2018;apples'] when the code finishes running?</p>
+      <p> What is the value of fruits[&#x2018;apples'] when the code finishes running?</p>
       <program language="python">
         <code>
 fruits = {'apples': 1, 'bananas': 4, 'pears': 17, 'oranges': 14}

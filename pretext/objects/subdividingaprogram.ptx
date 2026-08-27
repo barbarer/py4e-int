@@ -9,23 +9,20 @@
   <image source="images/program-oo-code.svg" width="50%" alt="Ignoring Detail When Using an Object"/>
   <activity label="subdividing_complexity">
     <statement>
-      <p>Q-1: One of the advantages of the __________ approach is that it can hide complexity. <var/>  </p>
+      <p>One of the advantages of the  <fillin width="20" mode="string" answer="object oriented"/> approach is that it can hide complexity. </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Oo]bject[-\s+][Oo]riented">
-          <feedback>
-            <p>Yes, we do not need to know how the object classes
-work internally when we use them.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Yes, we do not need to know how the object classes
+work internally when we use them.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>This ability to focus exclusively on the part of a program that we care about
             and ignore the rest is also helpful to the developers of the objects that we use.

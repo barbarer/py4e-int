@@ -66,7 +66,7 @@
             integer value 42.</p>
   <p>A format sequence can appear anywhere in the string, so you can embed a
             value in a sentence:</p>
-  <program xml:id="str-formatSent" interactive="activecode" language="python">
+  <program label="str-formatSent" interactive="activecode" language="python">
     <code>
 camels = 42
 print('I have spotted %d camels.' % camels)
@@ -78,7 +78,7 @@ print('I have spotted %d camels.' % camels)
             Each format sequence is matched with an element of the tuple, in order.</p>
   <p>The following example uses <c>%d</c> to format an integer, <c>%g</c> to format
             a floating-point number (don't ask why), and <c>%s</c> to format a string:</p>
-  <program xml:id="str-formatMult" interactive="activecode" language="python">
+  <program label="str-formatMult" interactive="activecode" language="python">
     <code>
 camels = 42
 print('In %d years I have spotted %g %s.' % (3, 0.1, 'camels'))

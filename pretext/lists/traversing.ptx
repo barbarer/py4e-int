@@ -15,7 +15,7 @@
 <idx>Nested List</idx>
   <p>The most common way to traverse the elements of a list is with a
             <c>for</c> loop. The syntax is the same as for strings:</p>
-  <program xml:id="listCheese" interactive="activecode" language="python">
+  <program label="listCheese" interactive="activecode" language="python">
     <code>
 cheeses = ["Gouda", "Swiss", "Provolone", "Cheddar"]
 for cheese in cheeses:
@@ -34,7 +34,7 @@ for i in range(len(numbers)):
   </program>
   <activity label="listTrav_MC_iterate">
     <statement>
-      <p>Q-2: How many times will the for loop iterate in the following statements?</p>
+      <p> How many times will the for loop iterate in the following statements?</p>
       <pre>p = [3, 4, "Me", 3, [], "Why", 0, "Tell", 9.3]
 for ch in p:
     print(ch)</pre>
@@ -81,7 +81,7 @@ for ch in p:
             element. The assignment statement in the body uses <c>i</c> to
             read the old value of the element and to assign the new value.</p>
   <p>A <c>for</c> loop over an empty list never executes the body:</p>
-  <program xml:id="listEmptyLoop" interactive="activecode" language="python">
+  <program label="listEmptyLoop" interactive="activecode" language="python">
     <code>
 empty = []
 for x in empty:
@@ -90,7 +90,7 @@ for x in empty:
   </program>
   <activity label="listTrav_MC_empty">
     <statement>
-      <p>Q-4: What will happen if you attempt to traverse an empty list?</p>
+      <p> What will happen if you attempt to traverse an empty list?</p>
     </statement>
     <choices>
       <choice>
@@ -129,7 +129,7 @@ for x in empty:
   </activity>
   <p>Although a list can contain another list, the nested list still counts
             as a single element. Check out the length of this list:</p>
-  <program xml:id="listNested2" interactive="activecode" language="python">
+  <program label="listNested2" interactive="activecode" language="python">
     <code>
 bigList = ['spam', 1, ['Brie', 'Roquefort', 'Pol le Veq'], [1, 2, 3]]
 print(len(bigList))
@@ -137,7 +137,7 @@ print(len(bigList))
   </program>
   <activity label="listTrav_MC_nested">
     <statement>
-      <p>Q-6: How many items are in <c>nestedList</c>?</p>
+      <p> How many items are in <c>nestedList</c>?</p>
       <pre>nestedList = [["First", 2, ["Third"]]]</pre>
     </statement>
     <choices>

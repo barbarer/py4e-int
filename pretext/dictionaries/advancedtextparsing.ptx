@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="dictionaries_advanced-text-parsing">
   <title>Advanced Text Parsing</title>
-  <program xml:id="fileOpen2" interactive="activecode" language="python">
+  <program label="fileOpen2" interactive="activecode" language="python">
     <code>
 with open("romeo2.txt", "r") as filename:
     lines = filename.readlines()
@@ -47,7 +47,7 @@ Who is already sick and pale with grief,</pre>
             <q>punctuation</q>:</p>
   <activity label="question9_5_1">
     <statement>
-      <p>Q-2: Which line of code correctly uses the .translate() method?</p>
+      <p> Which line of code correctly uses the .translate() method?</p>
     </statement>
     <choices>
       <choice correct="yes">
@@ -87,7 +87,7 @@ Who is already sick and pale with grief,</pre>
     <p>The parameters used by <c>translate</c> were different in Python 2.0.</p>
   </note>
   <p>We make the following modifications to our program:</p>
-  <program xml:id="fileOpen3_v2" interactive="activecode" language="python3">
+  <program label="fileOpen3_v2" interactive="activecode" language="python3">
     <code>
 import string
 
@@ -107,7 +107,7 @@ print(counts)
   </program>
   <activity label="question9_5_2">
     <statement>
-      <p>Q-4: Which line(s) in the above activecode remove the punctuation from the text?</p>
+      <p> Which line(s) in the above activecode remove the punctuation from the text?</p>
     </statement>
     <choices>
       <choice>

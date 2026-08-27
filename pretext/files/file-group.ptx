@@ -1,15 +1,14 @@
 <?xml version="1.0"?>
-<section xml:id="files_group-work-reading-from-files">
+<worksheet xml:id="csv_file_groupsub" groupwork="yes" groupsize="4" label="csv_file_groupsub">
   <title>Group Work: Reading from Files</title>
-  <introduction>
-  <p>It is best to use a POGIL approach with the following. In POGIL students work
+   <p>It is best to use a POGIL approach with the following. In POGIL students work
             in groups on activities and each member has an assigned role.  For more information see <url href="https://cspogil.org/Home" visual="https://cspogil.org/Home">https://cspogil.org/Home</url>.</p>
   <note>
     <p>If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.</p>
   </note>
-  <p>
-    <term>Learning Objectives</term>
-  </p>
+<section xml:id="files_group-work-reading-from-files">
+<title>Learning Objectives</title>
+  <introduction>
   <p>Students will know and be able to do the following.</p>
   <p>
     <em>Content Objectives:</em>
@@ -54,23 +53,18 @@
     <title>Reading from Files</title>
     <p>To read from a file, open the file which returns a file object and loop through
                 the lines in a file.  Remember to close the file when you are done reading from it!</p>
-    <hint>
-      <pre>Labrador Retriever
-German Shepherd
-Golden Retriever
-Beagle
-Bulldog
-Yorkshire Terrier
-Boxer
-Poodle
-Rottweiler
-Dachshunds</pre>
-    </hint>
+
+    <p>Below is the dogs.txt file used in several activities on this page.</p>
+
+ <datafile xml:id="dogs_id" label="dogs_id" filename='dogs.txt'>
+      <pre source="files/dogs.txt"></pre>
+</datafile>
+
     <activity label="file_pogil_read_lines_with_loop">
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
-      <program xml:id="file_pogil_read_lines_with_loop_editor" interactive="activecode" language="python">
+      <program label="file_pogil_read_lines_with_loop_editor" interactive="activecode" language="python" add-files="dogs_id">
         <code>
 # function definition
 def print_contents(file):
@@ -89,42 +83,36 @@ print_contents("dogs.txt")
                 When you print a line you add another newline character which prints as a blank line.</p>
     <activity label="file_remove_newline">
       <statement>
-        <p>Q-2: What string method can you use to remove the newline character from the end of a line? <var/>  </p>
+        <p>What string method can you use to remove the newline character from the end of a line? <fillin width="20" mode="string" answer="rstrip"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="rstrip|strip">
-            <feedback>
-              <p>You can use rstrip or strip to remove the newline character.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What method removes whitespace from the right side of a string?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp>rstrip|strip</strcmp>
+                      <feedback><p>You can use rstrip or strip to remove the newline character.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>What method removes whitespace from the right side of a string?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <p>Modify the code above to remove the newline from each line after it is read in.</p>
     <activity label="file_obj_type_fitb">
       <statement>
-        <p>Q-3: What type of thing is <c>file_obj</c> in the code above? <var/>  </p>
+        <p>What type of thing is <c>file_obj</c> in the code above? <fillin width="20" mode="string" answer="file"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="'?file'?">
-            <feedback>
-              <p>It is an object of the file class.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What is the class name that was printed?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>It is an object of the file class.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>What is the class name that was printed?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <p>You can also read all the lines from a file at once into a list.  One advantage
                 to this is that you can immediately close the file after that.  This makes it easier to remember to close the file.</p>
@@ -132,7 +120,7 @@ print_contents("dogs.txt")
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
-      <program xml:id="file_pogil_read_lines_list_editor" interactive="activecode" language="python">
+      <program label="file_pogil_read_lines_list_editor" interactive="activecode" language="python" add-files="dogs_id">
         <code>
 # function definition
 def print_contents(file):
@@ -156,26 +144,23 @@ print_contents("dogs.txt")
     </note>
     <activity label="line_file_close_fitb">
       <statement>
-        <p>Q-5: What method do you use to close a file that you have opened? <var/>  </p>
+        <p>What method do you use to close a file that you have opened? <fillin width="20" mode="string" answer="close"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="close">
-            <feedback>
-              <p>This will close the file object.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the example Python code above.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>This will close the file object.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Look at the example Python code above.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="file_read_all_lines_at_once_sa">
       <statement>
-        <p>Q-6: When would it not be best to read all of the lines in a file into a list at once?</p>
+        <p>When would it not be best to read all of the lines in a file into a list at once?</p>
       </statement>
     </activity>
     <p>You can also just read some of the lines from a file using the <c>readline</c> method.  This can be handy
@@ -184,7 +169,7 @@ print_contents("dogs.txt")
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
-      <program xml:id="file_pogil_read_x_lines_editor" interactive="activecode" language="python">
+      <program label="file_pogil_read_x_lines_editor" interactive="activecode" language="python" add-files="dogs_id">
         <code>
 # function definition
 def print_contents(file, num):
@@ -202,14 +187,14 @@ print_contents("dogs.txt", 2)
     <p>Modify the code above to print 4 lines and run it again.</p>
     <activity label="file_read_lines_no_file">
       <statement>
-        <p>Q-8: What do you think will happen when you try to run the code below?</p>
+        <p>What do you think will happen when you try to run the code below?</p>
       </statement>
     </activity>
     <activity label="file_pogil_read_lines_wrong_file_name">
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
-      <program xml:id="file_pogil_read_lines_wrong_file_name_editor" interactive="activecode" language="python">
+      <program label="file_pogil_read_lines_wrong_file_name_editor" interactive="activecode" language="python">
         <code>
 # function definition
 def print_contents(file):
@@ -235,7 +220,7 @@ print_contents("unknown.txt")
       <statement>
         <p>Run the code below to see what it prints.  When it asks for another file name type in &#x2018;dogs.txt'.</p>
       </statement>
-      <program xml:id="file_pogil_read_lines_try_and_catch_editor" interactive="activecode" language="python">
+      <program label="file_pogil_read_lines_try_and_catch_editor" interactive="activecode" language="python" add-files="dogs_id">
         <code>
 # function definition
 def print_contents(file):
@@ -266,29 +251,26 @@ print_contents("unknown.txt")
     <p>You can use <c>try</c> and <c>except</c> to handle code that can cause exceptions. Put the code that can cause the exception in the <c>try</c> block.</p>
     <activity label="line_file_open_except_fitb">
       <statement>
-        <p>Q-11: What keyword do you use to specify code to execute if there is an error when the code in the body of the <c>try</c> executes? <var/>  </p>
+        <p>What keyword do you use to specify code to execute if there is an error when the code in the body of the <c>try</c> executes? <fillin width="20" mode="string" answer="except"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="except">
-            <feedback>
-              <p>The code specified in the body of the except will run if there is an exception when the code in the body fo the try runs.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the example Python code above.</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The code specified in the body of the except will run if there is an exception when the code in the body fo the try runs.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Look at the example Python code above.</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <p>You can also use <c>with open(file) as name</c> which will automatically close the file after the code block ends. It is particularly important to close the file when you write data to a file.</p>
     <activity label="file_pogil_read_lines_list_with">
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
-      <program xml:id="file_pogil_read_lines_list_with_editor" interactive="activecode" language="python">
+      <program label="file_pogil_read_lines_list_with_editor" interactive="activecode" language="python" add-files="dogs_id">
         <code>
 # function definition
 def print_contents(file):
@@ -311,7 +293,7 @@ print_contents("dogs.txt")
     <note>
       <p>When you use <c>with open(file) as name:</c> the file is closed automatically when you leave the block (indented area).</p>
     </note>
-    <activity label="file_char_count_with_open" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <activity label="file_char_count_with_open" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Create a function, <c>num_chars(filename)</c>, that returns the number of total characters (including new lines) in the file with the passed file name.  Initialize a count then open the file and loop through all of the lines in the file and add the length of each line to the count.  Close the file.  Then return the count.  There are extra blocks that are not needed in the solution.</p>
       </statement>
@@ -342,7 +324,7 @@ print_contents("dogs.txt")
         </block>
       </blocks>
     </activity>
-    <activity label="file_char_count_open" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <activity label="file_char_count_open" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Create a function, <c>num_chars(filename)</c>, that returns the number of total characters (including new lines) in the file with the passed file name.  Initialize a count then open the file and loop through all of the lines in the file and add the length of each line to the count.  Close the file.  Then return the count.  There is an extra block that is not needed in the solution.</p>
       </statement>
@@ -375,28 +357,25 @@ print_contents("dogs.txt")
     </activity>
     <activity label="file_pogil_line_count_type_returned">
       <statement>
-        <p>Q-15: What type of thing is returned from the function below? <var/>  </p>
+        <p>What type of thing is returned from the function below? <fillin width="20" mode="string" answer="dictionary"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="dictionary">
-            <feedback>
-              <p>It will return a dictionary with the counts of the number of lines in the file that start with a character.</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What type of thing is b_dict?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>It will return a dictionary with the counts of the number of lines in the file that start with a character.</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>What type of thing is b_dict?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
     </activity>
     <activity label="file_pogil_dict_count">
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
-      <program xml:id="file_pogil_dict_count_editor" interactive="activecode" language="python">
+      <program label="file_pogil_dict_count_editor" interactive="activecode" language="python" add-files="dogs_id">
         <code>
 # function definition
 def count_first(file):
@@ -416,20 +395,6 @@ print(count_first("dogs.txt"))
       <p>Notice how the code above handles the case when the key isn't yet in the dictionary.  The <c>get(key, alternative)</c> method on a dictionary will return the value for the key if it is in the dictionary, otherwise it return return the alternative.</p>
     </note>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
-    <raw format="html" xml:space="preserve">
-&lt;div class="runestone sqcontainer %(optclass)s"&gt;
-    &lt;div data-component="groupsub" id=read_files_groupsub data-size_limit=3&gt;
-        &lt;div class="col-sm-6"&gt;
-            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
-            &lt;/select&gt;
-        &lt;/div&gt;
-        &lt;div id="groupsub_button" class="col-sm-6"&gt;
-        &lt;/div&gt;
-        &lt;p&gt;The Submit Group button will submit the answer for each each question
-        on this page for each member of your group. It also logs you as the official
-        group submitter.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</raw>
   </subsection>
 </section>
+</worksheet>

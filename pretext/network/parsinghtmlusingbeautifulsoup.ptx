@@ -25,7 +25,7 @@
   <p>We will use <c>urllib</c> to read the page and then use
             <c>BeautifulSoup</c> to extract the <c>href</c> attributes
             from the anchor (<c>a</c>) tags.</p>
-  <program xml:id="urllinks" interactive="activecode" language="python3">
+  <program label="urllinks" interactive="activecode" language="python3">
     <code>
 import urllib.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
@@ -55,7 +55,7 @@ for tag in tags:
             that do not include <q><url href="http://" visual="http://">http://</url></q> or <q><url href="https://" visual="https://">https://</url></q>, which was a
             requirement in our regular expression.</p>
   <p>You can use also BeautifulSoup to pull out various parts of each tag:</p>
-  <program xml:id="urllink2" interactive="activecode" language="python3">
+  <program label="urllink2" interactive="activecode" language="python3">
     <code>
 from urllib.request import urlopen
 from bs4 import BeautifulSoup

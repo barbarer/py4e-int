@@ -23,40 +23,34 @@
             running the right program!</p>
   <activity label="functDebug_spacing">
     <statement>
-      <p>Q-1: The best way to avoid problems with spaces and tabs is to use ______ exclusively. <var/>  </p>
+      <p>The best way to avoid problems with spaces and tabs is to use <fillin width="20" mode="string" answer="spaces"/> exclusively.   </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ss]paces">
-          <feedback>
-            <p>The best way to avoid problems with spacing is to use spaces exclusively.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! Which of those two options should you use? Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive" />
+                    <feedback><p>The best way to avoid problems with spacing is to use spaces exclusively.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! Which of those two options should you use? Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <activity label="functDebug_look">
     <statement>
-      <p>Q-2: Sometimes the program you are running can be different than the program you are looking at in the text editor if you forget to ____ your program. <var/>  </p>
+      <p>Sometimes the program you are running can be different than the program you are looking at in the text editor if you forget to <fillin width="20" mode="string" answer="save"/> your program.   </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ss]ave">
-          <feedback>
-            <p>Saving frequently will keep your code up to date.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! When you make changes to your code, what do you have to do? Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive" />
+                    <feedback><p>Saving frequently will keep your code up to date.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! When you make changes to your code, what do you have to do? Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
 </section>

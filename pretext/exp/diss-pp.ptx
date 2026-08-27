@@ -15,7 +15,7 @@
         <statement>
           <p>Fix the code below to remove all adjacent duplicate values in the passed list. For example, <c>removeDups([5, 5, 1])</c> returns <c>[5, 1]</c> and <c>removeDups([1, 1, 2, 2, 3, 3, 3, 5, 6, 5, 6])</c> returns <c>[1, 2, 3, 5, 6, 5, 6]</c>.</p>
         </statement>
-        <program xml:id="remove_duplicates_fix_timed-pp_editor" interactive="activecode" language="python">
+        <program label="remove_duplicates_fix_timed-pp_editor" interactive="activecode" language="python">
           <code>
 def removeDups(a_list):
     prev = a_list[0]
@@ -67,7 +67,7 @@ myTests().main()
         <statement>
           <p>Fix the function <c>adjacentTwos</c> below to return True if there are at least two adjacent 2's in list <c>nums</c>, otherwise return False.  For example, return <c>True</c> for <c>adjacentTwos([1, 2, 2])</c> since there are two adjacent items equal to 2 (at index 1 and 2) and <c>False</c> for <c>adjacentTwos([2, 1, 2])</c> since the 2's are not adjacent.</p>
         </statement>
-        <program xml:id="adjacentTwos_fix_timed-pp_editor" interactive="activecode" language="python">
+        <program label="adjacentTwos_fix_timed-pp_editor" interactive="activecode" language="python">
           <code>
 def adjacentTwos(nums):
     i = 1
@@ -154,7 +154,7 @@ myTests().main()
         <statement>
           <p>Fix the code below to remove all adjacent duplicate values in the passed list. For example, <c>removeExtras([3, 3, 1])</c> returns <c>[3, 1]</c> and <c>removeExtras([7, 7, 8, 8, 9, 9, 9, 10, 9, 10, 11])</c> returns <c>[7, 8, 9, 10, 9, 10, 11]</c>.</p>
         </statement>
-        <program xml:id="removeExtras_fix_timed-pp_editor" interactive="activecode" language="python">
+        <program label="removeExtras_fix_timed-pp_editor" interactive="activecode" language="python">
           <code>
 def removeExtras(a_list):
     prev = a_list[0]
@@ -206,7 +206,7 @@ myTests().main()
         <statement>
           <p>Fix the function <c>two_cats</c> below to return True if there are at least two adjacent <q>cat</q> strings in list <c>pets</c>, otherwise return False.  For example, return <c>True</c> for <c>two_cats(['dog', 'cat', 'cat'])</c> since there are two adjacent items equal to &#x2018;cat' (at index 1 and 2) and <c>False</c> for <c>two_cats(['cat', 'dog', 'cat'])</c> since the &#x2018;cat' strings are not adjacent.</p>
         </statement>
-        <program xml:id="find_extras_fix_timed-pp_editor" interactive="activecode" language="python">
+        <program label="find_extras_fix_timed-pp_editor" interactive="activecode" language="python">
           <code>
 def two_cats(pets):
     i = 1

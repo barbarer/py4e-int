@@ -1,0 +1,254 @@
+<?xml version="1.0"?>
+<section xml:id="web_write-code-questions">
+  <title>Write Code Questions</title>
+  <p>The file "books.xml" has information for the books in a bookstore.</p>
+<datafile xml:id="xml-book" label="xml-book" filename="books.xml">
+    <pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;bookstore&gt;
+
+    &lt;book category="cooking"&gt;
+        &lt;title lang="en"&gt;Everyday Italian&lt;/title&gt;
+        &lt;author&gt;Giada De Laurentiis&lt;/author&gt;
+        &lt;year&gt;2005&lt;/year&gt;
+        &lt;price&gt;30.00&lt;/price&gt;
+    &lt;/book&gt;
+
+    &lt;book category="children"&gt;
+        &lt;title lang="en"&gt;Harry Potter&lt;/title&gt;
+        &lt;author&gt;J K. Rowling&lt;/author&gt;
+        &lt;year&gt;2005&lt;/year&gt;
+        &lt;price&gt;29.99&lt;/price&gt;
+    &lt;/book&gt;
+
+    &lt;book category="web"&gt;
+        &lt;title lang="en"&gt;XQuery Kick Start&lt;/title&gt;
+        &lt;author&gt;James McGovern&lt;/author&gt;
+        &lt;author&gt;Per Bothner&lt;/author&gt;
+        &lt;author&gt;Kurt Cagle&lt;/author&gt;
+        &lt;author&gt;James Linn&lt;/author&gt;
+        &lt;author&gt;Vaidyanathan Nagarajan&lt;/author&gt;
+        &lt;year&gt;2003&lt;/year&gt;
+        &lt;price&gt;49.99&lt;/price&gt;
+    &lt;/book&gt;
+
+    &lt;book category="web" cover="paperback"&gt;
+        &lt;title lang="en"&gt;Learning XML&lt;/title&gt;
+        &lt;author&gt;Erik T. Ray&lt;/author&gt;
+        &lt;year&gt;2003&lt;/year&gt;
+        &lt;price&gt;39.95&lt;/price&gt;
+    &lt;/book&gt;
+
+&lt;/bookstore&gt;
+       </pre>
+      </datafile>
+
+  <activity label="web_get_book_info_xml" xml:id="web_get_book_info_xml_editor">
+    <statement>
+      <p>Fix the errors in the code below so that it reads the data from books.xml
+            and finds all of the book data and prints the title for each book and
+            then finds all the author names for each book and prints each author name.</p>
+    </statement>
+    <program interactive="activecode" language="python3" add-files="xml-book">
+      <code>
+import xml.etree.ElementTree as ET
+fh = open("books.xml")
+data = fh.read()
+fh.close()
+tree = ET.fromstring(data)
+book_list = tree.find('book')
+for book in book_list:
+    print(f'Book title: {book.find(title).text}')
+    author_list = book.find('author')
+    for author in author_list:
+        print(f"Author: {author}")
+        </code>
+    </program>
+  </activity>
+  
+  <p>The file "news.xml" has information for news stories.</p>
+    <datafile xml:id="xml-news" label="xml-news" filename="news.xml">
+            <pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;nitf&gt;
+    &lt;head&gt;
+        &lt;title&gt;Colombia Earthquake&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;headline&gt;
+            &lt;hl1&gt;143 Dead in Colombia Earthquake&lt;/hl1&gt;
+        &lt;/headline&gt;
+        &lt;byline&gt;
+            &lt;bytag&gt;By Jared Kotler, Associated Press Writer&lt;/bytag&gt;
+        &lt;/byline&gt;
+        &lt;dateline&gt;
+            &lt;location&gt;Bogota, Colombia&lt;/location&gt;
+            &lt;date&gt;Monday January 25 1999 7:28 ET&lt;/date&gt;
+        &lt;/dateline&gt;
+    &lt;/body&gt;
+&lt;/nitf&gt;
+    </pre>
+  </datafile>
+  <activity label="web_get_news_info_xml" xml:id="web_get_news_info_xml_editor">
+    <statement>
+      <p>Fix the errors in the code below so that it reads the data from news.xml
+            and prints the headline and date.</p>
+    </statement>
+    <program interactive="activecode" language="python3" add-files="xml-news">
+      <code>
+import xml.etree.ElementTree as ET
+fh = open("news.xml")
+data = fh.read()
+fh.close()
+tree = ET.fromstring(data)
+head = tree.find('head')
+title = head.find('title')
+print(head)
+body = find(body)
+dateline = body.find('dateline')
+date = dateline.find('date')
+print(date)
+        </code>
+    </program>
+  </activity>
+
+  <p>The following file "weather.xml" has information for the weather for a particular day and time at an airport.</p>
+  <datafile xml:id="xml-weather" label="xml-weather" filename="weather.xml">
+     <pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;current_observation&gt;
+
+    &lt;location&gt;New York/John F. Kennedy Intl Airport, NY&lt;/location&gt;
+    &lt;station_id&gt;KJFK&lt;/station_id&gt;
+    &lt;latitude&gt;40.66&lt;/latitude&gt;
+    &lt;longitude&gt;-73.78&lt;/longitude&gt;
+    &lt;observation_time_rfc822&gt;Mon, 11 Feb 2008 06:51:00 -0500 EST&lt;/observation_time_rfc822&gt;
+    &lt;weather&gt;A Few Clouds&lt;/weather&gt;
+    &lt;temp_f&gt;11&lt;/temp_f&gt;
+    &lt;temp_c&gt;-12&lt;/temp_c&gt;
+    &lt;relative_humidity&gt;36&lt;/relative_humidity&gt;
+    &lt;wind_dir&gt;West&lt;/wind_dir&gt;
+    &lt;wind_degrees&gt;280&lt;/wind_degrees&gt;
+    &lt;wind_mph&gt;18.4&lt;/wind_mph&gt;
+    &lt;wind_gust_mph&gt;29&lt;/wind_gust_mph&gt;
+    &lt;pressure_mb&gt;1023.6&lt;/pressure_mb&gt;
+    &lt;pressure_in&gt;30.23&lt;/pressure_in&gt;
+    &lt;dewpoint_f&gt;-11&lt;/dewpoint_f&gt;
+    &lt;dewpoint_c&gt;-24&lt;/dewpoint_c&gt;
+    &lt;windchill_f&gt;-7&lt;/windchill_f&gt;
+    &lt;windchill_c&gt;-22&lt;/windchill_c&gt;
+    &lt;visibility_mi&gt;10.00&lt;/visibility_mi&gt;
+
+&lt;/current_observation&gt;
+    </pre>
+  </datafile>
+  <activity label="web_get_weather_info_xml" xml:id="web_get_weather_info_xml_editor">
+    <statement>
+      <p>Finish the code below so that it reads the data from weather.xml
+            into a tree and then prints the location, temp_f, and windchill_f for
+            the current_observation.</p>
+    </statement>
+    <program interactive="activecode" language="python3" add-files="xml-weather">
+      <code>
+import xml.etree.ElementTree as ET
+fh = open("weather.xml")
+data = fh.read()
+fh.close()
+tree = ET.fromstring(data)
+        </code>
+    </program>
+  </activity>
+  
+<p>The following file "email.json" has first name, last name, email, gender, and ip_address information for people.</p>
+<datafile xml:id="json-person" label="json-person" filename="email.json">
+    <pre>
+[{
+  "id": 1,
+  "first_name": "Jeanette",
+  "last_name": "Penddreth",
+  "email": "jpenddreth0@census.gov",
+  "gender": "Female",
+  "ip_address": "26.58.193.2"
+}, {
+  "id": 2,
+  "first_name": "Giavani",
+  "last_name": "Frediani",
+  "email": "gfrediani1@senate.gov",
+  "gender": "Male",
+  "ip_address": "229.179.4.212"
+}, {
+  "id": 3,
+  "first_name": "Noell",
+  "last_name": "Bea",
+  "email": "nbea2@imageshack.us",
+  "gender": "Female",
+  "ip_address": "180.66.162.255"
+}, {
+  "id": 4,
+  "first_name": "Willard",
+  "last_name": "Valek",
+  "email": "wvalek3@vk.com",
+  "gender": "Male",
+  "ip_address": "67.76.188.26"
+}]</pre>
+</datafile>
+  <activity label="web_email_json_write" xml:id="web_email_json_write_editor">
+    <statement>
+      <p>Finish the code below so that it prints the first name, last name and email
+            address for each person in the list of dictionaries returned from <c>json.loads(data).</c></p>
+    </statement>
+    <program interactive="activecode" language="python3" add-files="json-person">
+      <code>
+import json
+fh = open("email.json")
+data = fh.read()
+fh.close()
+person_list = json.loads(data)
+        </code>
+    </program>
+  </activity>
+
+<p>The following file "person.json" has first name, last name, a flag if they are alive, age, address, phone numbers, spouse, and a list of children information for people.</p>
+<datafile xml:id="json-person2" label="json-person2" filename="person.json">
+    <pre>
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "isAlive": true,
+  "age": 27,
+  "address": {
+    "streetAddress": "21 2nd Street",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": "10021-3100"
+  },
+  "phoneNumbers": [
+    {
+      "type": "home",
+      "number": "212 555-1234"
+    },
+    {
+      "type": "office",
+      "number": "646 555-4567"
+    },
+    {
+      "type": "mobile",
+      "number": "123 456-7890"
+    }
+  ],
+  "children": [],
+  "spouse": null
+}</pre>
+</datafile>
+  <activity label="web_email_person_write" xml:id="web_email_person_write">
+    <statement>
+      <p>Finish the code below so that it prints the first name, last name, the
+            state the person lives in, and their mobile phone number.</p>
+    </statement>
+    <program interactive="activecode" language="python3" add-files="json-person2">
+      <code>
+import json
+        </code>
+    </program>
+  </activity>
+</section>

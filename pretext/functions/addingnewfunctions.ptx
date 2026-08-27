@@ -40,7 +40,7 @@ def print_lyrics():
             their inputs.</p>
   <activity label="functAdd_MC_empty">
     <statement>
-      <p>Q-1: What does it means when there are empty parentheses after a function name?</p>
+      <p> What does it means when there are empty parentheses after a function name?</p>
     </statement>
     <choices>
       <choice>
@@ -83,7 +83,7 @@ def print_lyrics():
             body can contain any number of statements.</p>
   <activity label="functAdd_MC_firstLine">
     <statement>
-      <p>Q-2: What is the first line of a function definition called? What is every line after the first line called?</p>
+      <p> What is the first line of a function definition called? What is every line after the first line called?</p>
     </statement>
     <choices>
       <choice>
@@ -134,7 +134,7 @@ def print_lyrics():
   <p>To end the function, you have to enter an empty line (this is not
             necessary in a script).</p>
   <p>Defining a function creates a variable with the same name.</p>
-  <program xml:id="functAdd_lyrics" interactive="activecode" language="python">
+  <program label="functAdd_lyrics" interactive="activecode" language="python">
     <code>
 def print_lyrics():
     print("I'm a lumberjack, and I'm okay.")
@@ -148,7 +148,7 @@ print(type(print_lyrics))
             has type <q>function</q>.</p>
   <activity label="functAdd_MC_weather">
     <statement>
-      <p>Q-4: Consider the code below. Which statement is true?</p>
+      <p> Consider the code below. Which statement is true?</p>
       <program language="python">
         <code>
 def printWeather():
@@ -193,7 +193,7 @@ def printWeather():
   </activity>
   <p>The syntax for calling the new function is the same as for built-in
             functions:</p>
-  <program xml:id="functAdd_call" interactive="activecode" language="python">
+  <program label="functAdd_call" interactive="activecode" language="python">
     <code>
 def print_lyrics():
     print("I'm a lumberjack, and I'm okay.")
@@ -205,7 +205,7 @@ print_lyrics()
   <p>Once you have defined a function, you can use it inside another
             function. For example, to repeat the previous refrain, we could write a
             function called <c>repeat_lyrics</c> and then call that function:</p>
-  <program xml:id="functAdd_repeat" interactive="activecode" language="python">
+  <program label="functAdd_repeat" interactive="activecode" language="python">
     <code>
 def print_lyrics():
     print("I'm a lumberjack, and I'm okay.")

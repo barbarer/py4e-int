@@ -13,23 +13,20 @@
             application has sent.</p>
   <activity label="http_connection">
     <statement>
-      <p>Q-1: A ______ is much like a file, except that a single socket provides a two-way
-connection between two programs. <var/>  </p>
+      <p>A <fillin width="20" mode="string" answer="socket"/> is much like a file, except that a single socket provides a two-way
+connection between two programs.   </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ss]ocket">
-          <feedback>
-            <p>Yes, a socket provides a two-way connection between two programs.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Yes, a socket provides a two-way connection between two programs.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>But if you try to read a socket when the program on the other end of the
             socket has not sent any data, you just sit and wait. If the programs on
@@ -43,24 +40,21 @@ connection between two programs. <var/>  </p>
             making sure not to step on each other's toes.</p>
   <activity label="http_rules">
     <statement>
-      <p>Q-2: A ________ is a set of practice rules that determine who is to go first,
+      <p>A <fillin width="20" mode="string" answer="protocol"/>  is a set of practice rules that determine who is to go first,
 what they are to do, and then what the responses are to that message, and
-who sends next, and so on. <var/>  </p>
+who sends next, and so on. </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Pp]rotocol">
-          <feedback>
-            <p>A protocol is a set of rules that determines order and responses.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>A protocol is a set of rules that determines order and responses.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>There are many documents that describe these network protocols. The
             HyperText Transfer Protocol is described in the following document:</p>

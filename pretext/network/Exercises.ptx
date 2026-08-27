@@ -3,7 +3,7 @@
   <title>Multiple Choice Questions</title>
   <activity label="networks_ex1">
     <statement>
-      <p>Q-1: What  protocol can be used to retrieve web pages using python?</p>
+      <p> What  protocol can be used to retrieve web pages using python?</p>
     </statement>
     <choices>
       <choice>
@@ -42,7 +42,7 @@
   </activity>
   <activity label="networks_ex2">
     <statement>
-      <p>Q-2: What provides two way communication between two different programs in a network.</p>
+      <p> What provides two way communication between two different programs in a network.</p>
     </statement>
     <choices>
       <choice correct="yes">
@@ -81,7 +81,7 @@
   </activity>
   <activity label="networks_ex3">
     <statement>
-      <p>Q-3: What is a python library that can be used to send and receive data over HTTP?</p>
+      <p> What is a python library that can be used to send and receive data over HTTP?</p>
     </statement>
     <choices>
       <choice>
@@ -120,7 +120,7 @@
   </activity>
   <activity label="networks_ex4">
     <statement>
-      <p>Q-4: What is the process by which search engines retrieve webpages and build a search index called?</p>
+      <p> What is the process by which search engines retrieve webpages and build a search index called?</p>
     </statement>
     <choices>
       <choice>
@@ -159,7 +159,7 @@
   </activity>
   <activity label="networks_ex5">
     <statement>
-      <p>Q-5: What does the following block of code do?</p>
+      <p> What does the following block of code do?</p>
       <pre>mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 mysock.connect(('data.pr4e.org', 80))
 cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
@@ -202,7 +202,7 @@ mysock.send(cmd)</pre>
   </activity>
   <activity label="networks_ex6">
     <statement>
-      <p>Q-6: What does the following block of code do?</p>
+      <p> What does the following block of code do?</p>
       <pre>import urllib.request
 
 fhand = urllib.request.urlopen('http://data.pr4e.org/romeo.txt')
@@ -246,7 +246,7 @@ for line in fhand:
   </activity>
   <activity label="networks_ex7">
     <statement>
-      <p>Q-7: What does the following block of code do?</p>
+      <p> What does the following block of code do?</p>
       <pre>import urllib.request, urllib.parse, urllib.error
 
 img = urllib.request.urlopen('http://data.pr4e.org/cover3.jpg').read()
@@ -283,7 +283,7 @@ fhand.close()</pre>
   </activity>
   <activity label="networks_ex8">
     <statement>
-      <p>Q-8: What does the following regex match?</p>
+      <p> What does the following regex match?</p>
       <pre>http[s]?://.+?</pre>
     </statement>
     <choices>
@@ -323,7 +323,7 @@ fhand.close()</pre>
   </activity>
   <activity label="networks_ex9">
     <statement>
-      <p>Q-9: What does the following block of code do?</p>
+      <p> What does the following block of code do?</p>
       <pre>url = "https://www.nytimes.com"
 html = urllib.request.urlopen(url, context=ctx).read()
 soup = BeautifulSoup(html, 'html.parser')</pre>
@@ -357,7 +357,7 @@ soup = BeautifulSoup(html, 'html.parser')</pre>
   </activity>
   <activity label="networks_ex10">
     <statement>
-      <p>Q-10: What does the following block of code print?</p>
+      <p> What does the following block of code print?</p>
       <pre>url = "https://www.nytimes.com/"
 html = urllib.request.urlopen(url).read()
 soup = BeautifulSoup(html, 'html.parser')

@@ -43,22 +43,19 @@ t = t.sort()           # WRONG!
             </p>
             <activity label="listDebug_fillMethods">
               <statement>
-                <p>Q-1: Most list methods return ______, where string methods generally return a new string. <var/>  </p>
+                <p>Most list methods return <fillin width="20" mode="string" answer="None"/>, where string methods generally return a new string.  </p>
               </statement>
-              <setup>
-                <var>
-                  <condition string="[Nn]one">
-                    <feedback>
-                      <p>Most list methods modify the argument and return <q>None</q>.</p>
-                    </feedback>
-                  </condition>
-                  <condition string=".*">
-                    <feedback>
-                      <p>Try again.</p>
-                    </feedback>
-                  </condition>
-                </var>
-              </setup>
+              <evaluation>
+                  <evaluate>
+                          <test correct="yes">
+                              <strcmp use-answer="yes"/>
+                              <feedback><p>Most list methods modify the argument and return <q>None</q>.</p></feedback>
+                          </test>
+                          <test>
+                              <feedback><p>Try again.</p></feedback>
+                          </test>
+                  </evaluate>
+              </evaluation>
             </activity>
           </paragraphs>
           
@@ -94,7 +91,7 @@ t = t + x              # WRONG!
     <statement>
       <p>Fix the following code to correctly add x, y, and z to the end of lst in that order.</p>
     </statement>
-    <program xml:id="listDebug_ac_fix_editor" interactive="activecode" language="python">
+    <program label="listDebug_ac_fix_editor" interactive="activecode" language="python">
       <code>
 lst = [1, 1, 2, 3, 5, 8, 13]
 x = 21
@@ -135,7 +132,7 @@ t.sort()
 
   <activity label="listDebug_MC_tf">
     <statement>
-      <p>Q-3: True or False? The built-in function sorted affects the original list.</p>
+      <p>True or False? The built-in function sorted affects the original list.</p>
     </statement>
     <choices>
       <choice>
@@ -173,7 +170,7 @@ t.sort()
                                 of the line to determine if we are interested in the line at all. We
                                 can use <c>continue</c> to skip lines that don't have <q>From</q>
                                 as the first word as follows:</p>
-            <program xml:id="listDebug_ac_print" interactive="activecode" language="python">
+            <program label="listDebug_ac_print" interactive="activecode" language="python">
               <code>
 fhand = open('mboxShort.txt')
 for line in fhand:
@@ -187,7 +184,7 @@ for line in fhand:
                                 But is it better?</p>
             <activity label="listDebug_MC_error">
               <statement>
-                <p>Q-5: What kind of error will caused by the code above?</p>
+                <p>What kind of error will caused by the code above?</p>
               </statement>
               <choices>
                 <choice>
@@ -277,7 +274,7 @@ Details: http://source.sakaiproject.org/viewsvn/?view=rev&amp;rev=39772</pre>
                                 the first word is not there. There are many ways to protect this
                                 code; we will choose to check the number of words we have before we
                                 look at the first word:</p>
-            <program xml:id="listDebug_file" interactive="activecode" language="python">
+            <program label="listDebug_file" interactive="activecode" language="python">
               <code>
 fhand = open('mboxShort1.txt')
 count = 0

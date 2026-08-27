@@ -23,22 +23,19 @@
 
         <activity label="dbKeys_fill1">
           <statement>
-            <p>Q-1: What constraint is often used with logical keys? <var/>  </p>
+            <p>What constraint is often used with logical keys? <fillin width="20" mode="string" answer="UNIQUE"/>  </p>
           </statement>
-          <setup>
-            <var>
-              <condition string="[Uu][Nn][Ii][Qq][Uu][Ee]">
-                <feedback>
-                  <p>A UNIQUE constraint is often used with a logical key, since it doesn't make sense to allow multiple rows with the same identifier.</p>
-                </feedback>
-              </condition>
-              <condition string=".*">
-                <feedback>
-                  <p>Try again.</p>
-                </feedback>
-              </condition>
-            </var>
-          </setup>
+          <evaluation>
+              <evaluate>
+                      <test correct="yes">
+                          <strcmp use-answer="yes" case="insensitive"/>
+                          <feedback><p>A UNIQUE constraint is often used with a logical key, since it doesn't make sense to allow multiple rows with the same identifier.</p></feedback>
+                      </test>
+                      <test>
+                          <feedback><p>Try again.</p></feedback>
+                      </test>
+              </evaluate>
+          </evaluation>
         </activity>
 
         <p>A <em>primary key</em> is usually a number that is assigned
@@ -51,7 +48,7 @@
                     our data model, the <c>id</c> field is an example of a primary key.</p>
         <activity label="dbKeys_MC_tf">
           <statement>
-            <p>Q-2: True or False? A primary key is usually a number</p>
+            <p>True or False? A primary key is usually a number</p>
           </statement>
           <choices>
             <choice correct="yes">
@@ -82,21 +79,18 @@
             that is a foreign key.</p>
   <activity label="dbKeys_fill">
     <statement>
-      <p>Q-3: How many kinds of keys are generally used in a database model? <var/>  </p>
+      <p>How many kinds of keys are generally used in a database model? <fillin width="20" mode="string" answer="3"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="3|three">
-          <feedback>
-            <p>Generally, there are three kinds of keys used in a database model, logical, primary, and foreign.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp>3|three</strcmp>
+                    <feedback><p>Generally, there are three kinds of keys used in a database model, logical, primary, and foreign.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
 </section>

@@ -237,6 +237,8 @@ Write Code Questions
                 def sumTo(n):
                     # your code here
 
+                print(sumTo(10))
+
                 ====
                 from unittest.gui import TestCaseGui
 
@@ -246,7 +248,7 @@ Write Code Questions
                         self.assertAlmostEqual(sumTo(15),120.0,0,"sumTo(15)")
                         self.assertAlmostEqual(sumTo(0),0.0,0,"sumTo(0)")
                         self.assertAlmostEqual(sumTo(25),325.0,0,"sumTo(25)")
-                        self.assertAlmostEqual(sumTo(7),28.0,0,"sumTo(7)")
+                        self.assertAlmostEqual((7),28.0,0,"sumTo(7)")
 
                 myTests().main()
 
@@ -268,6 +270,8 @@ Write Code Questions
                     # alternatively, you can accomplish this on one line:
                     # return (n * (n + 1)) / 2
 
+                print(sumTo(10))
+
 #.
     .. activecode:: funct_ex_addq
         :practice: T
@@ -286,7 +290,7 @@ Write Code Questions
 
             def testOne(self):
                 self.assertEqual(sumTo(15),120,"sumTo(15)")
-                self.assertEqual(sumTo(0),0,"sumTo(0)")
+                self.assertEqual((0),0,"sumTo(0)")
                 self.assertEqual(sumTo(25),325,"sumTo(25)")
                 self.assertEqual(sumTo(7),28,"sumTo(7)")
 
@@ -309,6 +313,7 @@ Write Code Questions
                 def areaOfCircle(r):
                     # your code here
 
+                print(areaOfCircle(31415.926535897932))
                 ====
                 from unittest.gui import TestCaseGui
 
@@ -340,6 +345,8 @@ Write Code Questions
                     a = r**2 * math.pi
                     # Return the area
                     return a
+
+                print(areaOfCircle(31415.926535897932))
 
 #.
     .. activecode:: funct_avg_drop_lowest
@@ -383,6 +390,9 @@ Write Code Questions
                 If it is your birthday, your speed can be 5 higher in all cases. For example, ``caught_speeding(60,False)`` should return ``0``.
                 ~~~~
                 def caught_speeding(speed, is_birthday):
+                    # add code here
+
+                print(caught_speeding(60,False))
 
                 ====
                 from unittest.gui import TestCaseGui
@@ -431,6 +441,8 @@ Write Code Questions
                             return 1
                         else:
                             return 2
+
+                print(caught_speeding(60,False))
 
 
 #.

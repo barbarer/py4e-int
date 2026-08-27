@@ -44,22 +44,19 @@ SELECT * FROM Tracks WHERE title = 'My Way'
   </program>
   <activity label="dbSQL_fill">
     <statement>
-      <p>Q-1: What is the SQL command that is used to add new data to a table? <var/>  </p>
+      <p>What is the SQL command that is used to add new data to a table? <fillin width="20" mode="string" answer="INSERT"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="INSERT">
-          <feedback>
-            <p>INSERT is used to add a new row of values to a table.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>INSERT is used to add a new row of values to a table.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>Using <c>*</c> indicates that you want the database to return all of the
             columns for each row that matches the <c>WHERE</c> clause.</p>
@@ -75,28 +72,21 @@ SELECT * FROM Tracks WHERE title = 'My Way'
   </dl>
   <activity label="dbSQL_fill2">
     <statement>
-      <p>Q-2: What is the symbol that is used to return all information for a row that matches a WHERE statement? <var/>  </p>
+      <p>What is the symbol that is used to return all information for a row that matches a WHERE statement? <fillin width="20" mode="string" answer="*"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="\*">
-          <feedback>
-            <p>
-              <ul>
-                <li>
-                  <p>indicates that you want the database to return all of the columns for each row that matches the WHERE clause.</p>
-                </li>
-              </ul>
-            </p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback>
+                       <p>The '*' indicates that you want the database to return all of the columns for each row that matches the WHERE clause.</p>
+                    </feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>You can request that the returned rows be sorted by one of the fields as
             follows:</p>

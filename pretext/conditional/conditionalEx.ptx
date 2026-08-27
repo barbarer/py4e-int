@@ -17,7 +17,7 @@
       <p>Now that we know how to express <q>true or false</q> questions  in Python, it's time to put them to use in programs. We'll take different actions depending on whether a condition is true or false with <em>conditional statements</em>.</p>
     </introduction>
     <p>The simplest form of a conditional statement is the <c>if</c> statement:</p>
-  <program xml:id="cndtnlPositive" interactive="codelens" language="python">
+  <program label="cndtnlPositive" interactive="codelens" language="python">
     <code>
 x = 2
 if x &gt; 0 :
@@ -55,7 +55,7 @@ print('All done.')
             a body with no statements (usually as a place holder for code you haven't
             written yet). In that case, you can use the <c>pass</c> statement,
             which does nothing.</p>
-  <program xml:id="cndtnlNegative" interactive="codelens" language="python">
+  <program label="cndtnlNegative" interactive="codelens" language="python">
     <code>
     x = -3
     if x &lt; 0:
@@ -94,7 +94,7 @@ SyntaxError: invalid syntax
             and executing a script, but it may improve readability of your code.</p>
   <activity label="cndtnl-cndex-mc-if1">
     <statement>
-      <p>Q-3: Given the code below, what line executes after line 2 executes?</p>
+      <p> Given the code below, what line executes after line 2 executes?</p>
       <pre>1) x = 4
 2) if x &lt; 3:
 3)     print ("x is less than 3")
@@ -122,7 +122,7 @@ SyntaxError: invalid syntax
   
   <activity label="cndtnl-cndex-mc-and">
     <statement>
-      <p>Q-4: Given the code below, what describes the values of x that will cause the code to print <q>condition true</q>?</p>
+      <p> Given the code below, what describes the values of x that will cause the code to print <q>condition true</q>?</p>
       <pre>if x &gt; 0 and x &lt; 10:
     print ("condition true")
 print ("All done")</pre>
@@ -165,7 +165,7 @@ print ("All done")</pre>
   </activity>
   <activity label="cndtnl-cndex-mc-or">
     <statement>
-      <p>Q-5: Given the code below, what describes the values of x that will cause the code to print <q>condition true</q>?</p>
+      <p> Given the code below, what describes the values of x that will cause the code to print <q>condition true</q>?</p>
       <pre>if x &gt; 0 or x &lt; 10:
     print ("condition true")
 print ("All done")</pre>

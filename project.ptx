@@ -11,13 +11,17 @@
       format="html"
       source="main.ptx"
       publication="publication.ptx"
-      output-dir="output/web" />
+      output-dir="output/web">
+    <stringparams author.tools="yes" html.css.extra="external/_static/css/custom.css" />
+  </target>
 
     <target name="runestone"
       format="html"
       source="main.ptx"
       publication="publication-academy.ptx"
-      output-dir="output/runestone" />
+      output-dir="output/runestone" >
+    <stringparams author.tools="yes" html.css.extra="external/_static/css/custom.css" />
+    </target>
 
     <target name="print" 
       format="pdf"

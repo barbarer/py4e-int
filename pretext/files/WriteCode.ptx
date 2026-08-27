@@ -1,0 +1,403 @@
+<?xml version="1.0"?>
+<section xml:id="files_write-code-questions">
+  <title>Write Code Questions</title>
+  <introduction>
+    <p>The <dataurl filename="uspoll.txt" source="files/uspoll.txt">uspoll.txt</dataurl> data file is used in some of the questions in this section. The data
+              is <c>City, State: PM10: PM2.5</c>.  PM 10 is annual mean amounts of particulate pollution that's over 2.5 and less than 10
+              micrometers in diameter, and PM2.5 is the  annual mean amounts of particulate pollution
+              that's 2.5 micrometers or less in diameter.</p>
+    <p>Click <dataurl filename="uspoll.txt" source="files/uspoll.txt">here to view the uspoll.txt data file</dataurl>
+    in a new browser tab.</p>
+
+  </introduction>
+  <activity label="files-write-code" xml:id="files-write-code">
+    <statement><p>Fix errors in the code below so that the code runs correctly and prints the pollution
+        for all cities that start with the letter A.</p></statement>
+    <program interactive="activecode" language="python" add-files="files-write-uspoll-id">
+      <code>
+        inFile = open("uspoll.txt","r)
+        for line in inFile
+            values = line.split(":")
+            city = values[0]
+            if (city.find("A") == 0):
+                print('City: ' city)
+                print("Pollution values:",values[1],values[2])
+
+        inFile.close()
+      </code>
+  </program>
+  <solution><p>The program was missing a close double quote after the r on line 1.  It was missing a colon
+              at the end of line 3.  It was missing a comma or plus sign between the values on line 7.</p>
+              <program label="files-write-code-sol" interactive="activecode" language="python" add-files="files-write-uspoll-id">
+      <code>
+        # Close quotations around "r"
+        inFile = open("uspoll.txt","r")
+
+        # Add a colon at the end
+        for line in inFile:
+            values = line.split(":")
+            city = values[0]
+            if (city.find("A") == 0):
+                # "+" is needed to concatenate strings and variables
+                print('City: ' + city)
+                print("Pollution values:",values[1],values[2])
+
+        inFile.close()
+      </code>
+    </program></solution></activity>
+
+        <activity label="file_ex_pmErrorq" xml:id="file_ex_pmErrorq_editor">
+          <statement>
+            <p>Fix the errors in the code below so that it returns the average PM 2.5 value
+                    for the passed state (using the two letter abbreviation).  Each line of the file is in the format <c>City, State: PM10: PM2.5</c>. For example, the first line is <q>Aberdeen, SD :13 :8</q>. It should
+                    print 11.33333333333333.</p>
+          </statement>
+          <program interactive="activecode" language="python" add-files="files-write-uspoll-id">
+            <code>
+def avg_PM25(state)
+
+    # get the lines from the file
+    inFile = open("uspoll.txt","r")
+    lines = inFile.readlines()
+    inFile.close()
+
+    # calculate the average
+    total = 0
+    count = 0
+    for line in lines:
+        values = line.split(":")
+        curr25 = float(values[2])
+        cityState = values[1]
+        values = cityState.split(",")
+        curr_state = values[0]
+        if curr_state.find(state) &gt;= 0:
+            total += curr25
+            count += 1
+
+        return total / count
+
+print(avg_PM25('OH'))
+        </code>
+          </program>
+        </activity>
+
+        <activity xml:id="file_ex_bad_AorBa" label="file_ex_bad_AorBa">
+          <statement><p>The code below prints all the lines that have a city that starts with an “A”. Change it so that it prints out all lines that have a city that starts with “A” or “B”.</p></statement>
+          <program interactive="activecode" language="python" add-files="files-write-uspoll-id">
+            <code>inFile = open("uspoll.txt","r")
+lines = inFile.readlines()
+inFile.close()
+
+for line in lines:
+    if line[0] == "A":
+        print(line)
+        </code></program>
+    
+          <solution><p>See the changes on line 10.</p>
+            <program label="file_ex_bad_AorBa-sol" interactive="activecode" language="python" add-files="files-write-uspoll-id">
+              <code>
+# Read all the lines
+inFile = open("uspoll.txt","r")
+lines = inFile.readlines()
+inFile.close()
+
+# Loop through the lines
+for line in lines:
+    # Set condition for lines starting with A or B
+    # Be sure to close parentheses to separate phrases
+    if (line[0] == "A") | (line[0] == "B"):
+        print(line)
+        </code>
+            </program></solution></activity>
+
+        <activity label="file_ex_valueCity" xml:id="file_ex_valueCity_editor">
+          <statement>
+            <p>Fix the indention below for the code to correctly find and print the lowest 2.5 value and city.
+                    It should print <c>Smallest PM 2.5  4.0  in  Bellingham, WA</c>.</p>
+          </statement>
+          <program interactive="activecode" language="python" add-files="files-write-uspoll-id">
+            <code>
+inFile = open("uspoll.txt","r")
+lines = inFile.readlines()
+inFile.close()
+
+minCity = ''
+min25 = 500
+for line in lines:
+values = line.split(":")
+new25 = float(values[2])
+if new25 &lt; min25:
+minCity = values[0]
+min25 = new25
+print("Smallest PM 2.5 ",min25," in ",minCity)
+        </code>
+          </program>
+        </activity>
+
+        <activity label="file-write-studentdata" xml:id="file-write-studentdata">
+          <statement>
+            <p>The <dataurl filename="studentdata.txt" source="files/studentdata.txt">studentdata.txt</dataurl>
+               file shown below contains one line for each student in an imaginary class.
+               The student's name is the first thing on each line, followed by some exam scores.
+               The number of scores might be different for each student.</p>
+            <nbsp />
+            <datafile label="studentdata" filename="studentdata.txt" hide="no">
+              <pre source="files/studentdata.txt" />
+            </datafile>
+          </statement>
+            <program interactive="activecode" language="python" add-files="files-write-studentdata-id">
+              <code>
+                # Hint: first see if you can write a program that just
+                # prints out the number of scores on each line
+                # Then, make it print the number only if the number is at least six
+                # Then, switch it to printing the name instead of the number
+              </code>
+            </program>
+
+          <solution>
+            <p>
+              First see if you can write a program that just prints out the number of scores on each line.  Then, make it print the number only if the number is at least six.  Then, switch it to printing the name instead of the number</p>
+            <program label="file-write-studentdata-sol" interactive="activecode" language="python" add-files="files-write-studentdata-id">
+              <code>
+# Open the file in "read" mode
+f = open("studentdata.txt", "r")
+
+# iterate through lines in the file
+for aline in f:
+    # Split each item of the line
+    items = aline.split()
+    # Set condition for student that have 6 or more quiz scores
+    # Element 0 is the name, so start with element 1
+    if len(items[1:]) &gt;= 6:
+        # Print the name (element 0) if the condition is met
+        print(items[0])
+# Close the file
+f.close()
+        </code>
+            </program></solution></activity>
+
+        <activity label="file_ex_emotionq" xml:id="file_ex_emotionq">
+          <statement>
+              <p>The <dataurl filename="emotion_words.txt" source="files/emotion_words.txt">emotion_words.txt</dataurl> file
+                shown below contains a set of emotions that will be used in the next question.
+              </p>
+
+            <p>Create a list called <c>j_emotions</c> that contains every word in <c>emotion_words.txt</c>
+                    that begins with the letter <q>j</q>.  After the code executes <c>j_emotions</c> should be <c>['joyous', 'jittery', 'jumpy']</c>
+            </p>
+            <nbsp />
+            <datafile label="emotion_words" filename="emotion_words.txt" hide="no">
+              <pre source="files/emotion_words.txt" />
+            </datafile>
+          </statement>
+
+          <aside xml:id="emotion_words_id" type="note">
+    <title>Click to preview the data.</title>
+    <pre>Sad upset blue down melancholy somber bitter troubled
+Angry mad enraged irate irritable wrathful outraged infuriated
+Happy cheerful content elated joyous delighted lively glad
+Confused disoriented puzzled perplexed dazed befuddled
+Excited eager thrilled delighted
+Scared afraid fearful panicked terrified petrified startled
+Nervous anxious jittery jumpy tense uneasy apprehensive</pre>
+    </aside>
+          <program interactive="activecode" language="python" add-files="files-write-emotion_words-id">
+            <code>
+
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(j_emotions, ['joyous', 'jittery', 'jumpy'], "Testing that j_emotions was created correctly.")
+
+myTests().main()
+        </code>
+          </program>
+        </activity>
+
+        <p>The rest of the questions gather their data from the file 
+            <dataurl filename="stocks.txt" source="files/stocks.txt">stocks.txt</dataurl>, 
+            which shows the monthly Dow Jones averages from 1989 to 2001.
+            The data is in the order: Date, Open, High, Low, and Close.
+            The first line is <c>3-Dec-01,9848.93,10220.78,9651.87,10021.57</c>.  
+            The Date is in the format <c>day-month-yy</c>.  
+            The month is the first three letters of the month.
+        </p>
+        <p>Click <dataurl filename="stocks.txt" source="files/stocks.txt">here to view the stocks.txt data file</dataurl> in a new browser tab.</p>
+
+  
+ 
+        <activity label="file_ex_biggestLoss" xml:id="file_ex_biggestLoss">
+          <statement>
+  <p>Complete the code at the # so that it prints out the date with the biggest loss from open to close. Each line has: Date, Open, High, Low, and Close. It should print 3-Aug-98 loss 1329.030000000001.</p>
+</statement>
+<program interactive="activecode" language="python" add-files="files-write-stocks-id">
+  <code>def biggestLoss(file):
+    maxLoss = 0
+    lines = file.readlines()
+    for line in #:
+        values = line.split(",")
+        opening = float(values[#])
+        closing = float(values[4])
+        dailyLoss = opening # closing
+        if (dailyLoss # maxLoss):
+            maxLoss = dailyLoss
+            date = values[#]
+    print(date + " loss " + str(maxLoss))
+
+file = open("stocks.txt", "r")
+biggestLoss(file)
+</code>
+</program>
+          <solution>
+ <p>Complete the code at the # so that it prints out the date with the biggest loss from open to close. Each line has: Date, Open, High, Low, and Close. It should print 3-Aug-98 loss 1329.030000000001.</p>
+            <program label="file_ex_biggestLoss_sol" interactive="activecode" language="python" add-files="files-write-stocks-id">
+              <code>
+def biggestLoss(file):
+    maxLoss = 0
+    lines = file.readlines()
+    # Use line to iterate through lines
+    for line in lines:
+        values = line.split(",")
+        # Element 1 in values accesses the opening values
+        opening = float(values[1])
+        closing = float(values[4])
+        # dailyLoss is the difference between opening and closing
+        dailyLoss = opening - closing
+        # Set condition if the dailyLoss is greater than the overall highest loss
+        if (dailyLoss &gt; maxLoss):
+            maxLoss = dailyLoss
+            # Element 0 is the date
+            date = values[0]
+    print(date + " loss " + str(maxLoss))
+
+file = open("stocks.txt", "r")
+biggestLoss(file)
+        </code>
+            </program></solution></activity>
+ 
+        <activity label="file_ex_300" xml:id="file_ex_300_editor">
+          <statement>
+            <p>Fix the errors below so that the <c>pointGain</c> function returns a list of all the dates where the Dow
+                    Jones gained more than 300 points from open to close.  Each line has: Date, Open, High, Low, and Close.
+                    The Date is in the format <c>day-month-yy</c>.
+                    There should be 22 dates.</p>
+          </statement>
+          <program interactive="activecode" language="python" add-files="files-write-stocks-id">
+            <code>
+def pointGain():
+    file = open("stocks.txt", "r")
+    date_list = []
+    for lines in file:
+    values = line.split()
+    opening = str(values[2])
+    closing = float(values[4])
+    if (closing - opening) &lt; 300:
+        date_list.append(values[0])
+    file.close()
+    return date_list
+
+# read the data
+pointGain()
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        res = pointGain()
+        self.assertEqual(len(res),22,"Length(list) == 22")
+        self.assertEqual(res[0],"1-Nov-01")
+        self.assertEqual(res[1],"2-Apr-01")
+
+myTests().main()
+        </code>
+          </program>
+        </activity>
+        
+        <activity label="file_ex_stocks_june" xml:id="file_ex_June_start">
+          <statement><p>The code below prints all the dates and high price for dates that occur on the first day of the month (i.e. January 1, February 1…). Each line has: Date, Open, High, Low, and Close. Change it so that it prints the date and low price for all the dates that occur in June.</p></statement>
+          <program interactive="activecode" language="python"><code>file = open("stocks.txt", "r")
+lines = file.readlines()
+for line in lines:
+    values = line.split(",")
+    date = values[0]
+    if date[0] == "1":
+        print(date + " had a high value of " + values[2])
+        </code></program>
+          <solution>
+            <p>The code below prints all the dates and high price for dates that occur on the first day of the month (i.e. January 1, February 1…). Each line has: Date, Open, High, Low, and Close. Change it so that it prints the date and low price for all the dates that occur in June.</p>
+            <program label="file_ex_June_start_sol" interactive="activecode" language="python" add-files="files-write-stocks-id">
+              <code>
+file = open("stocks.txt", "r")
+lines = file.readlines()
+for line in lines:
+    values = line.split(",")
+    date = values[0]
+    # date[2:5] accesses the 3 characters that express the month
+    # if these are the letters for June, print the statement
+    if date[2:5] == "Jun":
+        print(date + " had a low value of " + values[3])
+        </code>
+            </program></solution></activity>
+
+        <activity label="file_ex_abbrq" xml:id="file_ex_abbrq_editor">
+          <statement>
+            <p>
+              Write a function <c>avg_month_close(lines, month)</c> that takes the <c>lines</c>
+              from the <dataurl filename="stocks.txt" source="files/stocks.txt">stocks.txt</dataurl>
+              file in a list and the abbreviation for a <c>month</c>
+              (i.e. <q>Jan</q>, <q>Feb</q>) as parameters and returns the average value of the closing
+              prices during that month for all the years in the file.
+              Each line has: Date, Open, High, Low, and Close. 
+              The Date is in the format <c>day-month-yy</c>.
+              The month is just the first three letters of the month.
+            </p>
+          </statement>
+          <program interactive="activecode" language="python" add-files="files-write-stocks-id">
+            <code>
+
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def setUp(self):
+        file = open("stocks.txt", "r")
+        self.lines = file.readlines()
+        file.close()
+
+    def testOne(self):
+        self.assertEqual(int(avg_month_close(self.lines,"Jan")), 5640, "Testing Jan = 5640")
+        self.assertEqual(int(avg_month_close(self.lines,"Feb")), 5622, "Testing Feb = 5622=")
+        self.assertEqual(int(avg_month_close(self.lines,"Jun")), 5957, "Testing Jun = 5957")
+        self.assertEqual(int(avg_month_close(self.lines,"Sep")), 5778, "Testing Jun = 5778")
+        self.assertEqual(int(avg_month_close(self.lines,"Nov")), 6043, "Testing Jun = 6043")
+
+myTests().main()
+        </code>
+          </program>
+        </activity>
+
+  <datafile xml:id="files-write-uspoll-id" label="files-write-uspoll-id" filename="uspoll.txt" hide="yes">
+      <pre source="files/uspoll.txt" />
+  </datafile>
+  <datafile xml:id="files-write-studentdata-id" label="files-write-studentdata-id" filename="studentdata.txt" hide="yes">
+      <pre source="files/studentdata.txt" />
+  </datafile>
+  <datafile xml:id="files-write-emotion_words-id" label="files-write-emotion_words-id" filename="emotion_words.txt" hide="yes">
+      <pre source="files/emotion_words.txt" />
+  </datafile>
+  <datafile xml:id="files-write-dogs-id" label="files-write-dogs-id" filename="dogs.txt" hide="yes">
+      <pre source="files/dogs.txt" />
+  </datafile>
+  <datafile xml:id="files-write-stocks-id" label="files-write-stocks-id" filename="stocks.txt" hide="yes">
+      <pre source="files/stocks.txt" />
+  </datafile>
+
+</section>

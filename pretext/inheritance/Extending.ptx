@@ -23,7 +23,7 @@
   <p>Here is a complete code listing showing both classes, with a version
             of <c>__str__()</c> for <c>LabeledPoint</c> that invokes its parent's implementation
             using <c>super()</c> to avoid duplicating the functionality provided in <c>Point</c>.</p>
-  <program xml:id="combined_pts_1" interactive="activecode" language="python">
+  <program label="combined_pts_1" interactive="activecode" language="python">
     <code>
 class Point:
 
@@ -52,7 +52,7 @@ print(p.distanceFromOrigin())
         </code>
   </program>
   <p>Finish the code for the <c>Student</c> class below.  In the <c>__init__</c> method for <c>Student</c> call the <c>__init__</c> method for <c>Person</c> and pass in a first and last name.  Then also set the id. In the <c>__str__</c> method for <c>Student</c> return the id in the form (id: actual_id,) followed by the string returned from the <c>__str__</c> method in <c>Person</c>.  For example, if <c>s = Student("Abby", "Lane", 1)</c> then <c>print(s)</c> should print <q>id: 1, name: Abby Lane</q>.</p>
-  <program xml:id="inherit_person_student_super_ac" interactive="activecode" language="python">
+  <program label="inherit_person_student_super_ac" interactive="activecode" language="python">
     <code>
 class Person:
 

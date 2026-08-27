@@ -16,7 +16,7 @@
 <idx><h>Slice</h><h>Update</h></idx>
 <idx><h>Update</h><h>Slice</h></idx>
   <p>The slice operator also works on lists:</p>
-  <program xml:id="listSlice" interactive="activecode" language="python">
+  <program label="listSlice" interactive="activecode" language="python">
     <code>
 t = ['a', 'b', 'c', 'd', 'e', 'f']
 print(t[1:3])
@@ -37,7 +37,7 @@ print(t[3:])
   </program>
   <activity label="listSlice_MC_4">
     <statement>
-      <p>Q-2: What is printed by the following statements?</p>
+      <p> What is printed by the following statements?</p>
       <pre>alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
 print(alist[4:])</pre>
     </statement>
@@ -70,7 +70,7 @@ print(alist[4:])</pre>
   </activity>
   <activity label="listSlice_MC_empty">
     <statement>
-      <p>Q-3: What is printed by the following statements?</p>
+      <p> What is printed by the following statements?</p>
       <pre>alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
 print(alist[:])</pre>
     </statement>
@@ -105,7 +105,7 @@ print(alist[:])</pre>
             performing operations that fold, spindle, or mutilate lists.</p>
   <p>A slice operator on the left side of an assignment can update multiple
             elements:</p>
-  <program xml:id="listSliceLeft" interactive="activecode" language="python">
+  <program label="listSliceLeft" interactive="activecode" language="python">
     <code>
 t = ['a', 'b', 'c', 'd', 'e', 'f']
 t[1:3] = ['x', 'y']
@@ -114,7 +114,7 @@ print(t)
   </program>
   <activity label="listSlice_MC_len">
     <statement>
-      <p>Q-5: What is printed by the following statements?</p>
+      <p> What is printed by the following statements?</p>
       <pre>L = [0.34, '6', 'SI106', 'Python', -2]
 print(len(L[1:-1]))</pre>
     </statement>

@@ -19,16 +19,20 @@
   </p>
   <p xml:id="pictures_index-1">Images (pictures) on a computer are broken up into little bits called <term>pixels</term>, for <em>picture</em> (pix) <em>elements</em> (els).  These are laid out on a grid, from left to right (horizontal or <term>x</term> dimension) and top to bottom (vertical or <term>y</term> dimension).</p>
   <figure align="center" xml:id="fig_repeat_images_id1">
-    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure: A grid with horizontal (x) and vertical (y) dimensions</caption>
-    <image source="pictures/Figures/grid.png" width="50%" alt="A grid with horizontal (x) and vertical (y) dimensions"/>
+    <caption>Figure: A grid with horizontal (x) and vertical (y) dimensions</caption>
+    <image source="pictures/Figures/grid.png" width="30%" alt="A grid with horizontal (x) and vertical (y) dimensions"/>
   </figure>
   <p>Pixels are quite small.  Even the small image below has 180 columns and 240 rows of pixels.  Each pixel has a color associated with it: an amount of redness, an amount of greenness, and an amount of blueness.
-            Let's remove the red from this picture.  Now, there are lot of lines in the program below, but fortunately, you can ignore most of them. The Audio Tour explains the important lines.  Press <image source="pictures/Figures/start-audio-tour.png" width="50%" alt="audio tour button"/> to hear the audio tour explanation.  When you run this program it may take several minutes to show the changed image.</p>
+            Let's remove the red from this picture.  Now, there are lot of lines in the program below, but fortunately, you can ignore most of them.</p>
+
   <figure align="center" xml:id="fig_repeat_images_id2">
-    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure: A picture of an arch</caption>
-    <image source="pictures/Figures/arch.jpg" width="50%" alt="A picture of an arch"/>
-  </figure>
-  <program xml:id="Image_Remove_Red" interactive="activecode" language="python">
+    <caption>Figure: A picture of a stone arch from Oxford</caption>
+  <datafile label="arch" filename="arch.jpg" hide="yes">
+    <image source="pictures/Figures/arch.jpg" alt="A picture of a stone arch at Oxford in the file arch.jpg"/>
+  </datafile>
+   </figure>
+
+  <program label="Image_Remove_Red" interactive="activecode" language="python">
     <code>
 from image import *
 
@@ -50,7 +54,7 @@ win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
         </code>
   </program>
-  <p>The program above can take several minutes to execute on the <c>arch.jpg</c> picture.  But we're not stuck using just the arch image.  You can
+  <p>We're not stuck using just the arch image.  You can
             change the file name in the program above to the URL for any small photo that is on the internet.</p>
   <activity label="Image_set_all_to_0_mcq">
     <statement>

@@ -12,7 +12,7 @@
 <idx>Concatenation</idx>
   <p>It is tempting to use the operator on the left side of an assignment,
             with the intention of changing a character in a string. For example:</p>
-  <program xml:id="str-immutable" interactive="activecode" language="python">
+  <program label="str-immutable" interactive="activecode" language="python">
     <code>
 greeting = 'Hello, world!'
 greeting[0] = 'J'
@@ -25,7 +25,7 @@ greeting[0] = 'J'
   <p>The reason for the error is that strings are <term>immutable</term>,
             which means that you can't modify an existing string. The best you can do is
             create a new string that is a variation on the original:</p>
-  <program xml:id="str-newString" interactive="activecode" language="python">
+  <program label="str-newString" interactive="activecode" language="python">
     <code>
 greeting = 'Hello, world!'
 new_greeting = 'J' + greeting[1:]
@@ -35,7 +35,7 @@ print(new_greeting)
   <p>This example concatenates a new first letter onto a slice of
             <c>greeting</c>. It has no effect on the original string.</p>
   <p>Or, you can reassign an existing variable to a completely new string:</p>
-  <program xml:id="str-redefineString" interactive="activecode" language="python">
+  <program label="str-redefineString" interactive="activecode" language="python">
     <code>
 greeting = 'Hello, world!'
 greeting = 'Hola, mundo!'
@@ -46,7 +46,7 @@ print(greeting)
             The old string object is deleted in the process.</p>
   <activity label="str-imm-mc-xyz">
     <statement>
-      <p>11-9-4: Given the following code segment, what is the value of the string s1 after the code is executed?</p>
+      <p>Given the following code segment, what is the value of the string s1 after the code is executed?</p>
       <pre>s1 = 'xy'
 s2 = s1
 s1 = s1 + s2 + 'z'</pre>
@@ -88,7 +88,7 @@ s1 = s1 + s2 + 'z'</pre>
   </activity>
   <activity label="str-imm-mc-ball">
     <statement>
-      <p>11-9-5: What is printed by the following statements:</p>
+      <p>What is printed by the following statements:</p>
       <program language="python">
         <code>
 s = "Ball"
@@ -134,21 +134,18 @@ print(s)
   </activity>
   <activity label="str-no-change-fitb-def">
     <statement>
-      <p>11-9-6: You cannot change an existing string because it is ________. <var/>  </p>
+      <p>You cannot change an existing string because it is <fillin width="20" mode="string" answer="immutable"/>.  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ii]mmutable">
-          <feedback>
-            <p>Correct! Strings are immutable, meaning you cannot change the object itself once it has been defined.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! Check your spelling. Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Correct! Strings are immutable, meaning you cannot change the object itself once it has been defined.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! Check your spelling. Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
 </section>

@@ -9,7 +9,7 @@
             entire contents of the document into a string variable
             (<c>img</c>) then write that information to a local file as
             follows:</p>
-  <program xml:id="curl1" interactive="activecode" language="python3">
+  <program label="curl1" interactive="activecode" language="python3">
     <code>
 import urllib.request, urllib.parse, urllib.error
 
@@ -27,7 +27,7 @@ fhand.close()
             the size of the memory of your computer.</p>
   <activity label="network_binary_tf">
     <statement>
-      <p>Q-2: True or False? The <c>wb</c> argument opens a binary file for writing only.</p>
+      <p> True or False? The <c>wb</c> argument opens a binary file for writing only.</p>
     </statement>
     <choices>
       <choice correct="yes">
@@ -54,7 +54,7 @@ fhand.close()
             (or buffers) and then write each block to your disk before retrieving
             the next block. This way the program can read any size file without
             using up all of the memory you have in your computer.</p>
-  <program xml:id="curl2" interactive="activecode" language="python3">
+  <program label="curl2" interactive="activecode" language="python3">
     <code>
 import urllib.request, urllib.parse, urllib.error
 
@@ -76,7 +76,7 @@ fhand.close()
             retrieving the next 100,000 characters of data from the web.</p>
   <activity label="network_binary_mc">
     <statement>
-      <p>Q-4: What is the purpose of the line <c>info = img.read(100000)</c> in the following code?</p>
+      <p> What is the purpose of the line <c>info = img.read(100000)</c> in the following code?</p>
       <pre>img = urllib.request.urlopen('http://data.pr4e.org/cover3.jpg')
 fhand = open('cover3.jpg', 'wb')
 size = 0

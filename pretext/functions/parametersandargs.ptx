@@ -29,25 +29,22 @@ def print_twice(bruce):
             the parameter (whatever it is) twice.</p>
   <activity label="functParam_fill1">
     <statement>
-      <p>Q-1: Inside the function, the arguments are assigned to variables called ___________. <var/>  </p>
+      <p>Inside the function, the arguments are assigned to variables called <fillin width="20" mode="string" answer="parameters*"/>. </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Pp]arameters*">
-          <feedback>
-            <p>Inside the function, the arguments are assigned to variables called parameters.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! Reread the beginning of this section and try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Inside the function, the arguments are assigned to variables called parameters.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! Reread the beginning of this section and try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>This function works with any value that can be printed.</p>
-  <program xml:id="functParam_codelens1" interactive="codelens" language="python">
+  <program label="functParam_codelens1" interactive="codelens" language="python">
     <code>
 import math
 
@@ -63,7 +60,7 @@ print_twice(math.pi)
   <p>The same rules of composition that apply to built-in functions also
             apply to user-defined functions, so we can use any kind of expression as
             an argument for <c>print_twice</c>:</p>
-  <program xml:id="functParam_codelens2" interactive="codelens" language="python">
+  <program label="functParam_codelens2" interactive="codelens" language="python">
     <code>
 import math
 
@@ -79,7 +76,7 @@ print_twice(math.cos(math.pi))
             examples the expressions <c>'Spam '*4</c> and <c>math.cos(math.pi)</c>
             are only evaluated once.</p>
   <p>You can also use a variable as an argument:</p>
-  <program xml:id="functParam_codelens3" interactive="codelens" language="python">
+  <program label="functParam_codelens3" interactive="codelens" language="python">
     <code>
 def print_twice(bruce):
     print(bruce)
@@ -95,7 +92,7 @@ print_twice(michael)
             here in <c>print_twice</c>, we call everybody <c>bruce</c>.</p>
   <activity label="functParam_MC_add">
     <statement>
-      <p>Q-5: Consider the code block below. What prints?</p>
+      <p>Consider the code block below. What prints?</p>
       <program language="python">
         <code>
 def add_two(num):
@@ -147,7 +144,7 @@ add_three(hi)
       </choice>
     </choices>
   </activity>
-  <activity label="functParam_PP_four" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="functParam_PP_four" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Construct a block of code with four functions, defined in this order: printName, printGPA,
             printAttendance, printStudentInfo. printStudentInfo should call the other three functions

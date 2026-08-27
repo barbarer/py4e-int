@@ -52,7 +52,7 @@ class Point:
             other name, but nobody ever does!) is automatically set to reference
             the newly-created object that needs to be initialized.</p>
   <p>So let's use our new Point class now.</p>
-  <program xml:id="chp13_classes1" interactive="activecode" language="python">
+  <program label="chp13_classes1" interactive="activecode" language="python">
     <code>
 class Point:
     """ Point class for representing and manipulating x,y coordinates. """
@@ -80,7 +80,7 @@ print("Nothing seems to have happened with the points")
             having an x and y coordinate with value 0.  However, because we have not asked the point to do anything, we don't see any other result.</p>
   <image source="classes-basics/Figures/objectpic4.png" width="50%" alt="Simple object has state and methods"/>
   <p>You can see this for yourself, via codelens:</p>
-  <program xml:id="chp13_points" interactive="codelens" language="python">
+  <program label="chp13_points" interactive="codelens" language="python">
     <code>
 class Point:
     """ Point class for representing and manipulating x,y coordinates. """
@@ -98,7 +98,7 @@ print("Nothing seems to have happened with the points")
   </program>
   <p>The following program adds a few print statements. You can see that the output suggests that each one is a <c>Point object</c>.
             However, notice that the <c>is</c> operator returns <c>False</c> meaning that they are different objects (we will have more to say about this in a later chapter).</p>
-  <program xml:id="chp13_classes2" interactive="activecode" language="python">
+  <program label="chp13_classes2" interactive="activecode" language="python">
     <code>
 class Point:
     """ Point class for representing and manipulating x,y coordinates. """

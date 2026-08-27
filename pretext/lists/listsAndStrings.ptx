@@ -19,7 +19,7 @@
   <p>A string is a sequence of characters and a list is a sequence of values,
             but a list of characters is not the same as a string. To convert from a
             string to a list of characters, you can use <c>list</c>:</p>
-  <program xml:id="listString" interactive="activecode" language="python">
+  <program label="listString" interactive="activecode" language="python">
     <code>
 s = 'spam'
 t = list(s)
@@ -33,7 +33,7 @@ print(t)
   <p>The <c>list</c> function breaks a string into individual letters.
             If you want to break a string into words, you can use the
             <c>split</c> method:</p>
-  <program xml:id="listSplit" interactive="activecode" language="python">
+  <program label="listSplit" interactive="activecode" language="python">
     <code>
 s = 'pining for the fjords'
 t = s.split()
@@ -48,7 +48,7 @@ print(t[2])
   <p>You can call <c>split</c> with an optional argument called a
             <em>delimiter</em> that specifies which characters to use as
             word boundaries. The following example uses a hyphen as a delimiter:</p>
-  <program xml:id="listSplitDelimiter" interactive="activecode" language="python">
+  <program label="listSplitDelimiter" interactive="activecode" language="python">
     <code>
 s = 'spam-spam-spam'
 delimiter = '-'
@@ -57,7 +57,7 @@ print(s.split(delimiter))
   </program>
   <activity label="listString_MC_poe">
     <statement>
-      <p>Q-4: What is printed by the following statements?</p>
+      <p> What is printed by the following statements?</p>
       <pre>myname = "Edgar Allan Poe"
 namelist = myname.split()
 init = ""
@@ -104,7 +104,7 @@ print(init)</pre>
             of strings and concatenates the elements. <c>join</c> is a string
             method, so you have to invoke it on the delimiter and pass the list as a
             parameter:</p>
-  <program xml:id="listJoin" interactive="activecode" language="python">
+  <program label="listJoin" interactive="activecode" language="python">
     <code>
 t = ['pining', 'for', 'the', 'fjords']
 delimiter = ' '
@@ -116,7 +116,7 @@ print(delimiter.join(t))
             can use the empty string, <q/>, as a delimiter.</p>
   <activity label="listString_MC_join">
     <statement>
-      <p>Q-6: What would print when the following code executes?</p>
+      <p> What would print when the following code executes?</p>
       <pre>mylist = ['Hannah', 'Grace', 'Olivia', 'Ruth']
 delimiter = ''
 print(delimiter.join(mylist))</pre>
@@ -158,7 +158,7 @@ print(delimiter.join(mylist))</pre>
   </activity>
   <activity label="listString_MC_split">
     <statement>
-      <p>Q-7: What would print when the following code executes?</p>
+      <p> What would print when the following code executes?</p>
       <pre>input = "Pat,Smith,girl,65 Elm Street,eat"
 pieces = input.split(",")
 print(pieces[3])</pre>

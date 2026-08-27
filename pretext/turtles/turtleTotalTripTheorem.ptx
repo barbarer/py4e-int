@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<section xml:id="turtles_total-turtle-trip-theorem">
+    <title>Total Turtle Trip Theorem</title>
+    <p>That last piece of code is actually a <term>pattern</term> for a wide variety of geometric shapes. Here’s the code to draw a triangle. It may not be obvious why we turn 120 in this program, but it will be soon.</p>
+
+    <activity xml:id="Turtle_Triangle" label="Turtle_Triangle">
+      <statement><p>Run the code to see what it draws.</p></statement>
+      <program label="turtle-draw-triangle-editor" interactive="activecode" language="python">
+        <code>
+from turtle import *    # use the turtle library
+space = Screen()        # create a turtle space
+avery = Turtle()        # create a turtle named avery
+avery.setheading(90)    # point due north
+for sides in range(3):  # repeat the indented lines 3 times
+    avery.forward(100)  # move forward by 100 units
+    avery.right(120)    # turn by 120 degrees
+        </code>
+      </program>
+    </activity>
+
+    <p>What shape do you think the following code will draw?</p>
+
+    <activity xml:id="Turtle_Pentagon" label="Turtle_Pentagon">
+      <statement><p>Run the code to see what it draws.</p></statement>
+      <program label="turtle-draw-pentagon-editor" interactive="activecode" language="python">
+        <code>
+from turtle import *    # use the turtle library
+space = Screen()        # create a turtle space
+will = Turtle()         # create a turtle named will
+will.setheading(90)     # point due north
+for sides in range(5):  # repeat the indented lines 5 times
+    will.forward(100)   # move forward by 100 units
+    will.right(72)      # turn by 72 degrees
+        </code>
+      </program>
+    </activity>
+
+    <p>The <term>Total Turtle Trip Theorem</term> states that the turtle will draw a closed figure with <c>n</c> sides when the sum of the angles turned 
+      is a multiple of 360. In the triangle example, <c>3 * 120 = 360</c> and in the pentagon example, <c>5 * 72 = 360</c>.</p>
+
+    <p>Change the <c>??</c> in line 7 below to the amount to turn each time to draw a 12-sided polygon, which is called a dodecagon. 
+      If you get it right the turtle will draw a 12-sided closed polygon.</p>
+
+    
+<activity label="turtle_2_1_Turtle_Dodecagon_Q1" xml:id="turtle_2_1_Turtle_Dodecagon_Q1">
+    <statement>
+     <p>How much does <c>mia</c> need to turn in the program above to create a closed dodecagon (12-sided figure)? Only one of these works.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>15</p>
+        </statement>
+        <feedback>
+          <p>This one will not close</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>30</p>
+        </statement>
+        <feedback>
+          <p>Exactly! 12 * 30 = 360</p>
+        </feedback>
+      </choice>
+       <choice>
+        <statement>
+          <p>12</p>
+        </statement>
+        <feedback>
+          <p> No, 12 * 12 is 144, which is not a multiple of 360</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>90</p>
+        </statement>
+        <feedback>
+          <p>This one will generate a square, three times. 12 * 90 = 1080 = 360 * 3</p>
+        </feedback>
+      </choice>
+      </choices>
+  </activity>
+
+
+    <activity xml:id="Turtle_Dodecagon" label="Turtle_Dodecagon">
+      <statement><p>You will need to replace the '??' on line 7 to have the code correctly draw a dodecagon (a polygon with 12 sides).</p></statement>
+      <program label="turtle-draw-dodecagon-editor" interactive="activecode" language="python">
+        <code>
+from turtle import *  # use the turtle library
+space = Screen()      # create a turtle space
+mia = Turtle()        # create a turtle named maria
+mia.setheading(90)    # point due north
+for sides in range(12):  # repeat the indented lines 12 times
+    mia.forward(40)      # move forward by 40 units
+    mia.right(??)        # change ?? to the amount to turn
+        </code>
+      </program>
+    </activity>
+
+
+
+     <activity label="turtle_equilateral_triangle" xml:id="turtle_equilateral_triangle" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>The following program uses a turtle to draw a triangle as shown below, but the lines are mixed up. The program should do all 
+        necessary set-up and create the turtle. After that, iterate (loop) 3 times, and each time through the loop the turtle should 
+        go forward 100 pixels, and then turn left 120 degrees. Drag the needed blocks of statements from the left column to the right 
+        column and put them in the right order with the correct indention. There may be additional blocks that are not needed 
+        in a correct solution. Click on Check to see if you are right. You will be told if any of the lines are in the wrong order 
+        or are the wrong blocks.</p>
+
+      <figure align="center" xml:id="fig_turtle_triangle_id1">
+        <caption>An equilateral triangle drawn by a turtle</caption>
+        <image source="turtles/Figures/TurtleTriangle.png" width="40%" alt="An equilateral triangle drawn by a turtle with the left side at the center of the window and points towards the west, north, and east.  A turtle is at the left side pointing east."/>
+      </figure>
+    </statement>
+    <blocks numbered="left">
+      <block order="11">
+        <cline>from turtle import *</cline>
+      </block>
+      <block order="5">
+        <cline>space = Screen()</cline>
+      </block>
+      <block order="8">
+        <cline>marie = Turtle()</cline>
+      </block>
+        <block order="2">
+        <choice>
+          <cline>for i in range(3)</cline>
+        </choice>
+        <choice correct="yes">
+          <cline>for i in range(3):</cline>
+        </choice>
+      </block>
+         <block order="6">
+        <choice>
+          <cline>    marie.forward(100</cline>
+        </choice>
+        <choice correct="yes">
+          <cline>    marie.forward(100)</cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    marie.left(120)</cline>
+        </choice>
+        <choice>
+          <cline>    marie.turn(120)</cline>
+        </choice>
+      </block>
+    </blocks>
+  </activity>
+ 
+    <activity xml:id="turtle-draw-polygon" label="turtle-draw-polygon">
+      <statement><p>Write a function <c>polygon</c> which takes in a turtle object and the number of sides as parameters to draw a polygon. 
+        Call the function to test it.</p></statement>
+      <program label="turtle-draw-polygon-editor" interactive="activecode" language="python">
+        <code>
+        </code>
+      </program>
+    </activity>
+  </section>
+  

@@ -9,7 +9,7 @@
 <idx>Encapsulation</idx>
   <p>The following program counts the number of times the letter
             <q>r</q> appears in a string:</p>
-  <program xml:id="strCount" interactive="codelens" language="python">
+  <program xml:id="strCount" label="strCount" interactive="codelens" language="python">
     <code>
 word = 'raspberry'
 count = 0
@@ -23,7 +23,7 @@ print(count)
             <em>counter</em>. The variable <c>count</c> is initialized
             to 0 and then incremented each time an <q>r</q> is found. When the
             loop exits, <c>count</c> contains the result: the total number of
-            r's.</p>
+            rs.</p>
   <activity label="str-count-mc-t">
     <statement>
       <p>11-9-2: What is printed by the following:</p>
@@ -73,26 +73,46 @@ print(count)
       </choice>
     </choices>
   </activity>
-  <activity>
-    <statement/>
-    <program interactive="" language=""/>
-    <solution>
-                In line 2, lettercount should be initialized to 0. In line 4, there should be a ==, not a =.
-                    In line 5, the variable name should be changed to lettercount. In line 6, the return statement should be indented.
 
-    <program xml:id="str-count-fixa" language="python"><code>
+  <activity label="str-count-errors">
+    <statement>
+      <p>
+        There are four errors in the following code. Fix the function so it takes 
+        a string and a character as arguments and returns the count of the character 
+        within the string.
+      </p>
+    </statement>
+
+    <program label="stringCount" interactive="codelens" language="python">
+      <code>
 def count(text, aChar):
-    lettercount = 0
-    for c in text:
-        if c == aChar:
-            lettercount = lettercount + 1
-    return lettercount
-        </code></program>
-            
-                <p>In line 2, <c>lettercount</c> should be initialized to 0. In line 4, there should be a <c>==</c>, not a <c>=</c>.
-                    In line 5, the variable name should be changed to <c>lettercount</c>. In line 6, the return statement should be indented.</p>
+  count = 0
+  for c in text:
+    if c == aChar:
+      count = count + 1
+  return count
 
-    
-            </solution>
+  from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        # Format: self.assertEqual(actual_expression, expected_value, feedback_string)
+        self.assertEqual(count('banana', 'a'), 3, "Tested 'a' in 'banana'")
+        self.assertEqual(count('pineapple', 'a'), 1, "Tested 'a' in 'pineapple'")
+        self.assertEqual(count('pepperoni pizza', 'p'), 4, "Tested 'p' in 'pepperoni pizza'")
+        self.assertEqual(count('racecar', 'r'), 2, "Tested 'r' in 'racecar'")
+
+myTests().main()
+      </code>
+    </program>
+
+    <solution>
+      <p>
+        To fix the function, ensure that the four syntax or logic errors are corrected: 
+        properly initialize the count variable to 0, use the correct loop syntax to 
+        iterate through the string, check for equality using the == operator, and 
+        properly increment the count before returning the final total.
+      </p>
+    </solution>
   </activity>
 </section>

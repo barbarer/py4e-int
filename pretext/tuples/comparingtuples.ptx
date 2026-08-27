@@ -87,7 +87,7 @@
   </activity>
   <p>For example, suppose you have a list of words and you want to sort them
             from longest to shortest:</p>
-  <program xml:id="comparingtuples_exercise_1" interactive="activecode" language="python">
+  <program label="comparingtuples_exercise_1" interactive="activecode" language="python">
     <code>
 txt = 'but soft what light in yonder window breaks'
 words = txt.split()
@@ -117,7 +117,7 @@ print(sortedWordsList)
   <pre>['yonder', 'window', 'breaks', 'light', 'what', 'soft', 'but', 'in']</pre>
   <p>Of course, the line loses much of its poetic impact when turned into a
             Python list and sorted in descending word length order.</p>
-  <activity label="question10_2_3" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="question10_2_3" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Move the code blocks around to create a program that sorts the words in word_list by length from longest to shortest and adds them to sorted_word_list. Hint: remember DSU!</p>
     </statement>

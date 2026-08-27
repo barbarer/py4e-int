@@ -2,12 +2,12 @@
 <section xml:id="conditional_write-code-questions">
   <title>Write Code Questions</title>
 
-        <activity>
+        <activity xml:id="cndtnl-wc-fiveq" label="cndtnl-wc-fiveq">
           <statement>
             <p>Fix the errors in the code, and change it to use only <term>one</term> if statement. The code should print
                             <q>The number is 5</q> when the number is 5, and should print <q>The number is NOT 5</q> when it is not.</p>
           </statement>
-          <program interactive="activecode" language="python" xml:id="cndtnl-wc-fiveq_editor">
+          <program interactive="activecode" language="python">
             <code>
 x = 5
 if x == 5:
@@ -17,14 +17,9 @@ print("The number is NOT 5")
         </code>
           </program>
           <solution>
-
-
-    
-                        Fix the errors in the code, and change it to use only one if statement. The code should print
-                            <q>The number is 5</q> when the number is 5, and should print <q>The number is NOT 5</q> when it is not.
-
-    
-    <program xml:id="cndtnl-wc-fivea_editor" language="python"><code>
+             <p>Fix the errors in the code, and change it to use only one if statement. The code should print
+                            <q>The number is 5</q> when the number is 5, and should print <q>The number is NOT 5</q> when it is not.</p>
+    <program label="cndtnl-wc-fiveq-sol" interactive="activecode" language="python"><code>
 # Initialize x and set condition for when x = 5
 x = 5
 if x == 5:
@@ -38,12 +33,12 @@ else:
                     </solution>
         </activity>
 
-        <activity label="cndtnl-wc-hiq">
+        <activity xml:id="cndtnl-wc-hiq" label="cndtnl-wc-hiq">
           <statement>
             <p>Complete the conditional below so the word <q>Hi</q> is printed if x does not
                     equal 3 and <q>Hello</q> is printed otherwise.</p>
           </statement>
-          <program xml:id="cndtnl-wc-hiq_editor" interactive="activecode" language="python">
+          <program interactive="activecode" language="python">
             <code>
 x = 4
 if x
@@ -51,13 +46,13 @@ if x
           </program>
         </activity>
 
-        <activity>
+        <activity xml:id="cndtnl-wc-payq" label="cndtnl-wc-payq">
           <statement>
             <p>Complete the pay computation to give the employee 1.5 times the hourly rate for hours worked
                             above 40 hours, if the regular pay rate is $10 an hour. Then set <c>grossPay</c> equal to the
                             amount an employee would be paid for working 45 hours.</p>
           </statement>
-          <program interactive="activecode" language="python" xml:id="cndtnl-wc-payq_editor">
+          <program interactive="activecode" language="python" >
             <code>
 hours = 45
 rate = 10
@@ -81,15 +76,12 @@ myTests().main()
         </code>
           </program>
           <solution>
-
-
-    
-                        Complete the pay computation to give the employee 1.5 times the hourly rate for hours worked
+                       <p> Complete the pay computation to give the employee 1.5 times the hourly rate for hours worked
                             above 40 hours, if the regular pay rate is $10 an hour. Then set grossPay equal to the
-                            amount an employee would be paid for working 45 hours.
+                            amount an employee would be paid for working 45 hours.</p>
 
     
-    <program xml:id="cndtnl-wc-paya_editor" language="python"><code>
+    <program label="cndtnl-wc-payq-sol" interactive="activecode" language="python"><code>
 # Initializing variables
 hours = 45
 rate = 10
@@ -117,7 +109,7 @@ print(grossPay)
                     </solution>
         </activity>
 
-        <activity label="cndtnl-wc-pay2q">
+        <activity label="cndtnl-wc-pay2q" xml:id="cndtnl-wc-pay2q">
           <statement>
             <p>Rewrite your pay program using <c>try</c> and <c>except</c> so that your program handles non-numeric
                     input gracefully by printing a message and exiting the program. The following shows two
@@ -128,20 +120,20 @@ Error, please enter numeric input</pre>
             <pre>Enter Hours: forty
 Error, please enter numeric input</pre>
           </statement>
-          <program xml:id="cndtnl-wc-pay2q_editor" interactive="activecode" language="python">
+          <program interactive="activecode" language="python">
             <code>
 
         </code>
           </program>
         </activity>
 
-        <activity>
+        <activity xml:id="cndtnl-wc-distanceq" label="cndtnl-wc-distanceq">
           <statement>
             <p>Write the code to calculate and print the cost of a 14 mile cab ride. If the distance traveled
                             is less than or equal to 12 miles the cost is $2.00 a mile, and if the distance traveled is more
                             than 12 miles the cost is $1.50 a mile. Assign the final cost to the variable <c>total</c>.</p>
           </statement>
-          <program interactive="activecode" language="python" xml:id="cndtnl-wc-distanceq_editor">
+          <program interactive="activecode" language="python" >
             <code>
 distance = 14
 
@@ -156,15 +148,12 @@ myTests().main()
         </code>
           </program>
           <solution>
-
-
-    
-                        Write the code to calculate and print the cost of a 14 mile cab ride. If the distance traveled
+                         <p>Write the code to calculate and print the cost of a 14 mile cab ride. If the distance traveled
                             is less than or equal to 12 miles the cost is $2.00 a mile, and if the distance traveled is more
-                            than 12 miles the cost is $1.50 a mile. Assign the final cost to the variable total.
+                            than 12 miles the cost is $1.50 a mile. Assign the final cost to the variable total.</p>
 
     
-    <program xml:id="cndtnl-wc-distancea_editor" language="python"><code>
+    <program label="cndtnl-wc-distanceq-sol" interactive="activecode" language="python"><code>
 # distance variable given
 distance = 14
 # Set conditions
@@ -182,7 +171,7 @@ print("Total cost of trip: " + str(total))
                     </solution>
         </activity>
 
-        <activity label="cndtnl-wc-scoreq">
+        <activity xml:id="cndtnl-wc-scoreq" label="cndtnl-wc-scoreq">
           <statement>
             <p>Write a program to prompt for a score between 0.0 and 1.0. If the score is out of range,
                     print an error message. If the score is between 0.0 and 1.0, print a grade using the
@@ -196,18 +185,18 @@ print("Total cost of trip: " + str(total))
             <pre>Enter score: 0.95
 A</pre>
           </statement>
-          <program xml:id="cndtnl-wc-scoreq_editor" interactive="activecode" language="python">
+          <program interactive="activecode" language="python">
             <code>
 
         </code>
           </program>
         </activity>
 
-        <activity>
+        <activity xml:id="cndtnl-wc-weightq" label="cndtnl-wc-weightq">
           <statement>
             <p>Fix the example such that the cost of frozen yogurt is 0 if you pour exactly 1 lb. in your cup.</p>
           </statement>
-          <program interactive="activecode" language="python" xml:id="cndtnl-wc-weightq_editor">
+          <program interactive="activecode" language="python" >
             <code>
 weight = 0.5
 if weight &lt; 1:
@@ -221,13 +210,10 @@ print(total)
         </code>
           </program>
           <solution>
-
-
-    
-                        Fix the example such that the cost of frozen yogurt is 0 if you pour exactly 1 lb. in your cup.
+                       <p>Fix the example such that the cost of frozen yogurt is 0 if you pour exactly 1 lb. in your cup.</p>
 
     
-    <program xml:id="cndtnl-wc-weighta_editor" language="python"><code>
+    <program label="cndtnl-wc-weightq-sol" interactive="activecode" language="python"><code>
 # Initial weight is given
 weight = 0.5
 # Set conditionals
@@ -253,20 +239,20 @@ print(total)
                     </solution>
         </activity>
 
-        <activity label="cndtnl-wc-walletq">
+        <activity xml:id="cndtnl-wc-walletq" label="cndtnl-wc-walletq">
           <statement>
             <p>Write a procedure that takes 2 ints, total price, and amount in wallet. Print <q>You have enough
                     money</q> if the difference between the wallet and price is 0 or greater; otherwise,
                     print <q>Get more money</q>.</p>
           </statement>
-          <program xml:id="cndtnl-wc-walletq_editor" interactive="activecode" language="python">
+          <program interactive="activecode" language="python">
             <code>
 
         </code>
           </program>
         </activity>
 
-        <activity>
+        <activity xml:id="cndtnl-wc-leapYearq" label="cndtnl-wc-leapYearq">
           <statement>
             <p>3 criteria must be taken into account to identify leap years:</p>
             <p>
@@ -285,32 +271,28 @@ print(total)
             <p>Write a program that takes a year as a parameter and sets <c>leapYear</c> equal to <c>True</c> if the year is a
                             leap year, <c>False</c> otherwise. (use a few different years to test your work)</p>
           </statement>
-          <program interactive="activecode" language="python" xml:id="cndtnl-wc-leapYearq_editor">
+          <program interactive="activecode" language="python" >
             <code>
 
         </code>
           </program>
           <solution>
+                 <p>3 criteria must be taken into account to identify leap years:</p>
+            <p>
+              <ul>
+                <li>
+                  <p>The year is evenly divisible by 4;</p>
+                </li>
+                <li>
+                  <p>If the year can be evenly divided by 100, it is NOT a leap year, unless;</p>
+                </li>
+                <li>
+                  <p>The year is also evenly divisible by 400. Then it is a leap year.</p>
+                </li>
+              </ul>
+            </p>
 
-
-    
-                        3 criteria must be taken into account to identify leap years:
-                        
-                            
-                                The year is evenly divisible by 4;
-                            
-                            
-                                If the year can be evenly divided by 100, it is NOT a leap year, unless;
-                            
-                            
-                                The year is also evenly divisible by 400. Then it is a leap year.
-                            
-                        
-                        Write a program that takes a year as a parameter and sets leapYear equal to True if the year is a
-                            leap year, False otherwise. (use a few different years to test your work)
-
-    
-    <program xml:id="cndtnl-wc-leapYeara_editor" language="python"><code>
+    <program label="cndtnl-wc-leapYearq-sol" interactive="activecode" language="python"><code>
 year = 1900 #TEST WITH ANY YEAR
 # Initializing leapYear to False since most years are not leap years
 leapYear = False
@@ -341,12 +323,12 @@ print(leapYear)
                     </solution>
         </activity>
 
-        <activity label="cndtnl-wc-evenq">
+        <activity xml:id="cndtnl-wc-evenq" label="cndtnl-wc-evenq">
           <statement>
             <p>Finish the following code. It first sets <c>n</c> to a number input by a user.  Convert the number from a string to an integer and set <c>result</c> to <c>True</c> if the
                     number is an <term>even number</term> (evenly divisible by two) and <c>False</c> if it is <term>odd</term>. Note: use the modulo operator.</p>
           </statement>
-          <program xml:id="cndtnl-wc-evenq_editor" interactive="activecode" language="python">
+          <program interactive="activecode" language="python">
             <code>
 n = input("Enter a number")
         </code>

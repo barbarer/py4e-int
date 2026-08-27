@@ -22,7 +22,7 @@
             list. If the function modifies a list parameter, the caller sees the
             change. For example, <c>delete_head</c> removes the first element from a
             list and is used like this:</p>
-  <program xml:id="listArgument" interactive="activecode" language="python">
+  <program label="listArgument" interactive="activecode" language="python">
     <code>
 def delete_head(t):
     del t[0]
@@ -36,7 +36,7 @@ print(letters)
             aliases for the same object.</p>
   <activity label="listArg_MC_del">
     <statement>
-      <p>Q-2: What would print when the following code executes?</p>
+      <p> What would print when the following code executes?</p>
       <pre>def myfun(lst):
     del lst[0]
 
@@ -67,7 +67,7 @@ print(mylist)</pre>
             operations that create new lists. For example, the <c>append</c>
             method modifies a list, but the <c>+</c> operator creates a new
             list:</p>
-  <program xml:id="listArgumentAppend" interactive="activecode" language="python">
+  <program label="listArgumentAppend" interactive="activecode" language="python">
     <code>
 t1 = [1, 2]
 t2 = t1.append(3)
@@ -93,7 +93,7 @@ def bad_delete_head(t):
             that was passed as an argument.</p>
   <activity label="listArg_MC_slice">
     <statement>
-      <p>Q-4: True or False. The following code block will <term>not</term> remove the first element from the list argument.</p>
+      <p> True or False. The following code block will <term>not</term> remove the first element from the list argument.</p>
       <pre>def deleting_first(lst):
     lst = lst[1:]</pre>
     </statement>
@@ -119,7 +119,7 @@ def bad_delete_head(t):
   <p>An alternative is to write a function that creates and returns a new
             list. For example, <c>tail</c> returns all but the first element
             of a list and leaves the original list unmodified. Here's how it is used:</p>
-  <program xml:id="listArgumentTail" interactive="activecode" language="python">
+  <program label="listArgumentTail" interactive="activecode" language="python">
     <code>
 def tail(t):
     return t[1:]
@@ -131,7 +131,7 @@ print(rest)
   </program>
   <activity label="listArg_MC_modify">
     <statement>
-      <p>Q-6: Which of the following list methods or operators will <term>not</term> create a new list when used.</p>
+      <p> Which of the following list methods or operators will <term>not</term> create a new list when used.</p>
     </statement>
     <choices>
       <choice>

@@ -21,22 +21,19 @@
 
   <activity label="webAPI_fill1">
     <statement>
-      <p>csp-10-2-1: APIs are ________ between applications that exchange data using HTTP and representing complex data using XML or JSON. <var/>  </p>
+      <p>APIs are <fillin width="20" mode="string" answer="contracts"/> between applications that exchange data using HTTP and representing complex data using XML or JSON. </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Cc]ontract(s)*">
-          <feedback>
-            <p>An API is the general name for an application to application contract.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>An API is an agreement between the two applications, also known as&#x2026;.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>An API is the general name for an application to application contract.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>An API is an agreement between the two applications, also known as&#x2026;.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
   <p>When we begin to build our programs where the functionality of our
             program includes access to services provided by other programs, we call
@@ -47,7 +44,7 @@
             code necessary to implement the application.</p>
   <activity label="webAPI_MC_tf">
     <statement>
-      <p>csp-10-2-2: True or False? A service-oriented architecture makes use of other applications' services.</p>
+      <p>True or False? A service-oriented architecture makes use of other applications' services.</p>
     </statement>
     <choices>
       <choice>
@@ -91,7 +88,7 @@
             the web, we call these <em>web services</em>.</p>
   <activity label="webAPI_MC_soa">
     <statement>
-      <p>csp-10-2-3: Which of the following is <term>not</term> an advantage of a service oriented architecture?</p>
+      <p>Which of the following is <term>not</term> an advantage of a service oriented architecture?</p>
     </statement>
     <choices>
       <choice>
@@ -137,7 +134,7 @@
                 URL: <url href="https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1" visual="https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1">https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1</url>.
                 Try entering that in a browser window.  You can also use Python to the get data
                 from an API using a URL as shown below.</p>
-    <program xml:id="web-api-get-dog-fact" interactive="activecode" language="python3">
+    <program label="web-api-get-dog-fact" interactive="activecode" language="python3">
       <code>
 import requests
 import json
@@ -158,7 +155,7 @@ print(in_dict.get("fact"))
                 create a dictionary
                 with all the parameter names and values and then pass the dictionary to the
                 <c>requests.get</c> after the URL as shown below.</p>
-    <program xml:id="web-api-get-dog-fact-with-parms-dict" interactive="activecode" language="python3">
+    <program label="web-api-get-dog-fact-with-parms-dict" interactive="activecode" language="python3">
       <code>
 import requests
 import json

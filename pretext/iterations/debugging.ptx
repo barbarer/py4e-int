@@ -28,7 +28,7 @@
             that the bug is before or after the check.</p>
   <activity label="itDebug_MC_bisection">
     <statement>
-      <p>Q-1: An example of <q>debugging by bisection</q> is&#x2026;</p>
+      <p>An example of <q>debugging by bisection</q> is&#x2026;</p>
     </statement>
     <choices>
       <choice>
@@ -59,21 +59,18 @@
   </activity>
   <activity label="itDebug_fill1">
     <statement>
-      <p>Q-2: When debugging, if the mid-point check is incorrect, the problem must be in the _______ half of the program. <var/>  </p>
+      <p>When debugging, if the mid-point check is incorrect, the problem must be in the <fillin width="20" mode="string" answer="first"/> half of the program.   </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ff]irst">
-          <feedback>
-            <p>Correct! If the mid-point check is incorrect the problem must be in the first half of the program.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! Hint: the problem won't be in the second half. Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Correct! If the mid-point check is incorrect the problem must be in the first half of the program.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! Hint: the problem won't be in the second half. Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
 </section>

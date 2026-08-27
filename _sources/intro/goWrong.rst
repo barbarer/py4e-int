@@ -4,6 +4,7 @@ What could possibly go wrong?
     single: Syntax Error
     single: Semantic Error
     single: Logic Error
+    single: Runtime Error
 
 As we saw in our earliest conversations with Python, we must communicate
 very precisely when we write Python code. The smallest deviation or
@@ -55,7 +56,7 @@ just don't understand what you meant, but please keep talking to me
 (\ ``>>>``\ )."
 
 As your programs become increasingly sophisticated, you will encounter
-three general types of errors:
+four general types of errors:
 
 * Syntax errors
     These are the first errors you will make and the easiest to fix. A
@@ -93,7 +94,24 @@ three general types of errors:
     while my instructions were syntactically correct, they sadly
     contained a small but undetected semantic error.".
 
-Again in all three types of errors, Python is merely trying its hardest
+* Runtime errors
+    A runtime error is a type of error that occurs when the program is syntactically
+    correct, but something goes wrong while the program is *running* that causes it to stop 
+    immediately, or "crash". For example, if you have a program that asks the user for 
+    a number that is used to divide another number, and the user enters 0, it causes 
+    the program to crash because division by zero is not defined mathematically. 
+
+    Another example is trying to add a number and a string. For example, the statement
+    ``total = 20 + "five"`` is syntactically correct, so Python is able to parse the code.
+    However, when Python attempts to run this statement, it does not know how to add 
+    a number and a string together, so the program stops with an error.
+
+    Runtime errors differ from syntax errors because Python cannot detect them until 
+    the program is actually running. When a runtime error occurs, Python displays an 
+    error message that includes the name of the error. Common examples are ``ValueError``,
+    ``TypeError``, and ``NameError``. You will learn more about these in later chapters.
+
+Again in all four types of errors, Python is merely trying its hardest
 to do exactly what you have asked.
 
 .. mchoice:: intro-gowrong-mc-error
@@ -125,6 +143,15 @@ to do exactly what you have asked.
     :feedback_c: Try again!
 
     Which of the following is a semantic error?
+
+.. fillintheblank:: intro-gowrong-mc-error-type
+    :practice: T
+
+    A ``ValueError`` is an example of a ________ error.
+
+    - :[Rr]untime: A runtime error is an error that occurs while the program is running, and it causes the program to stop immediately.
+      :[Ss]yntax: A syntax error is an error that occurs when the code does not follow the grammar rules of Python, and it prevents the program from running at all.
+      :.*: Try again!
 
 .. mchoice:: intro-gowrong-mc-syntax
     :practice: T

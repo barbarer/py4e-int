@@ -31,7 +31,7 @@
             1.0 (including 0.0 but not 1.0). Each time you call <c>random</c>,
             you get the next number in a long series. To see a sample, run this
             loop:</p>
-  <program xml:id="functRandom_float" interactive="activecode" language="python">
+  <program label="functRandom_float" interactive="activecode" language="python">
     <code>
 import random
 
@@ -60,7 +60,7 @@ for i in range(10):
             handle random numbers. The function <c>randint</c> takes the
             parameters <c>low</c> and <c>high</c>, and returns an
             integer between <c>low</c> and <c>high</c> (including both).</p>
-  <program xml:id="functRandom_randint" interactive="activecode" language="python">
+  <program label="functRandom_randint" interactive="activecode" language="python">
     <code>
 import random
 
@@ -70,7 +70,7 @@ print(random.randint(5, 10))
   </program>
   <p>To choose an element from a sequence at random, you can use
             <c>choice</c>:</p>
-  <program xml:id="functRandom_choice" interactive="activecode" language="python">
+  <program label="functRandom_choice" interactive="activecode" language="python">
     <code>
 import random
 
@@ -84,24 +84,21 @@ print(random.choice(t))
             exponential, gamma, and a few more.</p>
   <activity label="functRandom_fill1">
     <statement>
-      <p>Q-4: The ________ module provides functions that generate pseudorandom numbers <var/>  </p>
+      <p>The <fillin width="20" mode="string" answer="random"/> module provides functions that generate pseudorandom numbers  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Rr]andom">
-          <feedback>
-            <p>Correct! Some functions include <c>random</c>, <c>randint</c>, <c>choice</c>, and more.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! What is the word that comes before the period in these function calls? Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Correct! Some functions include <c>random</c>, <c>randint</c>, <c>choice</c>, and more.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! What is the word that comes before the period in these function calls? Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
   </activity>
-  <activity label="functRandom_pp_100" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="functRandom_pp_100" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Construct a block of code that correctly generates a random integer between 1 and 100
             (inclusive), then prints it out. Hint: there are two code blocks that are not used.</p>
@@ -124,7 +121,7 @@ print(random.choice(t))
       </block>
     </blocks>
   </activity>
-  <activity label="functRandom_pp_nums" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="functRandom_pp_nums" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Construct a block of code that correctly generates a random number from the list
             called <q>nums</q>, then prints it out. Hint: there are four code blocks that are not used.</p>

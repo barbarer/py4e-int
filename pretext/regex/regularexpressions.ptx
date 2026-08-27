@@ -30,7 +30,7 @@
     <statement>
       <p>This code uses regular expressions to print lines that contain <q>From:</q>.</p>
     </statement>
-    <program xml:id="re_ac1_editor" interactive="activecode" language="python">
+    <program label="re_ac1_editor" interactive="activecode" language="python">
       <code>
 import re
 hand = open('mbox-short.txt')
@@ -97,7 +97,7 @@ for line in hand:
     <statement>
       <p>Using regular expressions to print lines that contain <q>From:</q> at the beginning of the line.</p>
     </statement>
-    <program xml:id="re-ac2_editor" interactive="activecode" language="python">
+    <program label="re-ac2_editor" interactive="activecode" language="python">
       <code>
 import re
 hand = open('mbox-short.txt')
@@ -163,7 +163,7 @@ for line in hand:
       </choice>
     </choices>
   </activity>
-  <activity label="re-pp-wolverines-v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="re-pp-wolverines-v2" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Construct a block of code that loops reading lines from a file, removes whitespace on the right of the line, and prints out any line starting with &#x2018;Wolverines'.</p>
     </statement>

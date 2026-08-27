@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<section xml:id="functions_functions-and-conditionals-write-code-questions-orig" component="source-for-select-questions">
+  <title>Functions and Conditionals Write Code Questions Orig</title>
+
+  <activity xml:id="funct_conditional_writecode1q_pp" label="funct_conditional_writecode1q_pp" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Arrange the blocks to define a function <c>cropped_photo</c> that takes the <c>height</c> and <c>width</c> of a photo.
+            If the <c>height</c> and <c>width</c> are equal, then the function returns <c>"Cropped Photo"</c>. Otherwise,
+            it returns <c>"The photo needs to be cropped."</c></p>
+    </statement>
+    <blocks numbered="left">
+      <block order="1">
+        <cline>def cropped_photo(height, width):</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    if height == width:</cline>
+        </choice>
+        <choice>
+          <cline>    if height = width:</cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>        return "Cropped Photo"</cline>
+      </block>
+      <block order="4">
+        <cline>    else:</cline>
+      </block>
+      <block order="5">
+        <cline>        return "The photo needs to be cropped."</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity xml:id="funct_conditional_writecode2q_pp" label="funct_conditional_writecode2q_pp" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Arrange the blocks to define a function <c>bonus</c> that takes two parameters, <c>years</c> and <c>quality</c>.
+            If <c>years</c> is more than 5, then the person gets a bonus.
+            The person also gets a bonus if their <c>quality</c> of work was more than 90.
+            They can also get a bonus if they worked for at least 3 <c>years</c> and had <c>quality</c> more than 80.
+            If the person is eligible for a bonus, return <c>"Eligible for Bonus"</c>. Otherwise, return <c>"Ineligible for Bonus"</c>.</p>
+    </statement>
+    <blocks numbered="left">
+      <block order="1">
+        <cline>def bonus(years, quality):</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    if years > 5 or quality > 90 or (years >= 3 and quality > 80):</cline>
+        </choice>
+        <choice>
+          <cline>    if years > 5 and quality > 90 or (years >= 3 and quality > 80):</cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>        return "Eligible for Bonus"</cline>
+      </block>
+      <block order="4">
+        <cline>    else:</cline>
+      </block>
+      <block order="5">
+        <cline>        return "Ineligible for Bonus"</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity xml:id="funct_conditional_writecode3q_pp" label="funct_conditional_writecode3q_pp" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Arrange the blocks to define a function <c>move_elevator</c> that takes two parameters, <c>current_floor</c> and <c>next_floor</c>. If the elevator moves
+            to a floor above, then it should return <c>"Up"</c>. Otherwise, it should return <c>"Down"</c>. Also, if <c>next_floor</c> is the same as <c>current_floor</c>, it should return 0.</p>
+    </statement>
+    <blocks numbered="left">
+      <block order="1">
+        <cline>def move_elevator(current_floor, next_floor):</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    if next_floor &lt; current_floor:</cline>
+        </choice>
+        <choice>
+          <cline>    if next_floor &gt; current_floor:</cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>        return "Down"</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    elif next_floor &gt; current_floor:</cline>
+        </choice>
+        <choice>
+          <cline>    elif next_floor &lt; current_floor:</cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>        return "Up"</cline>
+      </block>
+      <block order="6">
+        <cline>    else:</cline>
+      </block>
+      <block order="7">
+        <cline>        return 0</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity xml:id="funct_conditional_writecode4q_pp" label="funct_conditional_writecode4q_pp" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Arrange the blocks to define a function <c>lunch_break</c> that takes a parameter <c>class_standing</c> and determines how long a lunch break will be based on
+            the student's class standing. If a person is a ‘Freshman', return <c>40</c>. If a person is a ‘Sophomore', return <c>30</c>.
+            If a person is a ‘Junior', return <c>20</c>. If a person is a ‘Senior', return <c>15</c>. If a person is none of these, return <c>0</c>.</p>
+    </statement>
+    <blocks numbered="left">
+      <block order="1">
+        <cline>def lunch_break(class_standing):</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    if class_standing == 'Freshman':</cline>
+        </choice>
+        <choice>
+          <cline>    if class_standing = 'Freshman':</cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>        return 40</cline>
+      </block>
+      <block order="4">
+        <cline>    elif class_standing == 'Sophomore':</cline>
+      </block>
+      <block order="5">
+        <cline>        return 30</cline>
+      </block>
+      <block order="6">
+        <cline>    elif class_standing == 'Junior':</cline>
+      </block>
+      <block order="7">
+        <cline>        return 20</cline>
+      </block>
+      <block order="8">
+        <choice correct="yes">
+          <cline>    elif class_standing == 'Senior':</cline>
+        </choice>
+        <choice>
+          <cline>    else class_standing == 'Senior':</cline>
+        </choice>
+      </block>
+      <block order="9">
+        <cline>        return 15</cline>
+      </block>
+      <block order="10">
+        <cline>    else:</cline>
+      </block>
+      <block order="11">
+        <cline>        return 0</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity xml:id="funct_conditional_writecode5q_pp" label="funct_conditional_writecode5q_pp" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Arrange the blocks to define a function <c>pay_rent</c> that takes in one parameter,
+            <c>units</c>. If <c>units</c> is less than 200, return <c>"$100"</c>.
+            If <c>units</c> is less than 500 and greater than or equal to 200, return <c>"$200"</c>. Otherwise, return <c>"$300"</c>.</p>
+    </statement>
+    <blocks numbered="left">
+      <block order="1">
+        <cline>def pay_rent(units):</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    if units &lt; 200:</cline>
+        </choice>
+        <choice>
+          <cline>    if units &lt;= 200:</cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>        return "$100"</cline>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    elif units &lt; 500:</cline>
+        </choice>
+        <choice>
+          <cline>    elif units &gt; 500:</cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>        return "$200"</cline>
+      </block>
+      <block order="6">
+        <cline>    else:</cline>
+      </block>
+      <block order="7">
+        <cline>        return "$300"</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity xml:id="funct_conditional_writecode6q_pp" label="funct_conditional_writecode6q_pp" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Arrange the blocks to define a function <c>play_weather</c> that takes the string <c>weather</c> as a parameter and
+            returns if one should play or not. If the <c>weather</c> is ‘sunny' or ‘cloudy', then the function
+            should return <c>"The person should play"</c>. If the <c>weather</c> is ‘rainy', ‘windy' or ‘snowy',
+            then the function should return <c>"The person should not play"</c>. If the <c>weather</c> is none of these, the
+            function should return <c>"It is not safe to go outside"</c>.</p>
+    </statement>
+    <blocks numbered="left">
+      <block order="1">
+        <cline>def play_weather(weather):</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    if weather == 'sunny' or weather == 'cloudy':</cline>
+        </choice>
+        <choice>
+          <cline>    if weather == 'sunny' and weather == 'cloudy':</cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>        return "The person should play"</cline>
+      </block>
+      <block order="4">
+        <cline>    elif weather == 'rainy' or weather == 'windy' or weather == 'snowy':</cline>
+      </block>
+      <block order="5">
+        <cline>        return "The person should not play"</cline>
+      </block>
+      <block order="6">
+        <cline>    else:</cline>
+      </block>
+      <block order="7">
+        <cline>        return "It is not safe to go outside"</cline>
+      </block>
+    </blocks>
+  </activity>
+</section>

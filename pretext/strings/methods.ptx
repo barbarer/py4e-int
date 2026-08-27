@@ -20,7 +20,7 @@
   <p>Python has a function called <c>dir</c> which lists all the methods
             available for an object. The <c>type</c> function returns the type
             of an object.</p>
-  <program xml:id="str-methods" interactive="activecode" language="python">
+  <program label="str-methods" interactive="activecode" language="python">
     <code>
 stuff = 'Hello world'
 print(type(stuff))
@@ -90,7 +90,7 @@ capitalize(...)
   <p>For example, the method <c>upper</c> takes a string and returns a
             new string with all uppercase letters. Instead of the function
             syntax, <c>upper(word)</c>, it uses the method syntax, <c>word.upper()</c>.</p>
-  <program xml:id="str-methodUpper" interactive="activecode" language="python">
+  <program label="str-methodUpper" interactive="activecode" language="python">
     <code>
 word = 'banana'
 new_word = word.upper()
@@ -106,7 +106,7 @@ print(new_word)
             <c>word</c>.</p>
   <p>For example, there is a string method named <c>find</c> that
             searches for the position of one string within another:</p>
-  <program xml:id="str-methodFind" interactive="activecode" language="python">
+  <program label="str-methodFind" interactive="activecode" language="python">
     <code>
 word = 'banana'
 index = word.find('a')
@@ -132,14 +132,14 @@ print(index)
   <p>One common task is to remove white space (spaces, tabs, or newlines)
             from the beginning and end of a string using the <c>strip</c>
             method:</p>
-  <program xml:id="str-stripMethod" interactive="activecode" language="python">
+  <program label="str-stripMethod" interactive="activecode" language="python">
     <code>
 line = '  Here we go  '
 print(line.strip())
         </code>
   </program>
   <p>Some methods, such as <c>startswith</c>, return boolean values:</p>
-  <program xml:id="str-startswith" interactive="activecode" language="python">
+  <program label="str-startswith" interactive="activecode" language="python">
     <code>
 line = 'Have a nice day'
 print(line.startswith('Have'))
@@ -149,7 +149,7 @@ print(line.startswith('h'))
   <p>You will note that <c>startswith</c> requires case to match, so
             sometimes we'll convert a line to lowercase using the <c>lower</c>
             method before we do any checking:</p>
-  <program xml:id="str-methodStartsWith" interactive="activecode" language="python">
+  <program label="str-methodStartsWith" interactive="activecode" language="python">
     <code>
 line = 'Have a nice day'
 line.startswith('h')
@@ -163,10 +163,22 @@ print(line.lower().startswith('h'))
             use <c>startswith</c> to see if the resulting lowercase string
             starts with the letter <q>h</q>. As long as we are careful with the order, we
             can make multiple method calls in a single expression.</p>
-  <activity>
-    <statement/>
-    <program interactive="" language=""/>
-  </activity>
+  <activity xml:id="countss" label="countss">
+  <statement>
+    <p>
+      Fix the following function. It should use the string method <c>count</c> to count the number of times a
+      double s (ss) appears in a word. There are 3 mistakes to fix.
+    </p>
+  </statement>
+
+  <program interactive="codelens" language="python">
+    <code>
+def countSS(word):
+  counter == count(word, 'ss'):
+  return counter
+    </code>
+  </program>
+</activity>
   <activity label="str-method-mc-cheer">
     <statement>
       <p>11-9-9: What is printed by the following statements?</p>

@@ -1,17 +1,19 @@
 <?xml version="1.0"?>
-<section xml:id="lists_write-code-questions">
-  <title>Write Code Questions</title>
-  <activity label="list_writeItemsq_v2_ac">
+<section xml:id="lists_write-code-questions-orig" component="source-for-select-questions">
+  <title>Write Code Questions Orig</title>
+
+  <activity xml:id="list_writeItemsq_v2_ac" label="list_writeItemsq_v2_ac">
     <statement>
       <p>Write a function <c>item_lister</c> that takes in a list of at least three values, <c>items</c>, as a parameter. Set the first value to <q>First item</q>, set
             the second value to the original first value, and set the third value to its current value plus one (rounded to two decimals). (Note: the third value of <c>items</c>
             will only be numerical.) Then, return the modified list. For example, <c>itemLister([2,4,6.222,8])</c> would return <c>['First item', 2, 7.22, 8]</c>.</p>
     </statement>
-    <program xml:id="list_writeItemsq_v2_ac_editor" interactive="activecode" language="python">
+    <program interactive="activecode" language="python">
       <code>
 def itemLister(items):
     # write code here
 
+print(itemLister([2,4,6.222,8]))
 =====
 
 from unittest.gui import TestCaseGui
@@ -34,7 +36,8 @@ myTests().main()
         </code>
     </program>
   </activity>
-  <activity label="list_writeItemsq_v2_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+
+  <activity xml:id="list_writeItemsq_v2_pp" label="list_writeItemsq_v2_pp" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>item_lister</c> that takes in a list of at least three values, <c>items</c>, as a parameter. Set the first value to <q>First item</q>, set
             the second value to the original first value, and set the third value to its current value plus one (rounded to two decimals). (Note: the third value of <c>items</c>
@@ -72,18 +75,19 @@ myTests().main()
       </block>
     </blocks>
   </activity>
-  <activity label="list_write23_ac">
+
+  <activity xml:id="list_write23_ac" label="list_write23_ac">
     <statement>
       <p>Write the function <c>change_index3</c> that takes in one parameter, <c>lst</c>, and assigns the value at index 3 of <c>lst</c> to &#x2018;200' and then returns <c>lst</c>.
             For example, <c>change_index3(['hi', 'goodbye', 'python', '106', '506'])</c> would return <c>['hi', 'goodbye', 'python', '200', '506']</c> and
             <c>change_index3([1, 2, 0, -5, 4])</c> would return <c>[1, 2, 0, '200', 4]</c>.</p>
     </statement>
-    <program xml:id="list_write23_ac_editor" interactive="activecode" language="python">
+    <program label="list_write23_ac_editor" interactive="activecode" language="python">
       <code>
 def change_index3(lst):
     # write code here
 
-
+print(change_index3(['hi', 'goodbye', 'python', '106', '506']))
 =====
 
 from unittest.gui import TestCaseGui
@@ -100,7 +104,8 @@ myTests().main()
         </code>
     </program>
   </activity>
-  <activity label="list_write23_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+
+  <activity xml:id="list_write23_pp" label="list_write23_pp" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create the function <c>change_index3</c> that takes in one parameter, <c>lst</c>, and assigns the value at index 3 of <c>lst</c> to &#x2018;200' and then returns <c>lst</c>.
             For example, <c>change_index3(['hi', 'goodbye', 'python', '106', '506'])</c> would return <c>['hi', 'goodbye', 'python', '200', '506']</c> and
@@ -123,16 +128,18 @@ myTests().main()
       </block>
     </blocks>
   </activity>
-  <activity label="list_write5_ac">
+
+  <activity xml:id="list_write5_ac" label="list_write5_ac">
     <statement>
       <p>Write a function <c>countWords</c> that takes in a list, <c>lst</c>, as a parameter, and returns the amount of words that have a length of 5.
-            For example, <c>countWords(['hello', 'hi', 'good morning', 'three', 'kitty']</c> should return <c>3</c>.</p>
+            For example, <c>countWords(['hello', 'hi', 'good morning', 'three', 'kitty'])</c> should return <c>3</c>.</p>
     </statement>
-    <program xml:id="list_write5_ac_editor" interactive="activecode" language="python">
+    <program label="list_write5_ac_editor" interactive="activecode" language="python">
       <code>
 def countWords(lst):
     # write code here
 
+print(countWords(['hello', 'hi', 'good morning', 'three', 'kitty']))
 ====
 from unittest.gui import TestCaseGui
 
@@ -149,7 +156,7 @@ myTests().main()
         </code>
     </program>
   </activity>
-  <activity label="list_write5_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity xml:id="list_write5_pp" label="list_write5_pp" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>countWords</c> that takes in a list, <c>lst</c>, as a parameter, and returns the amount of words that have a length of 5.
             For example, <c>countWords(['hello', 'hi', 'good morning', 'three', 'kitty']</c> should return <c>3</c>.</p>
@@ -180,15 +187,17 @@ myTests().main()
       </block>
     </blocks>
   </activity>
-  <activity label="list_writeReverse_ac">
+  <activity xml:id="list_writeReverse_ac" label="list_writeReverse_ac">
     <statement>
       <p>Write a function <c>reverse</c> that takes in one parameter, <c>lst</c>, and returns the reverse of a passed list.
-            For example, <c>reverse[1,2,3]</c> should return <c>[3, 2, 1]</c>.</p>
+            For example, <c>reverse([1,2,3])</c> should return <c>[3, 2, 1]</c>.</p>
     </statement>
-    <program xml:id="list_writeReverse_ac_editor" interactive="activecode" language="python">
+    <program interactive="activecode" language="python">
       <code>
 def reverse(lst):
     # write code here
+
+print(reverse([1,2,3]))
 ====
 from unittest.gui import TestCaseGui
 
@@ -204,10 +213,10 @@ myTests().main()
         </code>
     </program>
   </activity>
-  <activity label="list_writeReverse_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity xml:id="list_writeReverse_pp"  label="list_writeReverse_pp" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>reverse</c> that takes in one parameter, <c>lst</c>, and returns the reverse of a passed list.
-            For example, <c>reverse[1,2,3]</c> should return <c>[3, 2, 1]</c>.</p>
+            For example, <c>reverse([1,2,3])</c> should return <c>[3, 2, 1]</c>.</p>
     </statement>
     <blocks numbered="left">
       <block order="3">
@@ -226,16 +235,17 @@ myTests().main()
       </block>
     </blocks>
   </activity>
-  <activity label="list_sortByLen_ac">
+  <activity xml:id="list_sortByLen_ac" label="list_sortByLen_ac">
     <statement>
       <p>Write a function <c>sort_by_length</c> that takes in one parameter, a list of strings, <c>lst</c>, and returns the list sorted
             by the length of the strings. For example, <c>sort_by_length(["hello", "hi", "hey", "greetings"])</c> would return <c>['hi', 'hey', 'hello', 'greetings']</c>.</p>
     </statement>
-    <program xml:id="list_sortByLen_ac_editor" interactive="activecode" language="python">
+    <program label="list_sortByLen_ac_editor" interactive="activecode" language="python">
       <code>
 def sort_by_length(lst):
     # write code here
 
+print(sort_by_length(["hello", "hi", "hey", "greetings"]))
 ====
 
 from unittest.gui import TestCaseGui
@@ -251,10 +261,10 @@ myTests().main()
         </code>
     </program>
   </activity>
-  <activity label="list_sortByLen_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity xml:id="list_sortByLen_pp" label="list_sortByLen_pp" adaptive="yes" indentation="hide" language="python">
     <statement>
-      <p>Create a function <c>reverse</c> that takes in one parameter, <c>lst</c>, and returns the reverse of a passed list.
-            For example, <c>reverse[1,2,3]</c> should return <c>[3, 2, 1]</c>.</p>
+      <p>Arrange the blocks to define a function <c>sort_by_length</c> that takes in one parameter, a list of strings, <c>lst</c>, and returns the list sorted
+            by the length of the strings. For example, <c>sort_by_length(["hello", "hi", "hey", "greetings"])</c> would return <c>['hi', 'hey', 'hello', 'greetings']</c>.</p>
     </statement>
     <blocks numbered="left">
       <block order="3">
@@ -265,6 +275,218 @@ myTests().main()
       </block>
       <block order="1">
         <cline>    return lst</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity xml:id="list_writeMyListq_pp" label="list_writeMyListq_pp" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Arrange the blocks to define a function <c>add_to_new_list</c> that takes in a list of strings, <c>lst</c>, and creates a new list with the length
+            of <c>lst</c> and the first element of <c>lst</c> three times. For example, <c>add_to_new_list(["1","2","3"])</c> would return <c>[3, '111']</c>.</p>
+    </statement>
+    <blocks numbered="left">
+      <block order="1">
+        <cline>def add_to_new_list(lst):</cline>
+      </block>
+      <block order="2">
+        <cline>    new_list = []</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    new_list.append(len(lst))</cline>
+        </choice>
+        <choice>
+          <cline>    new_list.append(len(new_list))</cline>
+        </choice>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>    new_list.append(lst[0] * 3)</cline>
+        </choice>
+        <choice>
+          <cline>    new_list.append(lst[0] + 3)</cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>    return new_list</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity xml:id="list_writeAvgq_pp" label="list_writeAvgq_pp" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Arrange the blocks to define a function <c>average</c> that takes in a list of integers, <c>aList</c>, and returns the average of
+            all of the integers, rounded to one decimal place. For example, <c>average([99, 100, 74, 63, 100, 100])</c> would return <c>89.3</c>.</p>
+    </statement>
+    <blocks numbered="left">
+      <block order="1">
+        <cline>def average(aList):</cline>
+      </block>
+      <block order="2">
+        <cline>    total = 0</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    for num in aList:</cline>
+        </choice>
+        <choice>
+          <cline>    for num in aList</cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>        total += num</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    avg = round(total / len(aList), 1)</cline>
+        </choice>
+        <choice>
+          <cline>    avg = round(total / len(total), 1)</cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    return avg</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity xml:id="list_capitalize_pp" label="list_capitalize_pp" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Arrange the blocks to define a function <c>capitalize</c> that takes in a list of lists of strings, <c>lst</c>, and makes the first letter of each element capitalized and adds
+            it to a new list, then returns that new list. For example, <c>capitalize([["hi"],["hello", "hey"]])</c> would return <c>['Hi', 'Hello', 'Hey']</c>.</p>
+    </statement>
+    <blocks numbered="left">
+      <block order="1">
+        <cline>def capitalize(lst):</cline>
+      </block>
+      <block order="2">
+        <cline>    new_list = []</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    for sublist in lst:</cline>
+        </choice>
+        <choice>
+          <cline>    for sublist in lst[0]:</cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>        for word in sublist:</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>            new_list.append(word.capitalize())</cline>
+        </choice>
+        <choice>
+          <cline>            new_list.append(word.upper())</cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    return new_list</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity xml:id="list_writeChopq_pp" label="list_writeChopq_pp" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Arrange the blocks to define a function <c>chop</c> that takes a list, <c>lst</c>, and modifies it, removing the first and last elements.
+            For example, <c>chop([1,2,3,4,5])</c> should return <c>[2,3,4]</c>.</p>
+    </statement>
+    <blocks numbered="left">
+      <block order="1">
+        <cline>def chop(lst):</cline>
+      </block>
+      <block order="2">
+        <choice correct="yes">
+          <cline>    lst.pop(0)</cline>
+        </choice>
+        <choice>
+          <cline>    lst.pop(1)</cline>
+        </choice>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    lst.pop(-1)</cline>
+        </choice>
+        <choice>
+          <cline>    lst.pop(len(lst))</cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>    return lst</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity xml:id="list_writeSumq_pp" label="list_writeSumq_pp" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Arrange the blocks to define a function <c>sumUntilEven</c> that takes in one parameter, <c>lst</c>, and returns the sum of all the
+            elements in the <c>lst</c> up to but not including the first even number. For example, <c>sumUntilEven([1,2,3,4,5])</c>
+            should return <c>1</c> and <c>sumUntilEven([1,3,5,7,9])</c> should return <c>25</c>.</p>
+    </statement>
+    <blocks numbered="left">
+      <block order="1">
+        <cline>def sumUntilEven(lst):</cline>
+      </block>
+      <block order="2">
+        <cline>    total = 0</cline>
+        <cline>    index = 0</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    while index &lt; len(lst) and lst[index] % 2 != 0:</cline>
+        </choice>
+        <choice>
+          <cline>    while index &lt; len(lst) and lst[index] % 2 == 0:</cline>
+        </choice>
+      </block>
+      <block order="4">
+        <cline>        total += lst[index]</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>        index += 1</cline>
+        </choice>
+        <choice>
+          <cline>        total += 1</cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    return total</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity xml:id="list_loop_two_lists_pp" label="list_loop_two_lists_pp" adaptive="yes" indentation="hide" language="python">
+    <statement>
+      <p>Arrange the blocks to define a function <c>combine(names, ages)</c> that takes in two lists, <c>names</c> and <c>ages</c>, and returns a list of strings in the format <c>"Name: name, age: age"</c>. For example,
+            <c>combine(["Claire", "Jennifer"],[23, 19])</c> would return <c>["Name: Claire, age: 23", "Name: Jennifer, age: 19"]</c>.</p>
+    </statement>
+    <blocks numbered="left">
+      <block order="1">
+        <cline>def combine(names, ages):</cline>
+      </block>
+      <block order="2">
+        <cline>    result = []</cline>
+      </block>
+      <block order="3">
+        <choice correct="yes">
+          <cline>    for i in range(len(names)):</cline>
+        </choice>
+        <choice>
+          <cline>    for i in range(len(names) - 1):</cline>
+        </choice>
+      </block>
+      <block order="4">
+        <choice correct="yes">
+          <cline>        result.append("Name: " + names[i] + ", age: " + str(ages[i]))</cline>
+        </choice>
+        <choice>
+          <cline>        result.append("Name: " + names[i] + ", age: " + ages[i])</cline>
+        </choice>
+      </block>
+      <block order="5">
+        <cline>    return result</cline>
       </block>
     </blocks>
   </activity>
