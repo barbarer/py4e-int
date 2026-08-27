@@ -7,7 +7,7 @@
       <p>Write a function <c>add_to_new_list</c> that takes in a list of strings, <c>lst</c>, as a parameter and creates a new list with the length
                     of <c>lst</c> and the first element of <c>lst</c> three times. For example, <c>add_to_new_list(["1","2","3"])</c> would return <c>[3, '111']</c>.</p>
     </statement>
-    <program interactive="activecode" language="python">
+    <program interactive="activecode" language="python" codetailor="all" codetailor-fallback="list_writeMyListq_pp">
       <code>
 def add_to_new_list(lst):
     # write code here
@@ -28,19 +28,20 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
     </program>
-    <solution>
-        <p>
-                Write a function add_to_new_list that takes in a list of strings, lst, as a parameter and creates a new list with the length
-                    of lst and the first element of lst three times. For example, add_to_new_list(["1","2","3"]) would return [3, '111']
-        </p>
-    <program label="list_writeMyListq_sol" interactive="activecode" language="python"><code>
-def add_to_new_list(lst):
-    new_list = []
-    new_list.append(len(lst))
-    new_list.append(lst[0] * 3)
-    return new_list
+  </activity>
 
-print(add_to_new_list(["1","2","3"]))
+  <activity xml:id="list_writeItemsq_v2" label="list_writeItemsq_v2">
+    <statement>
+      <p>Write a function <c>item_lister</c> that takes in a list of at least three values, <c>items</c>, as a parameter. Set the first value to <q>First item</q>, set
+            the second value to the original first value, and set the third value to its current value plus one (rounded to two decimals). (Note: the third value of <c>items</c>
+            will only be numerical.) Then, return the modified list. For example, <c>itemLister([2,4,6.222,8])</c> would return <c>['First item', 2, 7.22, 8]</c>.</p>
+    </statement>
+    <program interactive="activecode" language="python" codetailor="incorrect" codetailor-fallback="list_writeItemsq_v2_pp">
+      <code>
+def itemLister(items):
+    # write code here
+
+print(itemLister([2,4,6.222,8]))
 =====
 
 from unittest.gui import TestCaseGui
@@ -48,24 +49,28 @@ from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
 
     def testOne(self):
-        self.assertEqual(add_to_new_list(['1','2','3']), [3, '111'], "add_to_new_list(['1','2','3'])")
-        self.assertEqual(add_to_new_list(['0','0','0','0']), [4, '000'], "add_to_new_list(['0','0','0','0'])")
-        self.assertEqual(add_to_new_list(['10.2','0.0','100','-2']), [4, '10.210.210.2'], "add_to_new_list(['10.2','0.0','100','-2'])")
+
+        res = itemLister([2,4,6.222,8])
+        self.assertEqual(res[0],'First item', "testing first item in list from itemLister([2,4,6.222,8])")
+        self.assertEqual(res[1],2, "testing second item in list from itemLister([2,4,6.222,8])")
+        self.assertAlmostEqual(res[2],7.22, 2, "testing third item in list from itemLister([2,4,6.222,8])")
+        res = itemLister([-2.2,'hi',-2.222])
+        self.assertEqual(res[0],'First item', "testing first item in list from itemLister([-2.2,'hi',-2.222])")
+        self.assertAlmostEqual(res[1],-2.2,1, "testing second item in list from itemLister([-2.2,'hi',-2.222])")
+        self.assertAlmostEqual(res[2],-1.22, 2, "testing third item in list from itemLister([-2.2,'hi',-2.222])")
 
 
 myTests().main()
-        </code></program>
-            </solution>
+        </code>
+    </program>
   </activity>
-  
-<activity label="list_writeItemsq_v2_sq"><select grade="first" questions="list_writeItemsq_v2_ac list_writeItemsq_v2_pp"/></activity>
 
   <activity xml:id="list_writeAvgq" label="list_writeAvgq">
     <statement>
       <p>Write a function <c>average</c> that takes in a list of integers, <c>aList</c>, as a parameter and returns the average of
                     all of the integers, rounded to one decimal place. For example, <c>average([99, 100, 74, 63, 100, 100])</c> would return <c>89.3</c>.</p>
     </statement>
-    <program interactive="activecode" language="python">
+    <program interactive="activecode" language="python" codetailor="all" codetailor-fallback="list_writeAvgq_pp">
       <code>
 def average(aList):
     # write code here
@@ -87,18 +92,20 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
     </program>
-    <solution>
-                <p>Write a function average that takes in a list of integers, aList, as a parameter and returns the average of
-                    all of the integers, rounded to one decimal place. For example, average([99, 100, 74, 63, 100, 100]) would return 89.33.</p>
-    <program label="list_writeAvgq_sol" interactive="activecode" language="python"><code>
-def average(aList):
-    sum = 0
-    for num in aList:
-        sum += num
-    avg = round(sum / len(aList),2)
-    return avg
+  </activity>
 
-print(average([99, 100, 74, 63, 100, 100]))
+  <activity xml:id="list_write23" label="list_write23">
+    <statement>
+      <p>Write the function <c>change_index3</c> that takes in one parameter, <c>lst</c>, and assigns the value at index 3 of <c>lst</c> to &#x2018;200' and then returns <c>lst</c>.
+            For example, <c>change_index3(['hi', 'goodbye', 'python', '106', '506'])</c> would return <c>['hi', 'goodbye', 'python', '200', '506']</c> and
+            <c>change_index3([1, 2, 0, -5, 4])</c> would return <c>[1, 2, 0, '200', 4]</c>.</p>
+    </statement>
+    <program interactive="activecode" language="python" codetailor="incorrect" codetailor-fallback="list_write23_pp">
+      <code>
+def change_index3(lst):
+    # write code here
+
+print(change_index3(['hi', 'goodbye', 'python', '106', '506']))
 =====
 
 from unittest.gui import TestCaseGui
@@ -106,24 +113,22 @@ from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
 
     def testOne(self):
-        self.assertAlmostEqual(average([99, 100, 74, 63, 100, 100]), 89.3, 1, "average([99, 100, 74, 63, 100, 100])")
-        self.assertAlmostEqual(average([0, 2, -3, 1.2, 2000]), 400.0, 1, "average([0, 2, -3, 1.2, 2000])")
-        self.assertAlmostEqual(average([-2]), -2.0, 1, "average([-2])")
+        self.assertEqual(change_index3(['hi', 'goodbye', 'python', '106', '506']), ['hi', 'goodbye', 'python', '200', '506'], "change_index3(['hi', 'goodbye', 'python', '106', '506'])")
+        self.assertEqual(change_index3([1, 2, 0, -5, 4]), [1, 2, 0, '200', 4], "change_index3([1, 2, 0, -5, 4])")
+        self.assertEqual(change_index3([False, '2', 2.5, '200', -4]), [False, '2', 2.5, '200', -4], "change_index3([False, '2', 2.5, '200', -4]")
 
 
 myTests().main()
-        </code></program>
-            </solution>
+        </code>
+    </program>
   </activity>
-
-  <activity label="list_write23_sq"><select grade="first" questions="list_write23_ac list_write23_pp"/></activity>
 
   <activity xml:id="list_capitalize_q" label="list_capitalize_q">
     <statement>
       <p>Write a function <c>capitalize</c> that takes in a list of lists of strings, <c>lst</c>, and makes the first letter of each element capitalized and adds
                     it to a new list and returns that new list. For example, <c>capitalize([["hi"],["hello", "hey"]])</c> would return <c>['Hi', 'Hello', 'Hey']</c>.</p>
     </statement>
-    <program interactive="activecode" language="python">
+    <program interactive="activecode" language="python" codetailor="all" codetailor-fallback="list_capitalize_pp">
       <code>
 def capitalize(lst):
     # write code here
@@ -143,43 +148,42 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
     </program>
-    <solution>
-            <p>Write a function capitalize that takes in a list of lists of strings, lst, and makes the first letter of each element capitalized and adds
-                    it to a new list and returns that new list. For example, capitalize([["hi"],["hello", "hey"]]) would return ['Hi', 'Hello', 'Hey'].
-                </p>
-    <program label="list_capitalize_q_sol" interactive="activecode" language="python"><code>
-def capitalize(lst):
-    new_list = []
-    for i in lst:
-        for j in i:
-            new_list.append(j.capitalize())
-    return new_list
+  </activity>
 
-print(capitalize([["hi"],["hello", "hey"]]))
-=====
+  <activity xml:id="list_write5" label="list_write5">
+    <statement>
+      <p>Write a function <c>countWords</c> that takes in a list, <c>lst</c>, as a parameter, and returns the amount of words that have a length of 5.
+            For example, <c>countWords(['hello', 'hi', 'good morning', 'three', 'kitty'])</c> should return <c>3</c>.</p>
+    </statement>
+    <program interactive="activecode" language="python" codetailor="incorrect" codetailor-fallback="list_write5_pp">
+      <code>
+def countWords(lst):
+    # write code here
 
+print(countWords(['hello', 'hi', 'good morning', 'three', 'kitty']))
+====
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
 
     def testOne(self):
-        self.assertEqual(capitalize([['hi'],['hello', 'hey']]), ['Hi', 'Hello', 'Hey'], "capitalize([['hi'],['hello', 'hey']])")
-        self.assertEqual(capitalize([['HI'],['HELLO', 'HEY']]), ['Hi', 'Hello', 'Hey'], "capitalize([['HI'],['HELLO', 'HEY']])")
-        self.assertEqual(capitalize([['go', 'blue'],['python', 'IS', 'The', 'Best']]), ['Go', 'Blue', 'Python', 'Is', 'The', 'Best'], "capitalize([['go', 'blue'],['python', 'IS', 'The', 'Best']])")
+        self.assertEqual(countWords(['hello', 'hi', 'good morning', 'three', 'kitty']),3,"countWords(['hello', 'hi', 'good morning', 'three', 'kitty'])")
+        self.assertEqual(countWords(['two', 'three', 'four', 'five', 'six', 'seven']),2,"countWords(['two', 'three', 'four', 'five', 'six', 'seven'])")
+        self.assertEqual(countWords(['these', 'those', 'there']),3,"countWords(['these', 'those', 'there'])")
+        self.assertEqual(countWords(['the', 'an', 'a']),0,"countWords(['the', 'an', 'a'])")
+
 
 myTests().main()
-        </code></program>
-            </solution>
+        </code>
+    </program>
   </activity>
-
-  <activity label="list_write5_sq"><select grade="first" questions="list_write5_ac list_write5_pp"/></activity>
 
   <activity xml:id="list_writeChopq"  label="list_writeChopq">
     <statement>
       <p>Write a function <c>chop</c> that takes a list, <c>lst</c>, and modifies it, removing the first and last elements.
                     For example, <c>chop([1,2,3,4,5])</c> should return <c>[2,3,4]</c>.</p>
     </statement>
-    <program interactive="activecode" language="python" >
+    <program interactive="activecode" language="python" codetailor="all" codetailor-fallback="list_writeChopq_pp">
       <code>
 def chop(lst):
     # write code here
@@ -199,33 +203,34 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
     </program>
-    <solution>
-            <p>Write a function chop that takes a list, lst, and modifies it, removing the first and last elements.
-                    For example, chop([1,2,3,4,5] should return [2,3,4].</p>
-    <program label="list_writeChopq_sol" interactive="activecode" language="python"><code>
-def chop(lst):
-    lst.pop(0)
-    lst.pop(-1)
-    return(lst)
+  </activity>
 
-print(chop([1,2,3,4,5]))
-=====
+  <activity xml:id="list_writeReverse" label="list_writeReverse">
+    <statement>
+      <p>Write a function <c>reverse</c> that takes in one parameter, <c>lst</c>, and returns the reverse of a passed list.
+            For example, <c>reverse([1,2,3])</c> should return <c>[3, 2, 1]</c>.</p>
+    </statement>
+    <program interactive="activecode" language="python" codetailor="incorrect" codetailor-fallback="list_writeReverse_pp">
+      <code>
+def reverse(lst):
+    # write code here
 
+print(reverse([1,2,3]))
+====
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
 
     def testOne(self):
-        self.assertEqual(chop([1,2,3,4,5]),[2,3,4],"chop([1,2,3,4,5])")
-        self.assertEqual(chop([1,3,5,7,9,10]),[3,5,7,9],"chop([1,3,5,7,9,10])")
-        self.assertEqual(chop([2,9]),[],"chop([2,9])")
+          self.assertEqual(reverse([1,2,3,4,5]),[5,4,3,2,1],"reverse([1,2,3,4,5])")
+          self.assertEqual(reverse([1,3,5,7,9]),[9,7,5,3,1],"reverse([1,3,5,7,9])")
+          self.assertEqual(reverse([2,4,6,7,9]),[9,7,6,4,2],"reverse([2,4,6,7,9])")
+
 
 myTests().main()
-        </code></program>
-            </solution>
+        </code>
+    </program>
   </activity>
-
-  <activity label="list_writeReverse_sq"><select grade="first" questions="list_writeReverse_ac list_writeReverse_pp"/></activity>
 
   <activity xml:id="list_writeSumq" label="list_writeSumq">
     <statement>
@@ -233,7 +238,7 @@ myTests().main()
                     elements in the <c>lst</c> up to but not including the first even number. For example, <c>sumUntilEven([1,2,3,4,5])</c>
                     should return <c>1</c> and <c>sumUntilEven([1,3,5,7,9])</c> should return <c>25</c>.</p>
     </statement>
-    <program interactive="activecode" language="python" >
+    <program interactive="activecode" language="python" codetailor="all" codetailor-fallback="list_writeSumq_pp">
       <code>
 def sumUntilEven(lst):
     # write code here
@@ -253,44 +258,41 @@ class myTests(TestCaseGui):
 myTests().main()
         </code>
     </program>
-    <solution>
-        <p>Write a function called sumUntilEven that takes in one parameter, lst, and returns the sum of all the
-                    elements in the lst up to but not including the first even number. For example, sumUntilEven([1,2,3,4,5]
-                    should return 1 and sumUntilEven([1,3,5,7,9] should return 25.
-        </p>
-    <program label="list_writeSumq_sol" interactive="activecode" language="python"><code>
-def sumUntilEven(lst):
-    total = 0
-    element = 0
-    while element &lt; len(lst) and lst[element] % 2 != 0:
-        total = total + lst[element]
-        element += 1
-    return total
+  </activity>
 
-print(sumUntilEven([1,2,3,4,5]))
+  <activity xml:id="list_sortByLen" label="list_sortByLen">
+    <statement>
+      <p>Write a function <c>sort_by_length</c> that takes in one parameter, a list of strings, <c>lst</c>, and returns the list sorted
+            by the length of the strings. For example, <c>sort_by_length(["hello", "hi", "hey", "greetings"])</c> would return <c>['hi', 'hey', 'hello', 'greetings']</c>.</p>
+    </statement>
+    <program interactive="activecode" language="python" codetailor="incorrect" codetailor-fallback="list_sortByLen_pp">
+      <code>
+def sort_by_length(lst):
+    # write code here
+
+print(sort_by_length(["hello", "hi", "hey", "greetings"]))
 ====
+
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
 
     def testOne(self):
-        self.assertEqual(sumUntilEven([1,2,3,4,5]),1,"sumUntilEven([1,2,3,4,5])")
-        self.assertEqual(sumUntilEven([1,3,5,7,9]),25,"sumUntilEven([1,3,5,7,9])")
-        self.assertEqual(sumUntilEven([2,4,6,7,9]),0,"sumUntilEven([2,4,6,7,9])")
+          self.assertEqual(sort_by_length(['hello', 'hi', 'hey', 'greetings']),['hi', 'hey', 'hello', 'greetings'],"sort_by_length(['hello', 'hi', 'hey', 'greetings'])")
+          self.assertEqual(sort_by_length(['hello', 'hello']),['hello', 'hello'],"sort_by_length(['hello', 'hello'])")
+          self.assertEqual(sort_by_length(['I', 'have', 'four', 'apples']),['I', 'have', 'four', 'apples'],"sort_by_length(['I', 'have', 'four', 'apples'])")
 
 myTests().main()
-        </code></program>
-            </solution>
+        </code>
+    </program>
   </activity>
-
-<activity label="list_sortByLen_sq"><select grade="first" questions="list_sortByLen_ac list_sortByLen_pp"/></activity>
 
   <activity xml:id="list_loop_two_lists" label="list_loop_two_lists">
     <statement>
       <p>Write a function <c>combine(names, ages)</c> that takes in two lists, <c>names</c> and <c>ages</c> and returns a list of strings in the format <c>"Name: name, age: age"</c>.  For example,
             <c>combine(["Claire", "Jennifer"],[23, 19])</c> would return <c>["Name: Claire, age: 23", "Name: Jennfier, age: 19"]</c>.</p>
     </statement>
-    <program interactive="activecode" language="python">
+    <program interactive="activecode" language="python" codetailor="all" codetailor-fallback="list_loop_two_lists_pp">
       <code>
 def combine(names, ages):
 
