@@ -374,7 +374,7 @@ unittest.main()
                     <q>https://www.si.umich.edu/programs/bachelor-science-information</q> from Aug 3rd 2023.
                        Click on the following link to view the source: <url href="http://web.archive.org/web/20230803131935/https://www.si.umich.edu/programs/bachelor-science-information">link</url>.
                     For example, <c>bsi_list(soup)</c> should return a list that starts with: 
-                 <c>{'How do I apply?': 'file:///web/20230803131935/https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply', ...} </c>.
+                 <c>{'How do I apply?': '/web/20230803131935/https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply', ...} </c>.
             </p>
 
     </statement><program interactive="activecode" language="python3"  add-files="old-bsi-id">
@@ -408,7 +408,8 @@ class myTests(unittest.TestCase):
         # create the soup object and print the results
         soup = BeautifulSoup(text, 'html.parser')
         out = bsi_dict(soup)
-        self.assertEqual(out["How do I apply?"], "file:///web/20230803131935/https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply")
+        self.assertEqual(out["How do I apply?"], "/web/20230803131935/https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply")
+        self.assertEqual(out["Current U-M students"], "/web/20230803131935/https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/cross-campus-transfer'")
 
 unittest.main()
         </code>
@@ -469,11 +470,11 @@ unittest.main()
 
 <activity xml:id="bsoup_writecode9q_v2" label="bsoup_writecode9q_v2">
     <statement>
-                        <p>Write a function called <c>name_email(soup)</c> that takes in a parameter <c>soup</c>, and returns a dictionary with the faculty names as keys and their email addresses as values.
+                        <p>Write a function called <c>names(soup)</c> that takes in a parameter <c>soup</c>, and returns a list with the faculty names.
                              The soup object is created from the file <c>FacultyUMSI-7-30-2025.html</c> which is a saved version of 
                     <q>https://www.si.umich.edu/people/directory/faculty/e</q> from July 30th 2025.
                        Click on the following link to view the source: <url href="http://web.archive.org/web/20250730015002/https://www.si.umich.edu/people/directory/faculty/e">link</url>.
-                      For example, <c>name_email(souop)</c> should return <c>{'Paul Edwards': 'pne@umich.edu', 'Ron Eglash': 'eglash@umich.edu', ...'}</c>.</p>
+                      For example, <c>names(souop)</c> should return <c>['Paul Edwards', 'Ron Eglash', ...]</c>.</p>
 
     </statement><program interactive="activecode" language="python3" add-files="bsi-faculty-e-id"> >
         <code>
@@ -489,7 +490,7 @@ fh.close()
 
 # create the soup object and print the results
 soup = BeautifulSoup(text, 'html.parser')
-print(name_email(soup))
+print(names(soup))
 
 ====
 import unittest
@@ -503,9 +504,8 @@ class myTests(unittest.TestCase):
 
         # create the soup object and print the results
         soup = BeautifulSoup(text, 'html.parser')
-        out = name_email(soup)
-        self.assertEqual(out['Paul Edwards'], 'pne@umich.edu')
-        self.assertEqual(out['Ron Eglash'], 'eglash@umich.edu')
+        out = names(soup)
+        self.assertEqual(out[0:2], ['Paul Edwards', 'Ron Eglash'])
 
 
 unittest.main()
@@ -519,7 +519,7 @@ unittest.main()
 
 <activity xml:id="bsoup_writecode10q_v2" label="bsoup_writecode10q_v2">
     <statement>
-                <p>Write a function called <c>program_email(soup)</c> that takes in a parameter <c>souop</c> and returns a dictionary with the program names as keys and the email addresses as values.
+                <p>Write a function called <c>program_email(soup)</c> that takes in a parameter <c>souop</c> and returns a list of the program names and their email addresses.
                     The soup object is created from the file <c>ContactUMSI-7-5-2025.html</c> which is a saved version of 
                     <q>https://www.si.umich.edu/about-umsi/contact-us</q> from July 30th 2025.
                        Click on the following link to view the source: <url href="http://web.archive.org/web/20250705132649/https://www.si.umich.edu/about-umsi/contact-us">link</url>.

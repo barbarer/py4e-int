@@ -348,11 +348,11 @@
   </activity>
   <activity xml:id="bsoup_writecode9q_mu"  label="bsoup_writecode9q_mu" adaptive="yes" indentation="hide" language="python">
     <statement>
-                    <p>Create a function called <c>name_email(soup)</c> that takes in a parameter <c>soup</c>, and returns a dictionary with the faculty names as keys and their email addresses as values.
+             <p>Create a function called <c>names(soup)</c> that takes in a parameter <c>soup</c>, and returns a list with the faculty names.
                              The soup object is created from the file <c>FacultyUMSI-7-30-2025.html</c> which is a saved version of 
                     <q>https://www.si.umich.edu/people/directory/faculty/e</q> from July 30th 2025.
                        Click on the following link to view the source: <url href="http://web.archive.org/web/20250730015002/https://www.si.umich.edu/people/directory/faculty/e">link</url>.
-                      For example, <c>name_email(souop)</c> should return <c>{'Paul Edwards': 'pne@umich.edu', 'Ron Eglash': 'eglash@umich.edu', ...'}</c>.</p>
+                      For example, <c>names(souop)</c> should return <c>['Paul Edwards', 'Ron Eglash', ...]</c>.</p>
     </statement>
     <blocks numbered="left">
       <block order="1">
@@ -365,48 +365,26 @@
         </choice>
       </block>
       <block order="8">
-        <cline>def name_email(url):</cline>
-        <cline>    names_list = []</cline>
-        <cline>    emails_list = []</cline>
-        <cline>    name_email_dict = {}</cline>
+        <cline>def names(soup):</cline>
+        <cline>    name_list = []</cline>
       </block>
       <block order="7">
         <choice>
           <cline>    names = soup.find_all(class="research-person-profile__name") </cline>
         </choice>
-        <choice correct="yes">
+        <choice correct="yes">"
           <cline>    names = soup.find_all(class_="research-person-profile__name")</cline>
-        </choice>
-      </block>
-      <block order="10">
-        <choice>
-          <cline>    emails = soup.find_all("link", target="_blank") </cline>
-        </choice>
-        <choice correct="yes">
-          <cline>    emails = soup.find_all("a", target="_blank")</cline>
         </choice>
       </block>
       <block order="9">
         <cline>    for name in names:</cline>
       </block>
       <block order="5">
-        <cline>        profile_name = name.text.strip().replace('\n \n ', '')</cline>
-        <cline>        names_list.append(profile_name)</cline>
-      </block>
-      <block order="6">
-        <cline>    for email in emails:</cline>
-      </block>
-      <block order="4">
-        <cline>        profile_email = email.get("href")</cline>
-        <cline>        profile_email = profile_email.replace('mailto:', '')</cline>
-        <cline>        emails_list.append(profile_email)</cline>
-      </block>
-      <block order="14">
-        <cline>    for i in range(len(names_list)):</cline>
-        <cline>        name_email_dict[names_list[i]] = emails_list[i]</cline>
+        <cline>        name = name.text.strip("\n ")</cline>
+        <cline>        name_list.append(name)</cline>
       </block>
       <block order="3">
-        <cline>    return name_email_dict</cline>
+        <cline>    return name_list</cline>
       </block>
     </blocks>
   </activity>
