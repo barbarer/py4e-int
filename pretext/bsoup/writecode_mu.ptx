@@ -351,9 +351,11 @@
   </activity>
   <activity xml:id="bsoup_writecode9q_mu"  label="bsoup_writecode9q_mu" adaptive="yes" indentation="hide" language="python">
     <statement>
-      <p>Create a function called <c>name_email</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the names and email addresses,
-            and returns a dictionary with the names as keys and the email addresses as values. Use the string replace method while web scraping. For example, <c>name_email('https://www.si.umich.edu/people/directory/faculty/e')</c>
-            should return <c>{'Paul Edwards': 'pne@umich.edu', 'Ron Eglash': 'eglash@umich.edu', ...}</c>. Since we are scraping a live site the results may be different.</p>
+                    <p>Create a function called <c>name_email(soup)</c> that takes in a parameter <c>soup</c>, and returns a dictionary with the faculty names as keys and their email addresses as values.
+                             The soup object is created from the file <c>FacultyUMSI-7-30-2025.html</c> which is a saved version of 
+                    <q>https://www.si.umich.edu/people/directory/faculty/e</q> from July 30th 2025.
+                       Click on the following link to view the source: <url href="http://web.archive.org/web/20250730015002/https://www.si.umich.edu/people/directory/faculty/e">link</url>.
+                      For example, <c>name_email(souop)</c> should return <c>{'Paul Edwards': 'pne@umich.edu', 'Ron Eglash': 'eglash@umich.edu', ...'}</c>.</p>
     </statement>
     <blocks numbered="left">
       <block order="1">
@@ -370,16 +372,6 @@
         <cline>    names_list = []</cline>
         <cline>    emails_list = []</cline>
         <cline>    name_email_dict = {}</cline>
-      </block>
-      <block order="11">
-        <choice correct="yes">
-          <cline>    r = requests.get(url)</cline>
-          <cline>    soup = BeautifulSoup(r.text, 'html.parser')</cline>
-        </choice>
-        <choice>
-          <cline>    r = requests.get(url)</cline>
-          <cline>    soup = BeautifulSoup(r.string, 'html.parser') </cline>
-        </choice>
       </block>
       <block order="7">
         <choice>

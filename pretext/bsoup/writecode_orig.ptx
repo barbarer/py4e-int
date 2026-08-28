@@ -309,15 +309,15 @@ unittest.main()
 </activity>
 -->
 
-<datafile xml:id="old-bsi-id" label="old-bsi-id" filename='BSI-Aug-3-2023.html' hide="yes">
-       <pre source="bsoup/BSI-Aug-3-2023.html"></pre>
+<datafile xml:id="old-bsi-id" label="old-bsi-id" filename='BSIInfo-8-3-26.html' hide="yes">
+       <pre source="bsoup/BSIInfo-8-3-26.html"></pre>
 </datafile>
                     
 <activity xml:id="bsoup_writecode6q_v2" label="bsoup_writecode6q_v2" >
     <statement>
                 <p>Write a function called <c>bsi_list(soup)</c> that takes in a parameter <c>soup</c> and returns a list of the section names and 
                     subsection names under Programs-Bachelor of Science in Information. 
-                     The soup object is created from the file <c>BSI-Aug-3-2023.html</c> which is a saved version of 
+                     The soup object is created from the file <c>BSIInfo-8-3-26.html</c> which is a saved version of 
                     <q>https://www.si.umich.edu/programs/bachelor-science-information</q> from Aug 3rd 2023.
                        Click on the following link to view the source: <url href="http://web.archive.org/web/20230803131935/https://www.si.umich.edu/programs/bachelor-science-information">link</url>.
                     For example, <c>bsi_list(soup)</c> should return a list that starts with: 
@@ -335,7 +335,8 @@ def bsi_list(url):
     # add code here
 
 
-fh = open('BSI-Aug-3-2023.html')
+
+fh = open('BSIInfo-8-3-26.html')
 text = fh.read()
 fh.close()
 
@@ -351,7 +352,7 @@ from bs4 import BeautifulSoup
 class myTests(unittest.TestCase):
 
     def testOne(self):
-        fh = open('BSI-Aug-3-2023.html')
+        fh = open('BSIInfo-8-3-26.html')
         text = fh.read()
         fh.close()
 
@@ -369,7 +370,7 @@ unittest.main()
     <statement>
             <p>Write a function called <c>bsi_dict(soup)</c> that takes in a parameter <c>soup</c> and returns a dictionary of the section names and 
                     subsection names with the urls under the Programs-Bachelor of Science in Information. 
-                     The soup object is created from the file <c>BSI-Aug-3-2023.html</c> which is a saved version of 
+                     The soup object is created from the file <c>BSIInfo-8-3-26.html</c> which is a saved version of 
                     <q>https://www.si.umich.edu/programs/bachelor-science-information</q> from Aug 3rd 2023.
                        Click on the following link to view the source: <url href="http://web.archive.org/web/20230803131935/https://www.si.umich.edu/programs/bachelor-science-information">link</url>.
                     For example, <c>bsi_list(soup)</c> should return a list that starts with: 
@@ -384,7 +385,7 @@ import re
 
 def bsi_dict(url):
 
-fh = open('BSI-Aug-3-2023.html')
+fh = open('BSIInfo-8-3-26.html')
 text = fh.read()
 fh.close()
 
@@ -400,7 +401,7 @@ import re
 class myTests(unittest.TestCase):
 
     def testOne(self):
-        fh = open('BSI-Aug-3-2023.html')
+        fh = open('BSIInfo-8-3-26.html')
         text = fh.read()
         fh.close()
 
@@ -416,87 +417,96 @@ unittest.main()
 
 <activity xml:id="bsoup_writecode8q_v2" label="bsoup_writecode8q_v2">
     <statement>
-                <p>Write a function called <c>envelope_address</c> that takes in a parameter <c>url</c> and uses BeautifulSoup to web scrape and return the address text in the footer as a list. For example, <c>envelope_address('https://www.si.umich.edu/programs/bachelor-science-information')</c>
-                    should return a list like: <c>['School of Information', 'University of Michigan', '105 S State St.', ...]</c>.  Since we are scraping a live site the actual values may be different.</p>
+            <p>Write a function called <c>envelope_address(soup)</c> that takes in a parameter <c>soup</c> and returns a list of the address text in the footer. 
+                     The soup object is created from the file <c>BSIInfo-8-3-26.html</c> which is a saved version of 
+                    <q>https://www.si.umich.edu/programs/bachelor-science-information</q> from Aug 3rd 2023.
+                       Click on the following link to view the source: <url href="http://web.archive.org/web/20230803131935/https://www.si.umich.edu/programs/bachelor-science-information">link</url>.
+                    For example, <c>envelope_address(soup)</c> should return a list that starts with: 
+                 <c>['School of Information', 'University of Michigan', '105 S State St.', ...] </c>.
+            </p>
 
     </statement>
-    <program label="bsoup_writecode8q_v2_editor" interactive="activecode" language="python3">
+    <program label="bsoup_writecode8q_v2_editor" interactive="activecode" language="python3" add-files="old-bsi-id">
         <code>
 from bs4 import BeautifulSoup
 import requests
 
-def envelope_address(url):
+def envelope_address(soup):
+
+fh = open('BSIInfo-8-3-26.html')
+text = fh.read()
+fh.close()
+
+# create the soup object and print the results
+soup = BeautifulSoup(text, 'html.parser')
+print(envelope_address(soup))
 
 ====
 import unittest
 import requests
 from bs4 import BeautifulSoup
 
-def f_envelope_address(url):
-    r = requests.get(url)
-    soup = BeautifulSoup(r.text, 'html.parser')
-    address = soup.find('div', class_ = 'footer-address').text // for now use - needs to be double
-    add_list = address.strip().split("\n")
-    out_list = []
-    for add_line in add_list:
-        out_list.append(add_line.strip())
-    return out_list
-
 class myTests(unittest.TestCase):
 
     def testOne(self):
-        url = 'https://www.si.umich.edu/programs/bachelor-science-information'
-        self.assertEqual(envelope_address(url), f_envelope_address(url), f'envelope_address({url})')
+        fh = open('BSIInfo-8-3-26.html')
+        text = fh.read()
+        fh.close()
+
+        # create the soup object and print the results
+        soup = BeautifulSoup(text, 'html.parser')
+        out = envelope_address(soup)
+        self.assertEqual(out[0:3], ['School of Information', 'University of Michigan', '105 S State St.'])
 
 unittest.main()
         </code>
     </program>
 </activity>
 
+<datafile xml:id="bsi-faculty-e-id" label="bsi-faculty-e-id" filename='FacultyUMSI-7-30-2025.html' hide="yes">
+       <pre source="bsoup/FacultyUMSI-7-30-2025.html"></pre>
+</datafile>
+
 <activity xml:id="bsoup_writecode9q_v2" label="bsoup_writecode9q_v2">
     <statement>
-                        <p>Write a function called <c>name_email</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the names and email addresses,
-                            and returns a dictionary with the names as keys and the email addresses as values. Use the string replace method while web scraping to get rid of <q>n</q>. For example, <c>name_email('https://www.si.umich.edu/people/directory/faculty/e')</c>
-                            should return <c>{'Paul Edwards': 'pne@umich.edu', 'Ron Eglash': 'eglash@umich.edu', ...'}</c>.  Since we are scraping a live site the actual values may be different.</p>
+                        <p>Write a function called <c>name_email(soup)</c> that takes in a parameter <c>soup</c>, and returns a dictionary with the faculty names as keys and their email addresses as values.
+                             The soup object is created from the file <c>FacultyUMSI-7-30-2025.html</c> which is a saved version of 
+                    <q>https://www.si.umich.edu/people/directory/faculty/e</q> from July 30th 2025.
+                       Click on the following link to view the source: <url href="http://web.archive.org/web/20250730015002/https://www.si.umich.edu/people/directory/faculty/e">link</url>.
+                      For example, <c>name_email(souop)</c> should return <c>{'Paul Edwards': 'pne@umich.edu', 'Ron Eglash': 'eglash@umich.edu', ...'}</c>.</p>
 
     </statement><program interactive="activecode" language="python3" >
         <code>
 from bs4 import BeautifulSoup
 import requests
 
+def name_email(soup):
+    # write code here
+
+fh = open('FacultyUMSI-7-30-2025.html')
+text = fh.read()
+fh.close()
+
+# create the soup object and print the results
+soup = BeautifulSoup(text, 'html.parser')
+print(name_email(soup))
+
 ====
-def f_name_email(url):
-    r = requests.get(url)
-    soup = BeautifulSoup(r.text, 'html.parser')
-
-    names_list = []
-    emails_list = []
-    name_email_dict = {}
-
-    names = soup.find_all(class_="research-person-profile__name")
-    emails = soup.find_all("a", target="_blank")
-
-    for name in names:
-        profile_name = name.text.strip().replace('\n \n ', '')
-        names_list.append(profile_name)
-
-    for email in emails:
-        profile_email = email.get("href")
-        profile_email = profile_email.replace('mailto:', '')
-        emails_list.append(profile_email)
-
-    for i in range(len(names_list)):
-        name_email_dict[names_list[i]] = emails_list[i]
-
-    return name_email_dict
-
 import unittest
 
 class myTests(unittest.TestCase):
 
     def testOne(self):
-        url = 'https://www.si.umich.edu/people/directory/faculty/e'
-        self.assertEqual(name_email(url), f_name_email(url), "test of name_email")
+        fh = open('FacultyUMSI-7-30-2025.html')
+        text = fh.read()
+        fh.close()
+
+        # create the soup object and print the results
+        soup = BeautifulSoup(text, 'html.parser')
+        out = name_email(soup)
+        self.assertEqual(out['Paul Edwards'], 'pne@umich.edu')
+        self.assertEqual(out['Ron Eglash'], 'eglash@umich.edu')
+
 
 unittest.main()
         </code>
