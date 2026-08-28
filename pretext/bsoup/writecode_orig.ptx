@@ -174,7 +174,7 @@ unittest.main()
                     The soup object is created from the file <c>PythonKeywords.html</c> which is a saved version of 
                     <q>https://www.w3schools.com/python/python_ref_keywords.asp</q> from 2026.
                        Click on the following link to view the source: <url href="http://web.archive.org/web/20260723003533/https://www.w3schools.com/python/python_ref_keywords.asp">link</url>.
-                    For example, keywords(soup) should return a list that starts with: <c>['and', 'as', ...]</c>.
+                    For example, <c>keywords(soup)</c> should return a list that starts with: <c>['and', 'as', ...]</c>.
                  </p>
     </statement>
     <program interactive="activecode" language="python3" add-files="bs-python-keywords-id">
@@ -226,7 +226,7 @@ unittest.main()
                     The soup object is created from the file <c>top-box-office-8-2026.html</c> which is a saved version of 
                     <q>https://www.imdb.com/chart/boxoffice/</q> from Aug 7-9th 2026.
                        Click on the following link to view the source: <url href="http://web.archive.org/web/20260812195232/https://www.imdb.com/chart/boxoffice/ ">link</url>.
-                    For example, movies(soup) should return a list that starts with: <c>['Spider-Man: Brand New Day', 'The Odyssey', 'The Odyssey', ...]</c>.
+                    For example, <c>movies(soup)</c> should return a list that starts with: <c>['Spider-Man: Brand New Day', 'The Odyssey', 'One Night Only', ...]</c>.
                  </p>
     </statement>
     <program interactive="activecode" language="python3" add-files="box-office-id">
@@ -259,8 +259,9 @@ class myTests(unittest.TestCase):
 
         # create the soup object and print the results
         soup = BeautifulSoup(text, 'html.parser')
-        keywords_list = movies(soup)
-        self.assertEqual(keywords_list[0:3], ['Spider-Man: Brand New Day', 'The Odyssey', 'The Odyssey'])
+        movie_list = movies(soup)
+        self.assertEqual(movie_list[0:3], ['Spider-Man: Brand New Day', 'The Odyssey', 'One Night Only'])
+        self.assertEqual(len(movie_list), 10)
 
 unittest.main()
         </code>
@@ -307,12 +308,20 @@ unittest.main()
     </program>
 </activity>
 -->
+
+<datafile xml:id="old-bsi-id" label="old-bsi-id" filename='BSI-Aug-3-2023.html' hide="yes">
+       <pre source="bsoup/BSI-Aug-3-2023.html"></pre>
+</datafile>
                     
 <activity xml:id="bsoup_writecode6q_v2" label="bsoup_writecode6q_v2" >
     <statement>
-                <p>Write a function called <c>bsi_list</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the section names and subsection names under Programs Bachelor of Science in Information,
-                    and returns a list of the section names and subsection names under Programs Bachelor of Science in Information. For example, <c>bsi_list('https://www.si.umich.edu/programs/bachelor-science-information')</c>
-                    should return a list like: <c>['How do I apply?', 'Current U-M students', 'Transfer students', ...]</c>. Since we are scraping a live site the actual values may be different.</p>
+                <p>Write a function called <c>bsi_list(soup)</c> that takes in a parameter <c>soup</c> and returns a list of the section names and 
+                    subsection names under Programs-Bachelor of Science in Information. 
+                     The soup object is created from the file <c>BSI-Aug-3-2023.html</c> which is a saved version of 
+                    <q>https://www.si.umich.edu/programs/bachelor-science-information</q> from Aug 3rd 2023.
+                       Click on the following link to view the source: <url href="http://web.archive.org/web/20230803131935/https://www.si.umich.edu/programs/bachelor-science-information">link</url>.
+                    For example, <c>bsi_list(soup)</c> should return a list that starts with: 
+                 <c>['How do I apply?', 'Current U-M students', 'Transfer students', ...]</c>.</p>
 
     </statement>
     <program  interactive="activecode" language="python3">
@@ -321,27 +330,34 @@ from bs4 import BeautifulSoup
 import requests
 import re
 
+
 def bsi_list(url):
+    # add code here
+
+
+fh = open('BSI-Aug-3-2023.html')
+text = fh.read()
+fh.close()
+
+# create the soup object and print the results
+soup = BeautifulSoup(text, 'html.parser')
+print(bsi_list(soup))
 
 ====
 import unittest
 import requests
 from bs4 import BeautifulSoup
 
-def f_bsi_list(url):
-    list1 = []
-    r = requests.get(url)
-    soup = BeautifulSoup(r.text, 'html.parser')
-    sections = soup.find_all('a', href = re.compile("/programs/bachelor-science-information/"))
-    for section in sections[:-2]:
-        list1.append(section.text.strip())
-    return list1
-
 class myTests(unittest.TestCase):
 
     def testOne(self):
-        url = 'https://www.si.umich.edu/programs/bachelor-science-information'
-        self.assertEqual(bsi_list(url),f_bsi_list(url),f'bsi_list({url}),'
+        fh = open('BSI-Aug-3-2023.html')
+        text = fh.read()
+        fh.close()
+
+        # create the soup object and print the results
+        out = soup = BeautifulSoup(text, 'html.parser')
+        self.assertEqual(out[0:3], ['How do I apply?', 'Current U-M students', 'Transfer students'])
 
 unittest.main()
         </code>
