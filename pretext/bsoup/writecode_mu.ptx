@@ -187,49 +187,38 @@
   </activity>
   <activity xml:id="bsoup_writecode5q_mu" label="bsoup_writecode5q_mu" adaptive="yes" indentation="hide" language="python">
     <statement>
-      <p>Create a function called <c>restaurants_list(file)</c> that takes in a file name as <c>file</c>, uses BeautifulSoup to web scrape the 13 best restaurants in Ann Arbor as of 2026,
-          For example, <c>restaurants_list('AnnArborBestRestaurants2026.html')</c>
-            should return <c>['Sava’s', 'Knight’s Steakhouse', 'Mani Osteria and Bar', ...]</c>. The current url is <q>https://detroit.eater.com/maps/best-ann-arbor-restaurants</q>. We are using a saved version of that site from Aug 1 2026.
-              Click on the following link to view the source <url href="http://web.archive.org/web/20260801120205/https://detroit.eater.com/maps/best-ann-arbor-restaurants">link</url>.</p>
+      <p>Create a function called <c>movies(soup)</c> that takes a soup object and returns a list of the top box office movies.
+                    The soup object is created from the file <c>top-box-office-8-2026.html</c> which is a saved version of 
+                    <q>https://www.imdb.com/chart/boxoffice/</q> from Aug 7-9th 2026.
+                       Click on the following link to view the source: <url href="http://web.archive.org/web/20260812195232/https://www.imdb.com/chart/boxoffice/ ">link</url>.
+                    For example, movies(soup) should return a list that starts with: <c>['Spider-Man: Brand New Day', 'The Odyssey', 'The Odyssey', ...]</c>.
+                 </p>
     </statement>
     <blocks numbered="left">
-      <block order="1">
+      <block order="4">
         <cline>from bs4 import BeautifulSoup</cline>
         <cline>import requests</cline>
       </block>
-      <block order="9">
-        <cline>def restaurants_list(file):</cline>
-        <cline>    r_list = []</cline>
+        <block order="2">
+        <cline>def movies(soup):</cline>
+        <cline>    movies = []</cline>
       </block>
-      <block order="2">
-        <cline>    fh = open(file)</cline>
-        <cline>    text = fh.read()</cline>
-        <cline>    fh.close()</cline>
-      </block>
-      <block order="5">
-        <choice correct="yes">
-          <cline>    soup = BeautifulSoup(text, 'html.parser')</cline>
-        </choice>
-        <choice>
-          <cline>    soup = BeautifulSoup(text, 'xml') </cline>
-        </choice>
-      </block>
-      <block order="4">
+      <block order="1">
          <choice>
-          <cline>    rest_list = soup.find('h2', class_="hkfm3h5") </cline>
+          <cline>    head_list = soup.find('h4', class_="ipc-title__text") </cline>
         </choice>
         <choice correct="yes">
-          <cline>    rest_list = soup.find_all("h2", class_="hkfm3h5")</cline>
+          <cline>    head_list = soup.find_all("h4", class_="ipc-title__text")</cline>
         </choice>
       </block>
       <block order="3">
-        <cline>    for rest in rest_list:</cline>
+        <cline>    for header in head_list:</cline>
       </block>
       <block order="6">
-        <cline>        r_list.append(rest.text.strip())</cline>
+        <cline>        movies.append(header.text.strip())</cline>
       </block>
       <block order="10">
-        <cline>    return r_list</cline>
+        <cline>    return movies</cline>
       </block>
     </blocks>
   </activity>
