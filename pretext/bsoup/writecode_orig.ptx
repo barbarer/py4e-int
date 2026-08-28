@@ -331,7 +331,7 @@ import requests
 import re
 
 
-def bsi_list(url):
+def bsi_list(soup):
     # add code here
 
 
@@ -383,7 +383,7 @@ from bs4 import BeautifulSoup
 import requests
 import re
 
-def bsi_dict(url):
+def bsi_dict(soup):
 
 fh = open('BSIInfo-8-3-26.html')
 text = fh.read()

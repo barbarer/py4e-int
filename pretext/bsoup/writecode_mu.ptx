@@ -242,7 +242,8 @@
         <cline>    list1 = []</cline>
       </block>
       <block order="1">
-        <cline>    sections = soup.find_all('a', href = re.compile("/programs/bachelor-science-information/"))</cline>
+        <cline>    url = re.compile("/programs/bachelor-science-information/")</cline>
+        <cline>    sections = soup.find_all('a', href=url)</cline>
       </block>
       <block order="7">
         <cline>    for section in sections[:-2]:</cline>
@@ -281,12 +282,8 @@
         <cline>    bsi_dict = {}</cline>
       </block>
       <block order="3">
-        <choice correct="yes">
-          <cline>    sections = soup.find_all('a', href = re.compile("/programs/bachelor-science-information/"))</cline>
-        </choice>
-        <choice>
-          <cline>    sections = soup.find_all('link', href = re.compile("/programs/bachelor-science-information/")) </cline>
-        </choice>
+          <cline>    url = re.compile("/programs/bachelor-science-information/")</cline>
+          <cline>    sections = soup.find_all('a', href=url)</cline>
       </block>
       <block order="6">
         <cline>    for section in sections[:-2]:</cline>
