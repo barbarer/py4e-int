@@ -475,7 +475,7 @@ unittest.main()
                        Click on the following link to view the source: <url href="http://web.archive.org/web/20250730015002/https://www.si.umich.edu/people/directory/faculty/e">link</url>.
                       For example, <c>name_email(souop)</c> should return <c>{'Paul Edwards': 'pne@umich.edu', 'Ron Eglash': 'eglash@umich.edu', ...'}</c>.</p>
 
-    </statement><program interactive="activecode" language="python3" >
+    </statement><program interactive="activecode" language="python3" add-files="bsi-faculty-e-id"> >
         <code>
 from bs4 import BeautifulSoup
 import requests
@@ -511,46 +511,54 @@ class myTests(unittest.TestCase):
 unittest.main()
         </code>
     </program>
-    </activity>             
+    </activity>         
+    
+<datafile xml:id="si-email-id" label="si-email-id" filename='ContactUMSI-7-5-2025.html' hide="yes">
+       <pre source="bsoup/ContactUMSI-7-5-2025.html"></pre>
+</datafile>
 
 <activity xml:id="bsoup_writecode10q_v2" label="bsoup_writecode10q_v2">
     <statement>
-                <p>Write a function called <c>program_email</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the program names under Email Addresses
-                    and Admissions (BSI program, MSI program, etc.) and their associated email addresses, and returns a dictionary with the program names as keys and the email addresses as values.
-                    For example, <c>program_email('https://www.si.umich.edu/about-umsi/contact-us')</c> should return something like <c>{'BSI program': 'umsi.undergrad@umich.edu', 'MHI program': 'hi.admissions@umich.edu', ...}</c>. Since we are scraping a live site the actual values may be different.</p>
+                <p>Write a function called <c>program_email(soup)</c> that takes in a parameter <c>souop</c> and returns a dictionary with the program names as keys and the email addresses as values.
+                    The soup object is created from the file <c>ContactUMSI-7-5-2025.html</c> which is a saved version of 
+                    <q>https://www.si.umich.edu/about-umsi/contact-us</q> from July 30th 2025.
+                       Click on the following link to view the source: <url href="http://web.archive.org/web/20250705132649/https://www.si.umich.edu/about-umsi/contact-us">link</url>.
+                    For example, <c>program_email(soup)</c> should return something like <c>{'BSI program': 'umsi.undergrad@umich.edu', 'MHI program': 'hi.admissions@umich.edu', ...}</c>.
+                </p>
 
     </statement>
-    <program  interactive="activecode" language="python3">
+    <program  interactive="activecode" language="python3" add-files="si-email-id">
         <code>
 from bs4 import BeautifulSoup
 import requests
 
 
 def program_email(url):
+    # write code here
+
+fh = open('ContactUMSI-7-5-2025.html')
+text = fh.read()
+fh.close()
+
+# create the soup object and print the results
+soup = BeautifulSoup(text, 'html.parser')
+print(program_email(soup))
 ====
-
-def f_program_email(url):
-    program_email_dict = {}
-    r = requests.get(url)
-    soup = BeautifulSoup(r.text, 'html.parser')
-    programs_section = soup.find("ul", dir="ltr")
-    programs = programs_section.find_all("li")
-    for program in programs:
-        split_name_email = program.text.split(":")
-        program_name = split_name_email[0]
-        program_email = split_name_email[1].replace("\xa0", "")
-        program_email_dict[program_name] = program_email
-
-    return program_email_dict
-
 
 import unittest
 
 class myTests(unittest.TestCase):
 
     def testOne(self):
-        url = 'https://www.si.umich.edu/about-umsi/contact-us'
-        self.assertEqual(program_email(url), f_program_email(url), 'test of program_email')
+        fh = open('ContactUMSI-7-5-2025.html')
+        text = fh.read()
+        fh.close()
+
+        # create the soup object and print the results
+        soup = BeautifulSoup(text, 'html.parser')
+        out = program_email(soup)
+        self.assertEqual(out['BSI program'], 'umsi.undergrad@umich.edu')
+        self.assertEqual(out['MHI program'], 'hi.admissions@umich.edu')
 
 unittest.main()
         </code>

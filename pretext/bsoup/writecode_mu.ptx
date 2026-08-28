@@ -425,14 +425,8 @@
         <cline>from bs4 import BeautifulSoup</cline>
       </block>
       <block order="12">
-        <cline>def program_email(url):</cline>
+        <cline>def program_email(soup):</cline>
         <cline>    program_email_dict = {}</cline>
-      </block>
-      <block order="2">
-        <cline>    r = requests.get(url)</cline>
-      </block>
-      <block order="6">
-        <cline>    soup = BeautifulSoup(r.text, 'html.parser')</cline>
       </block>
       <block order="1">
         <cline>    programs_section = soup.find("ul", dir="ltr")</cline>
