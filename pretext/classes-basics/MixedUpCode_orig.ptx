@@ -223,7 +223,45 @@ myTests().main()
       <p>Create a class <c>Account</c> with an <c>__init__</c> method that takes <c>id</c> and <c>balance</c> as numbers. Then create a <c>__str__</c> method that returns <q>id, balance</q>. Next create a <c>deposit</c> method takes <c>amount</c> as a number and adds that to the <c>balance</c>.  For example,
             if <c>a = Account(32, 100)</c> and <c>a.deposit(50)</c> is executed, <c>print(a)</c> should print <q>32, 150</q>.</p>
     </statement>
-    <blocks/>
+        <blocks numbered="left">
+      <block order="4">
+        <cline>class Account:</cline>
+      </block>
+      <block order="7">
+        <choice correct="yes">
+          <cline>  def __init__(self, id, balance):</cline>
+        </choice>
+        <choice>
+          <cline>  def __init__(self, id, balance)</cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    self.id = id</cline>
+        <cline>    self.balance = balance</cline>
+      </block>
+      <block order="2">
+        <cline>  def __str__(self):</cline>
+      </block>
+      <block order="5">
+        <choice correct="yes">
+          <cline>    return f"{self.id}, {self.balance}"</cline>
+        </choice>
+        <choice>
+          <cline>    return f"{id}, {balance}"</cline>
+        </choice>
+      </block>
+      <block order="3">
+        <cline>  def deposit(self, amount):</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    self.balance += amount</cline>
+        </choice>
+        <choice>
+          <cline>    self.balance += self.amount</cline>
+        </choice>
+      </block>
+    </blocks>
   </activity>
   <activity label="Classes_Basic_Account_ac" xml:id="Classes_Basic_Account_ac">
     <statement>
