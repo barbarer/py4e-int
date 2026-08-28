@@ -224,9 +224,13 @@
   </activity>
   <activity xml:id="bsoup_writecode6q_mu" label="bsoup_writecode6q_mu" adaptive="yes" indentation="hide" language="python">
     <statement>
-      <p>Create a function called <c>bsi_list</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape the section names and subsection names under Programs Bachelor of Science in Information,
-            and returns a list of the section names and subsection names under Programs Bachelor of Science in Information. For example, <c>bsi_list('https://www.si.umich.edu/programs/bachelor-science-information')</c>
-            should return <c>['How do I apply?', 'Current U-M students', 'Transfer students', ...]</c>. Since we are scraping a live site the results may be different.</p>
+ <p>Write a function called <c>bsi_list(soup)</c> that takes in a parameter <c>soup</c> and returns a list of the section names and 
+                    subsection names under Programs-Bachelor of Science in Information. 
+                     The soup object is created from the file <c>BSI-Aug-3-2023.html</c> which is a saved version of 
+                    <q>https://www.si.umich.edu/programs/bachelor-science-information</q> from Aug 3rd 2023.
+                       Click on the following link to view the source: <url href="http://web.archive.org/web/20230803131935/https://www.si.umich.edu/programs/bachelor-science-information">link</url>.
+                    For example, <c>bsi_list(soup)</c> should return a list that starts with: 
+                 <c>['How do I apply?', 'Current U-M students', 'Transfer students', ...]</c>.</p>
     </statement>
     <blocks numbered="left">
       <block order="5">
@@ -234,14 +238,8 @@
         <cline>from bs4 import BeautifulSoup</cline>
       </block>
       <block order="6">
-        <cline>def bsi_list(url):</cline>
+        <cline>def bsi_list(soup):</cline>
         <cline>    list1 = []</cline>
-      </block>
-      <block order="4">
-        <cline>    r = requests.get(url)</cline>
-      </block>
-      <block order="2">
-        <cline>    soup = BeautifulSoup(r.text, 'html.parser')</cline>
       </block>
       <block order="1">
         <cline>    sections = soup.find_all('a', href = re.compile("/programs/bachelor-science-information/"))</cline>
@@ -264,9 +262,13 @@
   </activity>
   <activity xml:id="bsoup_writecode7q_mu" label="bsoup_writecode7q_mu" adaptive="yes" indentation="hide" language="python">
     <statement>
-      <p>Create a function called <c>bsi_dict</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape and create a list of the section names and subsection names under Programs Bachelor of Science in Information,
-            and creates another list that contains the full urls of the named sections and subsections. Then, return a dictionary that contains the names as keys and their full urls as values. For example, <c>bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information')</c>
-            should return <c>{'How do I apply?': 'https://www.si.umich.edu/.../how-do-i-apply', ...}</c>. Since we are scraping a live site the results may be different.</p>
+       <p>Create a function called <c>bsi_dict(soup)</c> that takes in a parameter <c>soup</c> and returns a list of the section names and 
+                    subsection names under Programs-Bachelor of Science in Information. 
+                     The soup object is created from the file <c>BSI-Aug-3-2023.html</c> which is a saved version of 
+                    <q>https://www.si.umich.edu/programs/bachelor-science-information</q> from Aug 3rd 2023.
+                       Click on the following link to view the source: <url href="http://web.archive.org/web/20230803131935/https://www.si.umich.edu/programs/bachelor-science-information">link</url>.
+                    For example, <c>bsi_list(soup)</c> should return a dictionary that starts with: 
+                 <c>[</c>.</p>
     </statement>
     <blocks numbered="left">
       <block order="7">
@@ -275,18 +277,8 @@
         <cline>import re</cline>
       </block>
       <block order="4">
-        <cline>def bsi_dict(url):</cline>
+        <cline>def bsi_dict(soup):</cline>
         <cline>    bsi_dict = {}</cline>
-      </block>
-      <block order="5">
-        <choice correct="yes">
-          <cline>    r = requests.get(url)</cline>
-          <cline>    soup = BeautifulSoup(r.text, 'html.parser')</cline>
-        </choice>
-        <choice>
-          <cline>    r = requests.get(url)</cline>
-          <cline>    soup = BeautifulSoup(r.string, 'html.parser') </cline>
-        </choice>
       </block>
       <block order="3">
         <choice correct="yes">
@@ -324,12 +316,6 @@
       <block order="11">
         <cline>def envelope_address(url):</cline>
         <cline>    out_list = []</cline>
-      </block>
-      <block order="3">
-        <cline>    r = requests.get(url)</cline>
-      </block>
-      <block order="10">
-        <cline>    soup = BeautifulSoup(r.text, 'html.parser')</cline>
       </block>
       <block order="6">
         <choice>

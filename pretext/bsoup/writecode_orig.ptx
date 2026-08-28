@@ -324,7 +324,7 @@ unittest.main()
                  <c>['How do I apply?', 'Current U-M students', 'Transfer students', ...]</c>.</p>
 
     </statement>
-    <program  interactive="activecode" language="python3">
+    <program  interactive="activecode" language="python3" add-files="old-bsi-id">
         <code>
 from bs4 import BeautifulSoup
 import requests
@@ -356,7 +356,8 @@ class myTests(unittest.TestCase):
         fh.close()
 
         # create the soup object and print the results
-        out = soup = BeautifulSoup(text, 'html.parser')
+        soup = BeautifulSoup(text, 'html.parser')
+        out = bsi_list(soup)
         self.assertEqual(out[0:3], ['How do I apply?', 'Current U-M students', 'Transfer students'])
 
 unittest.main()
@@ -366,12 +367,16 @@ unittest.main()
 
 <activity xml:id="bsoup_writecode7q_v2" label="bsoup_writecode7q_v2">
     <statement>
-                        <p>Write a function called <c>bsi_dict</c> that takes in a parameter <c>url</c>, uses BeautifulSoup to web scrape and create a list of the section names and subsection names under Programs Bachelor of Science in Information,
-                            and returns a dictionary that contains the names as keys and their full urls as values. For example, <c>bsi_dict('https://www.si.umich.edu/programs/bachelor-science-information')</c>
-                            should return a dictionary like: <c>{'How do I apply?': 'https://www.si.umich.edu//.../how-do-i-apply', ...}</c>.
-                            Since we are scraping a live site the actual values may be different.</p>
+            <p>Write a function called <c>bsi_dict(soup)</c> that takes in a parameter <c>soup</c> and returns a dictionary of the section names and 
+                    subsection names with the urls under the Programs-Bachelor of Science in Information. 
+                     The soup object is created from the file <c>BSI-Aug-3-2023.html</c> which is a saved version of 
+                    <q>https://www.si.umich.edu/programs/bachelor-science-information</q> from Aug 3rd 2023.
+                       Click on the following link to view the source: <url href="http://web.archive.org/web/20230803131935/https://www.si.umich.edu/programs/bachelor-science-information">link</url>.
+                    For example, <c>bsi_list(soup)</c> should return a list that starts with: 
+                 <c>{'How do I apply?': 'file:///web/20230803131935/https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply', ...} </c>.
+            </p>
 
-    </statement><program interactive="activecode" language="python3" >
+    </statement><program interactive="activecode" language="python3"  add-files="old-bsi-id">
         <code>
 from bs4 import BeautifulSoup
 import requests
@@ -379,29 +384,30 @@ import re
 
 def bsi_dict(url):
 
+fh = open('BSI-Aug-3-2023.html')
+text = fh.read()
+fh.close()
+
+# create the soup object and print the results
+soup = BeautifulSoup(text, 'html.parser')
+print(bsi_dict(soup))
+
 ====
 import unittest
 import requests
 import re
 
-def f_bsi_dict(url):
-    bsi_dict = {}
-    r = requests.get(url)
-    soup = BeautifulSoup(r.text, 'html.parser')
-    sections = soup.find_all('a', href = re.compile("/programs/bachelor-science-information/"))
-
-    for section in sections[:-2]:
-        key = section.text.strip()
-        value = "https://www.si.umich.edu/" + section.get('href')
-        bsi_dict[key] = value
-
-    return bsi_dict
-
 class myTests(unittest.TestCase):
 
     def testOne(self):
-        url = 'https://www.si.umich.edu/programs/bachelor-science-information'
-        self.assertEqual(bsi_dict(url),f_bsi_dict(url), f'bsi_dict({url})')
+        fh = open('BSI-Aug-3-2023.html')
+        text = fh.read()
+        fh.close()
+
+        # create the soup object and print the results
+        soup = BeautifulSoup(text, 'html.parser')
+        out = bsi_dict(soup)
+        self.assertEqual(out["How do I apply?"], "file:///web/20230803131935/https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply")
 
 unittest.main()
         </code>
