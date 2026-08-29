@@ -519,7 +519,7 @@ unittest.main()
 
 <activity xml:id="bsoup_writecode10q_v2" label="bsoup_writecode10q_v2">
     <statement>
-                <p>Write a function called <c>program_email(soup)</c> that takes in a parameter <c>souop</c> and returns a list of the program names and their email addresses.
+                <p>Write a function called <c>program_email(soup)</c> that takes in a parameter <c>soup</c> and returns a list of the program names and their email addresses.
                     The soup object is created from the file <c>ContactUMSI-7-5-2025.html</c> which is a saved version of 
                     <q>https://www.si.umich.edu/about-umsi/contact-us</q> from July 30th 2025.
                        Click on the following link to view the source: <url href="http://web.archive.org/web/20250705132649/https://www.si.umich.edu/about-umsi/contact-us">link</url>.
@@ -533,7 +533,7 @@ from bs4 import BeautifulSoup
 import requests
 
 
-def program_email(url):
+def program_email(soup):
     # write code here
 
 fh = open('ContactUMSI-7-5-2025.html')
