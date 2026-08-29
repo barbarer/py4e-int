@@ -409,7 +409,7 @@ class myTests(unittest.TestCase):
         soup = BeautifulSoup(text, 'html.parser')
         out = bsi_dict(soup)
         self.assertEqual(out["How do I apply?"], "/web/20230803131935/https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply")
-        self.assertEqual(out["Current U-M students"], "/web/20230803131935/https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/cross-campus-transfer'")
+        self.assertEqual(out["Current U-M students"], "/web/20230803131935/https://www.si.umich.edu/programs/bachelor-science-information/how-do-i-apply/cross-campus-transfer")
 
 unittest.main()
         </code>
@@ -523,7 +523,7 @@ unittest.main()
                     The soup object is created from the file <c>ContactUMSI-7-5-2025.html</c> which is a saved version of 
                     <q>https://www.si.umich.edu/about-umsi/contact-us</q> from July 30th 2025.
                        Click on the following link to view the source: <url href="http://web.archive.org/web/20250705132649/https://www.si.umich.edu/about-umsi/contact-us">link</url>.
-                    For example, <c>program_email(soup)</c> should return something like <c>{'BSI program': 'umsi.undergrad@umich.edu', 'MHI program': 'hi.admissions@umich.edu', ...}</c>.
+                    For example, <c>program_email(soup)</c> should return something like <c>{'BSI program': 'umsi.admissions@umich.edu', 'MHI program': 'hi.admissions@umich.edu', ...}</c>.
                 </p>
 
     </statement>
@@ -557,7 +557,7 @@ class myTests(unittest.TestCase):
         # create the soup object and print the results
         soup = BeautifulSoup(text, 'html.parser')
         out = program_email(soup)
-        self.assertEqual(out['BSI program'], 'umsi.undergrad@umich.edu')
+        self.assertEqual(out['BSI program'], 'umsi.admissions@umich.edu')
         self.assertEqual(out['MHI program'], 'hi.admissions@umich.edu')
 
 unittest.main()
