@@ -218,7 +218,7 @@ myTests().main()
         </code>
     </program>
   </activity>
-  <activity label="Classes_Basic_Account_pp" xml:id="Classes_Basic_Account_pp">
+  <activity label="Classes_Basic_Account_pp" xml:id="Classes_Basic_Account_pp" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a class <c>Account</c> with an <c>__init__</c> method that takes <c>id</c> and <c>balance</c> as numbers. Then create a <c>__str__</c> method that returns <q>id, balance</q>. Next create a <c>deposit</c> method takes <c>amount</c> as a number and adds that to the <c>balance</c>.  For example,
             if <c>a = Account(32, 100)</c> and <c>a.deposit(50)</c> is executed, <c>print(a)</c> should print <q>32, 150</q>.</p>
@@ -595,7 +595,7 @@ myTests().main()
         </code>
     </program>
   </activity
-  ><activity label="Classes_Basic_Loan_pp" xml:id="Classes_Basic_Loan_pp">
+  ><activity label="Classes_Basic_Loan_pp" xml:id="Classes_Basic_Loan_pp" adaptive="yes" indentation="hide" language="python">
   
     <statement>
       <p>Create a class <c>Loan</c> with an initializer method that takes in an integer loan_amt, a float interest_rate and integer years. Then create a string method that returns <q>Your loan is &#x2018;'loan_amt'' for &#x2018;'years'' years at an interest rate of &#x2018;'interest_rate''.</q> Create another method called total_payment that calculates the total amount of loan payment based on the interest rate and number of years. Use the formula (loan_amt * (1 + interest_rate/100) ^ years). Also round your total payment to two decimal places. We're assuming that you are paying on an annual basis. For example, <c>print(l)</c> when <c>l = Loan(10000, 5, 10)</c> would print <c>Your loan is $10000 for 10 years at an interest rate of 5%.</c> and <c>print(l.total_payment())</c> would print <c>16288.95</c> as a float.</p>
