@@ -562,10 +562,11 @@
         </code>
     </program>
   </activity>
-  <activity label="mixedupcode_turtles_10" xml:id="mixedupcode_turtles_10" adaptive="yes" indentation="hide" language="python">
+  <activity label="mixedupcode_turtles_10_v2" xml:id="mixedupcode_turtles_10_v2" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function called <c>draw_diamond</c> that takes in parameters <c>turtle</c>, <c>xpos</c>, <c>ypos</c>, <c>length</c>, and <c>color</c> and creates a diamond
-            at any given position with color <c>color</c> and side lengths of <c>length</c>. After creating the function, create a Screen object and a Turtle object and
+            at any given position with color <c>color</c> and side lengths of <c>length</c>. In the function pick up the pen, move the turtle to the desired xpos and ypos, put down the pend, and set the color.  Do all turning and moving to draw the filled diamond.
+            After creating the function, create a Screen object and a Turtle object and
             call <c>draw_diamond</c> with arguments <c>xpos = -120</c>, <c>ypos = 30</c>, <c>length = 60</c>, <c>color = 'green'</c>, and the Turtle object.</p>
     </statement>
     <blocks numbered="left">
@@ -577,14 +578,6 @@
         <cline>    turtle.penup()</cline>
         <cline>    turtle.goto(xpos, ypos)</cline>
       </block>
-      <block order="4">
-        <choice correct="yes">
-          <cline>    turtle.left(45)</cline>
-        </choice>
-        <choice>
-          <cline>    turtle.left(90) </cline>
-        </choice>
-      </block>
       <block order="9">
         <cline>    turtle.pendown()</cline>
       </block>
@@ -594,6 +587,14 @@
         </choice>
         <choice>
           <cline>    turtle.side(color) </cline>
+        </choice>
+      </block>
+            <block order="4">
+        <choice correct="yes">
+          <cline>    turtle.left(45)</cline>
+        </choice>
+        <choice>
+          <cline>    turtle.left(90) </cline>
         </choice>
       </block>
       <block order="2">
