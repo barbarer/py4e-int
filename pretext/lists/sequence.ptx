@@ -119,5 +119,16 @@ print(cheeses, numbers, empty)
 
         <activity label="listSeq_fill1">
             <statement>
-    <p> A list within another list is said to be __________. <var/>  </p></statement><setup><var><condition string="[Nn]ested"><feedback><p>A list within another list is nested.</p></feedback></condition><condition string=".*"><feedback><p>Try again.</p></feedback></condition></var></setup></activity>    </section>
+    <p> A list within another list is said to be <fillin width="10" answer="nested" mode="string"/>.</p>
+        </statement>
+        <evaluation>
+        <evaluate>
+        <test correct="yes"> 
+        <strcmp>[Nn]ested</strcmp>
+        <feedback><p>A list within another list is nested.</p>
+        </feedback>
+        </test>
+        <test>
+        <feedback><p>Try again.</p></feedback>
+        </test></evaluate></evaluation></activity>    </section>
 
