@@ -54,8 +54,8 @@ apples = 4
 pears = 3
 totalCost =
 print(totalCost)
-
-====
+        </code>
+        <tests>
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
 
@@ -63,7 +63,7 @@ class myTests(TestCaseGui):
         self.assertAlmostEqual(totalCost,3.55, 2, "totalCost should equal 3.55", 0.2)
 
 myTests().main()
-        </code>
+        </tests>
           </program>
         </activity>
 
@@ -122,7 +122,8 @@ print(word1, word1, word2, word3)
 total = 7 + 3 * 6 - 2
 print(total)
 
-====
+        </code>
+        <tests>
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
 
@@ -130,7 +131,7 @@ class myTests(TestCaseGui):
         self.assertEqual(total,40)
 
 myTests().main()
-        </code>
+        </tests>
           </program>
         </activity>
 
