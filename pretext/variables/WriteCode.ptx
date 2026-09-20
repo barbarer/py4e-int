@@ -175,8 +175,9 @@ myTests().main()
 
       <p>
         Store the current time in a variable called <c>current_time</c>, the
-        number of hours to wait in a variable called <c>waiting_time</c>, and
-        the resulting alarm time in a variable called <c>hours</c>, as shown in
+        number of hours to wait in a variable called <c>waiting_time</c>, the
+        sum of the current time and waiting time in a variable called <c>hours</c>,
+        and the resulting alarm time in a variable called <c>time_of_day</c>, as shown in
         the starter code.
       </p>
     </statement>
@@ -189,6 +190,7 @@ waiting_time =
 
 
 hours =
+time_of_day =
 
 print()
       </code>
@@ -210,11 +212,20 @@ class myTests(TestCaseGui):
             hours
         except NameError:
             self.fail("Checking that a variable named 'hours' was created")
+        try:
+            time_of_day
+        except NameError:
+            self.fail("Checking that a variable named 'time_of_day' was created")
 
+    def testHoursCalculation(self):
+      expected = int(current_time) + int(waiting_time)
+      self.assertEqual(int(hours), expected,
+        "Checking that hours equals current_time + waiting_time")
+    
     def testCalculation(self):
         expected = (int(current_time) + int(waiting_time)) % 24
-        self.assertEqual(int(hours), expected,
-            "Checking that hours equals (current_time + waiting_time) % 24")
+        self.assertEqual(int(time_of_day), expected,
+            "Checking that time_of_day equals (current_time + waiting_time) % 24")
 
     def testOutput(self):
         expected = (int(current_time) + int(waiting_time)) % 24
@@ -237,30 +248,29 @@ myTests().main()
         hours to wait for the alarm.
         Your program should output what the time will be on the clock when the
         alarm goes off.
-        Using the ``int()`` function and modulus operator ``%`` could come in
-        handy!
+        <em>Using the <c>int()</c> function and modulus operator <c>%</c> could come in handy!</em>
       </p>
 
       <program interactive="activecode" language="python" label="var-wc-timeq-sol">
         <code>
 
 #prompt the user for the current time
-current_time_string = input("What is the current time (in hours)?")
+current_time = input("What is the current time (in hours)?")
 #prompt the user for the time to wait
-waiting_time_string = input("How many hours do you have to wait?")
+waiting_time = input("How many hours do you have to wait?")
 
 #convert the current time and the time to wait to integers
-current_time_int = int(current_time_string)
-waiting_time_int = int(waiting_time_string)
+current_time = int(current_time)
+waiting_time = int(waiting_time)
 
 #combine the two times
-hours = current_time_int + waiting_time_int
+hours = current_time + waiting_time
 
 #use the modulus operator to keep the time within 24 hours
-timeofday = hours % 24
+time_of_day = hours % 24
 
 #print the time of day that the alarm will go off
-print(timeofday)
+print(time_of_day)
         </code>
         <tests/>
       </program>
