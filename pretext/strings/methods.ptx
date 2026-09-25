@@ -171,12 +171,24 @@ print(line.lower().startswith('h'))
     </p>
   </statement>
 
-  <program interactive="codelens" language="python">
+  <program label="countSS-editor" interactive="activecode" language="python">
     <code>
 def countSS(word):
   counter == count(word, 'ss'):
   return counter
     </code>
+    <tests>
+         from unittest.gui import TestCaseGui
+         class myTests(TestCaseGui):
+
+             def testOne(self):
+                 self.assertEqual(countSS('banana'),0,"Tested countSS on input 'banana'")
+                 self.assertEqual(countSS('Mississippi'),2,"Tested countSS on input 'Mississippi'")
+                 self.assertEqual(countSS('scissors'),1,"Tested countSS on input 'scissors'")
+                 self.assertEqual(countSS('methods'),0,"Tested countSS on input 'methods'")
+
+         myTests().main()
+    </tests>
   </program>
 </activity>
   <activity label="str-method-mc-cheer">
