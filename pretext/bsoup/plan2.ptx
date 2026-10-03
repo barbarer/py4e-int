@@ -51,7 +51,7 @@ soup = BeautifulSoup(r.content, 'html.parser')
 <cline><area correct="no"># Load libraries for web scraping</area></cline>
 <cline><area correct="no">from bs4 import BeautifulSoup</area></cline>
 <cline><area correct="no">import requests</area></cline>
-
+<cline></cline>
 <cline><area correct="no"># Get a soup from a URL</area></cline>
 <cline><area correct="no">url = </area><area correct="yes">'https://web.archive.org/web/20200427175705/https://cottageinn.com/pick-a-location/'</area></cline>
 <cline><area correct="no">r = requests.get(url)</area></cline>
@@ -91,6 +91,8 @@ soup = BeautifulSoup(r.content, 'html.parser')
             Correct! The URL for the University of Michigan wikipedia page is <c>https://en.wikipedia.org/wiki/University_of_Michigan</c>.
           </p>
         </feedback>
+      </test>
+      <test>
         <feedback>
           <p>
             Not quite. The URL for the University of Michigan wikipedia page is <c>https://en.wikipedia.org/wiki/University_of_Michigan</c>.
