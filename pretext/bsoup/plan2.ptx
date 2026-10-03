@@ -7,14 +7,14 @@
       <p>
         To use the BeautifulSoup web scraping library, we have to put the webpage into something called a <em>soup</em>.
       </p>
-      <p>Here is the code for getting a <strong>soup</strong> from the <strong>Cottage Inn location page</strong>.</p>
-      <program language="python">
+      <p>Here is the code for getting a <em>soup</em> from the <em>Cottage Inn location page</em>.</p>
+      <program language="python" label="plan2-example-editor">
         <code xml:space="preserve">
 # Load libraries for web scraping
 from bs4 import BeautifulSoup
 import requests
 # Get a soup from a URL
-url = 'https://cottageinn.com/pick-a-location/'
+url = 'https://web.archive.org/web/20200427175705/https://cottageinn.com/pick-a-location/'
 r = requests.get(url)
 soup = BeautifulSoup(r.content, 'html.parser')
         </code>
@@ -46,38 +46,59 @@ soup = BeautifulSoup(r.content, 'html.parser')
           <p>
             If you wanted to get a soup from the MDen homepage instead of the Cottage Inn location page, which part(s) of the code below would you change? Click on those part(s) of the code.
           </p>
-          <program language="python3" interactive="activecode" label="plan2_click-editor">
-            <code xml:space="preserve">
-# Load libraries for web scraping
-from bs4 import BeautifulSoup
-import requests
-
-# Get a soup from a URL
-url = 'https://cottageinn.com/pick-a-location/'
-r = requests.get(url)
-soup = BeautifulSoup(r.content, 'html.parser')
-            </code>
-          </program>
         </statement>
+        <areas language="python">
+<cline><area correct="no"># Load libraries for web scraping</area></cline>
+<cline><area correct="no">from bs4 import BeautifulSoup</area></cline>
+<cline><area correct="no">import requests</area></cline>
+
+<cline><area correct="no"># Get a soup from a URL</area></cline>
+<cline><area correct="no">url = </area><area correct="yes">'https://web.archive.org/web/20200427175705/https://cottageinn.com/pick-a-location/'</area></cline>
+<cline><area correct="no">r = requests.get(url)</area></cline>
+<cline><area correct="no">soup = BeautifulSoup(r.content, 'html.parser')</area></cline>
+        </areas>
+          <feedback>
+    <p>Check out the example of this plan above to identify the area that should be changed.
+    </p>
+  </feedback>
       </activity>
 
       <activity label="plan2_fill" xml:id="plan2_fill">
         <statement>
-          <p>Fill in the plan in order to get a soup from the University of Michigan wikipedia page.</p>
-          <program language="python3" label="plan2_fill-editor">
-            <code xml:space="preserve">
+          <p>What should be after the <c>url = </c> in the code below to complete the plan in order to get a soup from the University of Michigan wikipedia page.
+           <fillin width="60" mode="string" answer="https://en.wikipedia.org/wiki/University_of_Michigan"/>
+          </p>
+<program language="python" label="plan2-fill-editor" interactive="no">
+  <code>
 # Load libraries for web scraping
 from bs4 import BeautifulSoup
 import requests
 
 # Get a soup from a URL
-url = _______
+url = 
 
 r = requests.get(url)
 soup = BeautifulSoup(r.content, 'html.parser')
-            </code>
-          </program>
+  </code>
+      </program>
         </statement>
+        <evaluation>
+    <evaluate>
+      <test correct="yes">
+        <strcmp use-answer="yes"/>
+        <feedback>
+          <p>
+            Correct! The URL for the University of Michigan wikipedia page is <c>https://en.wikipedia.org/wiki/University_of_Michigan</c>.
+          </p>
+        </feedback>
+        <feedback>
+          <p>
+            Not quite. The URL for the University of Michigan wikipedia page is <c>https://en.wikipedia.org/wiki/University_of_Michigan</c>.
+          </p>
+        </feedback>
+      </test>
+      </evaluate> 
+      </evaluation>
       </activity>
 
       <note>
