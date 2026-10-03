@@ -15,7 +15,7 @@
       <p>
         Since that tag is the first of its type on the page, we can use the plan <strong>Get info from a single tag</strong>.
       </p>
-      <program language="python3">
+      <program language="python">
         <code xml:space="preserve">
 # Get first tag of a certain type from the soup
 tag = soup.find('a', class_='item-teaser--heading-link')
@@ -187,7 +187,7 @@ info = tag.text
       <activity label="get_link_fill" xml:id="get_link_fill">
         <statement>
           <p>What is the code to get a link from a tag?</p>
-          <program language="python3" label="get_link_fill-editor">
+          <program language="python3"  interactive="activecode" label="get_link_fill-editor">
             <code xml:space="preserve">
 # Get first tag of a certain type from the soup
 tags = soup.find('a', class_='announcement')
