@@ -4,7 +4,7 @@
   <activity label="Exercises_bsoup_mc1">
     <statement>
       <p> Given the below html, how would this tag type be described in web scraping code?</p>
-      <program language="python">
+      <program language="python3">
         <code>
 &lt;h1 class='sports'&gt;Sports News&lt;/h1&gt;
 </code>
@@ -48,7 +48,7 @@
   <activity label="Exercises_bsoup_mc2">
     <statement>
       <p> Which line of code correctly gets the first item in <c>items</c> and makes the most sense following the below code snippet?</p>
-      <program language="python">
+      <program language="python3">
         <code>
 soup = BeautifulSoup(response.content, 'html.parser')
 items = soup.find_all(class_='items')
@@ -374,7 +374,7 @@ items = soup.find_all(class_='items')
   <activity label="Exercises_bsoup_mc10">
     <statement>
       <p> Given the below html, after importing re, what will be returned after <c>for tag in soup.find_all(re.compile("t")): print(tag.name)</c> is run?</p>
-      <program language="python">
+      <program language="python3">
         <code>
 &lt;html&gt;
    &lt;head&gt;

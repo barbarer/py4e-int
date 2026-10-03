@@ -1,2 +1,39 @@
-<?xml version="1.0"?>
-<raw format="html" xml:space="preserve"/>
+<?xml version="1.0" encoding="UTF-8"?>
+  <section xml:id="section-debugging">
+    <title>Code debugging activity</title>
+      <title>Code debugging activity</title>
+      <p>Every week, a new cat or dog is <url href="https://www.hshv.org/petsoftheweek/">the Ann Arbor’s 107one Pet-of-the-Week</url>. The code below is supposed to <strong>get the pet of the week webpage, scrape the text of the title shown in the picture, and print it</strong>.</p>
+      <figure xml:id="fig-pet">
+        <caption>The pet of the week from August 22, 2020 is Chester.</caption>
+        <image source="bsoup/pet_of_the_week.png" width="70%"/>
+      </figure>
+      <p>However, it doesn't work! Instead of printing the title text, it prints nothing.</p>
+      <p>Can you fix it? Try to fix the buggy code below. Run the code to save your progress.</p>
+      <activity label="debug_code_1" xml:id="debug_code_1">
+        <statement>
+          <p>Fix the code below:</p>
+          <program label="debug_code_1-editor" language="python3">
+            <code>
+#Get the webpage
+# Load libraries for web scraping
+from bs4 import BeautifulSoup
+import requests
+# Get a soup from a URL
+url = 'https://www.hshv.org/petsoftheweek/'
+r = requests.get(url)
+soup = BeautifulSoup(r.content, 'html.parser')
+
+#Get info from one tag
+# Get first tag of a certain type from the soup
+tag = soup.find('a', class_='pt-cv-none cvplbd')
+# Get info from tag
+info = tag.get('href')
+
+#Do something with the info
+# Print the info
+print(info)
+            </code>
+          </program>
+        </statement>
+      </activity>
+    </section>

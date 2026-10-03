@@ -1,2 +1,59 @@
-<?xml version="1.0"?>
-<raw format="html" xml:space="preserve"/>
+<?xml version="1.0" encoding="UTF-8"?>
+  <section xml:id="example2">
+    <title>Get news links from faculty webpages</title>
+
+    <introduction>
+      <p>Let's say that you want to get the link to the first news article on your favorite umsi faculty's webpages.</p>
+      <figure xml:id="faculty_pages_img">
+        <image source="bsoup/faculty_pages.gif"/>
+        <caption>News articles on faculty pages</caption>
+      </figure>
+      <p>
+        But clicking through to gather all those links would be a pain. Fortunately, we can do that task with BeautifulSoup!
+      </p>
+      <p>Run the code below to see what it collects.</p>
+
+      <activity label="prof_homepages_example_rev2" xml:id="prof_homepages_example_rev2">
+        <statement>
+          <program language="python3" label="prof_homepages_example_rev2-editor">
+            <code xml:space="preserve">
+# Load libraries for web scraping
+from bs4 import BeautifulSoup
+import requests
+# Get a soup from multiple URLs
+base_url = 'https://web.archive.org/web/20230128074139/https://www.si.umich.edu/people/'
+endings = ['barbara-ericson', 'steve-oney', 'paul-resnick']
+for ending in endings:
+    url = base_url + ending
+    r = requests.get(url)
+    soup = BeautifulSoup(r.content, 'html.parser')
+
+    #Extract info from the page
+    # Get first tag of a certain type from the soup
+    tag = soup.find('a', class_='item-teaser--heading-link')
+    # Get link from tag
+    info = tag.get('href')
+
+    #Do something with the info
+    # Print the info
+    print(info)
+            </code>
+          </program>
+        </statement>
+      </activity>
+
+      <p>This code is made up of three plans. Click on each of the plans below to learn more about it.</p>
+      <p>
+        <strong>Plan 3: Get a soup from multiple URLs</strong>
+        <url href="plan3.html"/>
+      </p>
+      <p>
+        <strong>Plan 4: Get info from a single tag</strong>
+        <url href="plan4.html"/>
+      </p>
+      <p>
+        <strong>Plan 9: Print info</strong>
+        <url href="plan9.html"/>
+      </p>
+    </introduction>
+  </section>

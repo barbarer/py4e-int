@@ -1,2 +1,81 @@
-<?xml version="1.0"?>
-<raw format="html" xml:space="preserve"/>
+<?xml version="1.0" encoding="UTF-8"?>
+  <section xml:id="plan9">
+    <title>Plan 9: Print info</title>
+
+    <introduction>
+      <p>It's very common to print the information you have just scraped.</p>
+    </introduction>
+
+    <subsection xml:id="plan-9-example">
+      <title>Plan 9: Example</title>
+      <p>
+        If you want to print info from only one tag, like if you've just used <em>Plan 4: Get info from a single tag</em>, then do this:
+      </p>
+      <p>
+        Goal: Print the info
+        <c># Print the info</c>
+        <c>print(info)</c>
+      </p>      <p>
+        If you want to print info from multiple tags, like if you've just used <em>Plan 5: Get info from all tags of a certain type</em>, then do this:
+      </p>
+      <p>
+        Goal: Print the info
+        <c># Print the info</c>
+        <c>print(collect_info)</c>
+      </p>    </subsection>
+
+    <subsection xml:id="plan-9-exercises">
+      <title>Plan 9: Exercises</title>
+
+      <activity label="plan9_fill_in" xml:id="plan9_fill_in">
+        <statement>
+          <p>Here is the code to collect all the locations from the Cottage Inn locations page.</p>
+          <p>What should fill the slot in Plan 9 below?</p>
+          <program language="python3" label="plan9_fill_in-editor">
+            <code xml:space="preserve">
+#Get one webpage
+# Load libraries for web scraping
+from bs4 import BeautifulSoup
+import requests
+# Get a soup from a URL
+url = 'https://cottageinn.com/pick-a-location/'
+r = requests.get(url)
+soup = BeautifulSoup(r.content, 'html.parser')
+
+#Get info from all tags of a certain type
+# Get all tags of a certain type from the soup
+tags = soup.find_all('h3')
+# Collect info from the tags
+collect_info = []
+for tag in tags:
+    # Get info from tag
+    info = tag.text
+    collect_info.append(info)
+
+#Print the info
+# Print the info
+print(___________)
+            </code>
+          </program>
+        </statement>
+        <choices>
+          <choice correct="yes">
+            <statement><c>collect_info</c></statement>
+            <feedback><p>Correct.</p></feedback>
+          </choice>
+          <choice>
+            <statement><c>info</c></statement>
+            <feedback><p>Remember that the variable that goes in this plan depends on the plan above.</p></feedback>
+          </choice>
+        </choices>
+      </activity>
+
+      <note>
+        <p><url href="example1.html">Click here to go back to the Cottage Inn example</url></p>
+      </note>
+
+      <note>
+        <p><url href="example2.html">Click here to go back to the Faculty Pages example</url></p>
+      </note>
+    </subsection>
+  </section>

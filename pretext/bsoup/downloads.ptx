@@ -1,2 +1,155 @@
-<?xml version="1.0"?>
-<raw format="html" xml:space="preserve"/>
+<?xml version="1.0" encoding="UTF-8"?>
+  <section xml:id="downloads">
+    <title>You can download all the plans here</title>
+
+    <subsection xml:id="plan-1">
+      <title>Plan 1</title>
+      <activity label="plan1_download" xml:id="plan1_download">
+        <statement>
+          <program language="python3" label="plan1_download-editor">
+            <code xml:space="preserve">
+# Get the webpage
+_____________________________________________
+
+# Extract info from the page
+_____________________________________________
+
+# Do something with the info
+_____________________________________________
+            </code>
+          </program>
+        </statement>
+      </activity>
+    </subsection>
+
+    <subsection xml:id="plan-2">
+      <title>Plan 2</title>
+      <activity label="plan2_download" xml:id="plan2_download">
+        <statement>
+          <program language="python3" label="plan2_download-editor">
+            <code xml:space="preserve">
+# Load libraries for web scraping
+from bs4 import BeautifulSoup
+import requests
+# Get a soup from a URL 
+url = _________________________
+r = requests.get(url)
+soup = BeautifulSoup(r.content, 'html.parser')
+            </code>
+          </program>
+        </statement>
+      </activity>
+    </subsection>
+
+    <subsection xml:id="plan-3">
+      <title>Plan 3</title>
+      <activity label="plan3_download" xml:id="plan3_download">
+        <statement>
+          <program language="python3" label="plan3_download-editor">
+            <code xml:space="preserve">
+# Load libraries for web scraping
+from bs4 import BeautifulSoup
+import requests
+# Get a soup from multiple URLs 
+base_url = ___________________________________
+endings =  ___________________________________
+for ending in endings:
+    url = base_url + ending 
+    r = requests.get(url) 
+    soup = BeautifulSoup(r.content, 'html.parser')
+            </code>
+          </program>
+        </statement>
+      </activity>
+    </subsection>
+
+    <subsection xml:id="plan-4">
+      <title>Plan 4</title>
+      <activity label="plan4_download" xml:id="plan4_download">
+        <statement>
+          <program language="python3" label="plan4_download-editor">
+            <code xml:space="preserve">
+# Get first tag of a certain type from the soup
+tag = soup.find(___________)
+# Get info from the tag
+info = tag.________
+            </code>
+          </program>
+        </statement>
+      </activity>
+    </subsection>
+
+    <subsection xml:id="plan-5">
+      <title>Plan 5</title>
+      <activity label="plan5_download" xml:id="plan5_download">
+        <statement>
+          <program language="python3" label="plan5_download-editor">
+            <code xml:space="preserve">
+# Get all tags of a certain type from the soup
+tags = soup.find_all(___________)
+# Collect info from the tags
+collect_info = []
+for tag in tags:
+    # Get info from tag
+    info = tag.________
+    collect_info.append(info)
+            </code>
+          </program>
+        </statement>
+      </activity>
+    </subsection>
+
+    <subsection xml:id="plan-6">
+      <title>Plan 6</title>
+      <activity label="plan6_download" xml:id="plan6_download">
+        <statement>
+          <program language="python" label="plan6_download-editor">
+            <code xml:space="preserve">
+# Get first tag of a certain type from the soup
+first_tag = soup.find(___________)
+# Get all tags of a certain type from the first tag
+tags = first_tag.find_all(____________)
+# Collect info from the tags
+collect_info = []
+for tag in tags: 
+    # Get info from tag
+    info = tag.________
+    collect_info.append(info)
+            </code>
+          </program>
+        </statement>
+      </activity>
+    </subsection>
+
+    <subsection xml:id="plan-9">
+      <title>Plan 9</title>
+      <activity label="plan9_download" xml:id="plan9_download">
+        <statement>
+          <program language="python3" label="plan9_download-editor">
+            <code xml:space="preserve">
+# Print info
+print(____________)
+            </code>
+          </program>
+        </statement>
+      </activity>
+    </subsection>
+
+    <subsection xml:id="plan-10">
+      <title>Plan 10</title>
+      <activity label="plan10_download" xml:id="plan10_download">
+        <statement>
+          <program language="python3" label="plan10_download-editor">
+            <code xml:space="preserve">
+# Load library for json files
+import json
+# Put info into file
+f = open(____________, 'w')
+json.dump(____________, f)
+f.close()
+            </code>
+          </program>
+        </statement>
+      </activity>
+    </subsection>
+  </section>

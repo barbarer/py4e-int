@@ -1,2 +1,247 @@
-<?xml version="1.0"?>
-<raw format="html" xml:space="preserve"/>
+<?xml version="1.0" encoding="UTF-8"?>
+  <section xml:id="plan5">
+    <title>Plan 5: Get info from all tags of a certain type</title>
+
+    <introduction>
+      <p>
+        To get information from the Cottage Inn locations page, we need to figure out which tags we should get from the soup, and what information we should get from the tags.
+      </p>
+      <p>A great way to figure this out is to use the "inspect" function on your browser.</p>
+      <figure xml:id="cottageinn_inspect_img">
+        <image source="bsoup/cottageinn_inspect.gif"/>
+        <caption>By inspecting the locations, we see that they are all h3 tags.</caption>
+      </figure>
+      <p>
+        We see that we need to get info from all the <c>h3</c> tags from the webpage. The <em>text</em> in those tags has the information we need!
+      </p>
+    </introduction>
+
+    <subsection xml:id="looking-closer-at-a-tag">
+      <title>Looking closer at a tag</title>
+      <p>Behind every webpage is HTML code. HTML code is made up of <em>tags</em>.</p>
+      <p>
+        Here is the tag that creates the name of one of the Cottage Inn Pizza locations. The tag is surrounded by the blue rectangle. It is an 'h3' tag.
+      </p>
+      <figure xml:id="cottage_inn_h3_text_img">
+        <image source="bsoup/cottage_inn_h3_text.png"/>
+        <caption>h3 tag example</caption>
+      </figure>
+      <p>
+        The name of this tag is 'h3'. In-between the start and end tag (between the <c>&lt;h3&gt;</c> and <c>&lt;/h3&gt;</c>) is the tag's <strong>text</strong>. For this tag, the text is <strong>Ann Arbor Broadway St.</strong>
+      </p>
+    </subsection>
+
+    <subsection xml:id="plan-5-example">
+      <title>Plan 5: Example</title>
+      <p>
+        Here is how to get <strong>text</strong> from all the <strong>'h3'</strong> tags from webpage:
+      </p>
+      <program language="python3">
+        <code xml:space="preserve">
+# Get all tags of a certain type from the soup
+tags = soup.find_all('h3')
+# Collect info from the tags
+collect_info = []
+for tag in tags:
+    # Get info from tag
+    info = tag.text
+    collect_info.append(info)
+        </code>
+      </program>
+    </subsection>
+
+    <subsection xml:id="plan-5-how-to-use-it">
+      <title>Plan 5: How to use it</title>
+      <p>Once you've found the tags you want to get information from, do two things:</p>
+      <p>1. Find the <strong>tag description</strong> and put it into the first slot.</p>
+      <p>How do you do that? Here are some examples:</p>
+      <table>
+        <title>Tag Description Examples</title>
+        <tabular>
+          <row header="yes">
+            <cell>What you see when you inspect</cell>
+            <cell></cell>
+            <cell>Tag description in the code</cell>
+          </row>
+          <row>
+            <cell><c>&lt;p&gt;</c></cell>
+            <cell>-&gt;</cell>
+            <cell><c>'p'</c></cell>
+          </row>
+          <row>
+            <cell><c>&lt;h3&gt;</c></cell>
+            <cell>-&gt;</cell>
+            <cell><c>'h3'</c></cell>
+          </row>
+          <row>
+            <cell><c>&lt;div class="comment"&gt;</c></cell>
+            <cell>-&gt;</cell>
+            <cell><c>'div', class_='comment'</c></cell>
+          </row>
+          <row>
+            <cell><c>&lt;span style="X5e72;"&gt;</c></cell>
+            <cell>-&gt;</cell>
+            <cell><c>'span', style='X5e72;'</c></cell>
+          </row>
+          <row>
+            <cell><c>&lt;a class="css4z" href="/orders"&gt;</c></cell>
+            <cell>-&gt;</cell>
+            <cell><c>'a', class_='css4z'</c></cell>
+          </row>
+        </tabular>
+      </table>
+      <p>2. Determine if you want to get <strong>text</strong> from a tag, or a <strong>link</strong> from a tag</p>
+      <table>
+        <title>Info Types</title>
+        <tabular>
+          <row header="yes">
+            <cell>The info you want</cell>
+            <cell></cell>
+            <cell>What you put in the code</cell>
+          </row>
+          <row>
+            <cell>The tag's text</cell>
+            <cell>-&gt;</cell>
+            <cell><c>text</c></cell>
+          </row>
+          <row>
+            <cell>The tag's link</cell>
+            <cell>-&gt;</cell>
+            <cell><c>get('href')</c> or <c>get('href', None)</c></cell>
+          </row>
+        </tabular>
+      </table>
+    </subsection>
+
+    <subsection xml:id="plan-5-exercises">
+      <title>Plan 5: Exercises</title>
+
+      <activity label="get_text_mc_1" xml:id="get_text_mc_1">
+        <statement>
+          <p>What is the text of the tag below?</p>
+          <figure xml:id="dining_h2_text_img">
+            <image source="bsoup/dining_h2_text.png"/>
+            <caption>h2 tag on dining page</caption>
+          </figure>
+        </statement>
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement><p>Today's Menu</p></statement>
+            <feedback><p>Correct! This text is between the &lt;h2 class="menuItem"&gt; and &lt;/h2&gt;</p></feedback>
+          </choice>
+          <choice>
+            <statement><p>h2</p></statement>
+            <feedback><p>No, h2 is the tag name</p></feedback>
+          </choice>
+          <choice>
+            <statement><p>menuTitle</p></statement>
+            <feedback><p>No</p></feedback>
+          </choice>
+          <choice>
+            <statement><p>class</p></statement>
+            <feedback><p>No</p></feedback>
+          </choice>
+        </choices>
+      </activity>
+
+      <activity label="get_tag_description_mc_1" xml:id="get_tag_description_mc_1">
+        <statement>
+          <p>What is the tag description of the tag below?</p>
+          <figure xml:id="dining_h2_text_img_2">
+            <image source="bsoup/dining_h2_text.png"/>
+            <caption>h2 tag on dining page</caption>
+          </figure>
+        </statement>
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement><p>'h2', class_='menuTitle'</p></statement>
+            <feedback><p>Correct! This is how you would describe the tag type in our web scraping code.</p></feedback>
+          </choice>
+          <choice>
+            <statement><p>'h2'</p></statement>
+            <feedback><p>That is a part of the tag description, but we can be more specific.</p></feedback>
+          </choice>
+          <choice>
+            <statement><p>'h2', class='menuTitle'</p></statement>
+            <feedback><p>Very close, but in web scraping code you should use class followed by an underscore</p></feedback>
+          </choice>
+          <choice>
+            <statement><p>&lt;h2 class="menuTitle"&gt;</p></statement>
+            <feedback><p>This is what is actually in the tag, but it's not how we would describe the tag in web scraping code.</p></feedback>
+          </choice>
+        </choices>
+      </activity>
+
+      <activity label="plan5_click" xml:id="plan5_click">
+        <statement>
+          <p>
+            Right now, this code gets the <em>text</em> from all 'h3' tags in the webpage. If you wanted to get the <em>links</em> from all the 'a', class_='headline' tags in the webpage, which part(s) of the code below would you change?
+          </p>
+          <program language="python" label="plan5_click-editor">
+            <code xml:space="preserve">
+# Get all tags of a certain type from the soup
+tags = soup.find_all('h3')
+
+# Collect info from the tags
+collect_info = []
+for tag in tags:
+    # Get info from tag
+    info = tag.text
+    collect_info.append(info)
+            </code>
+          </program>
+        </statement>
+      </activity>
+
+      <activity label="plan5_fill_v2" xml:id="plan5_fill_v2">
+        <statement>
+          <p>Fill in the plan in order to get the text from all <c>&lt;div class="headline"&gt;</c> tags on a webpage.</p>
+          <program language="python3" label="plan5_fill_v2-editor">
+            <code xml:space="preserve">
+# Get all tags of a certain type from the soup
+tags = soup.find_all( _______ )
+
+# Collect info from the tags
+collect_info = []
+for tag in tags:
+    # Get info from tag
+    info = tag. _______
+    collect_info.append(info)
+            </code>
+          </program>
+        </statement>
+      </activity>
+
+      <activity label="get_text_mc_2" xml:id="get_text_mc_2">
+        <statement>
+          <p>Which tag in the picture below has text?</p>
+          <figure xml:id="dining_span_text_img">
+            <image source="bsoup/dining_span_text.png"/>
+            <caption>span tag on dining page</caption>
+          </figure>
+        </statement>
+        <choices randomize="yes">
+          <choice>
+            <statement><p>'h2'</p></statement>
+            <feedback><p>No, there is no h2 tag in this image.</p></feedback>
+          </choice>
+          <choice correct="yes">
+            <statement><p>span, style='font-weight: 400;'</p></statement>
+            <feedback><p>Correct! The text starts with "With its chandeliers and dramatically vaulted ceiling..."</p></feedback>
+          </choice>
+          <choice>
+            <statement><p>'p'</p></statement>
+            <feedback><p>No, this tag contains the span tag.</p></feedback>
+          </choice>
+          <choice>
+            <statement><p>'style'</p></statement>
+            <feedback><p>No, style is an attribute</p></feedback>
+          </choice>
+        </choices>
+      </activity>
+
+      <note>
+        <p><url href="example1.html">Click here to go back to the Cottage Inn example</url></p>
+      </note>
+    </subsection>
+  </section>

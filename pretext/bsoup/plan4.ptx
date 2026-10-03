@@ -1,2 +1,206 @@
-<?xml version="1.0"?>
-<raw format="html" xml:space="preserve"/>
+<?xml version="1.0" encoding="UTF-8"?>
+  <section xml:id="plan4">
+    <title>Plan 4: Get info from a single tag</title>
+
+    <subsection xml:id="plan-4-example">
+      <title>Plan 4: Example</title>
+      <p>
+        Maybe we want to get just one piece of information from a webpage. In this example, we want to get the first link to a news story from a professor's page.
+      </p>
+      <p>Here's what we see when we use the "inspect" function in the browser.</p>
+      <figure xml:id="ericson_more_info_img">
+        <image source="bsoup/ericson-more-info.png"/>
+        <caption>The tag that has a link to the news article</caption>
+      </figure>
+      <p>
+        Since that tag is the first of its type on the page, we can use the plan <strong>Get info from a single tag</strong>.
+      </p>
+      <program language="python3">
+        <code xml:space="preserve">
+# Get first tag of a certain type from the soup
+tag = soup.find('a', class_='item-teaser--heading-link')
+# Get info from tag
+info = tag.get('href')
+        </code>
+      </program>
+    </subsection>
+
+    <subsection xml:id="plan-4-when-to-use-it">
+      <title>Plan 4: When to use it</title>
+      <p>Use this when you want to get information that is in the first tag of a certain type on the page.</p>
+    </subsection>
+
+    <subsection xml:id="plan-4-how-to-use-it">
+      <title>Plan 4: How to use it</title>
+      <p>Once you've found the tag you want to get information from, do two things:</p>
+      <p>1. Find the <strong>tag description</strong> and put it into the first slot.</p>
+      <p>How do you do that? Here are some examples:</p>
+      <table>
+        <title>Tag Description Examples</title>
+        <tabular>
+          <row header="yes">
+            <cell>What you see when you inspect</cell>
+            <cell></cell>
+            <cell>Tag description in the code</cell>
+          </row>
+          <row>
+            <cell><c>&lt;p&gt;</c></cell>
+            <cell>-&gt;</cell>
+            <cell><c>'p'</c></cell>
+          </row>
+          <row>
+            <cell><c>&lt;h3&gt;</c></cell>
+            <cell>-&gt;</cell>
+            <cell><c>'h3'</c></cell>
+          </row>
+          <row>
+            <cell><c>&lt;div class="comment"&gt;</c></cell>
+            <cell>-&gt;</cell>
+            <cell><c>'div', class_='comment'</c></cell>
+          </row>
+          <row>
+            <cell><c>&lt;span style="X5e72;"&gt;</c></cell>
+            <cell>-&gt;</cell>
+            <cell><c>'span', style='X5e72;'</c></cell>
+          </row>
+          <row>
+            <cell><c>&lt;a class="css4z" href="/orders"&gt;</c></cell>
+            <cell>-&gt;</cell>
+            <cell><c>'a', class_='css4z'</c></cell>
+          </row>
+        </tabular>
+      </table>
+      <p>2. Determine if you want to get <strong>text</strong> from a tag, or a <strong>link</strong> from a tag</p>
+      <table>
+        <title>Info Types</title>
+        <tabular>
+          <row header="yes">
+            <cell>The info you want</cell>
+            <cell></cell>
+            <cell>What you put in the code</cell>
+          </row>
+          <row>
+            <cell>The tag's text</cell>
+            <cell>-&gt;</cell>
+            <cell><c>text</c></cell>
+          </row>
+          <row>
+            <cell>The tag's link</cell>
+            <cell>-&gt;</cell>
+            <cell><c>get('href')</c> or <c>get('href', None)</c></cell>
+          </row>
+        </tabular>
+      </table>
+      <p>One type of tag, the <c>a</c> tag, holds a link.</p>
+      <p>Here is the tag that creates the link to the North Quad dining hall page. It is an 'a' tag.</p>
+      <figure xml:id="nq_link_img">
+        <image source="bsoup/nq_link.png"/>
+        <caption>Link to the North Quad dining hall page</caption>
+      </figure>
+      <p>If you want to get the link from a tag, use <c>get('href')</c> in the second slot in this plan.</p>
+    </subsection>
+
+    <subsection xml:id="plan-4-exercises">
+      <title>Plan 4: Exercises</title>
+
+      <activity label="get_link_mc_1" xml:id="get_link_mc_1">
+        <statement>
+          <p>What is the link of the tag below?</p>
+          <figure xml:id="barb_link_img">
+            <image source="bsoup/barb_link.png"/>
+            <caption>Link to Barb's page</caption>
+          </figure>
+        </statement>
+        <choices randomize="yes">
+          <choice>
+            <statement><p>https://www.si.umich.edu/people/barbara-ericson</p></statement>
+            <feedback><p>No, this is the full link, but there is a relative link in the tag.</p></feedback>
+          </choice>
+          <choice correct="yes">
+            <statement><p>/people/barbara-ericson</p></statement>
+            <feedback><p>Correct!</p></feedback>
+          </choice>
+          <choice>
+            <statement><p>a</p></statement>
+            <feedback><p>No, this is the name of the tag</p></feedback>
+          </choice>
+          <choice>
+            <statement><p>Barbara Ericson</p></statement>
+            <feedback><p>No, this is the text of the tag</p></feedback>
+          </choice>
+        </choices>
+      </activity>
+
+      <activity label="plan4_click" xml:id="plan4_click">
+        <statement>
+          <p>
+            If you wanted to get a link from the first 'a' tag on a webpage, which part(s) of the code below would you change? Click on those parts of the code.
+          </p>
+          <program language="python" label="plan4_click-editor">
+            <code xml:space="preserve">
+# Get first tag of a certain type from the soup
+tag = soup.find('div', class_='Comments_StyledComments-dzzyvm-0 dvnRbr')
+
+# Get info from tag
+info = tag.text
+            </code>
+          </program>
+        </statement>
+      </activity>
+
+      <p>Check out the image below, that inspects the description of the North Quad dining hall.</p>
+      <figure xml:id="nq_dining_onetag_img">
+        <image source="bsoup/nq_dining_onetag.png"/>
+        <caption>The tag that creates the description of North Quad</caption>
+      </figure>
+
+      <activity label="plan4_parsons" xml:id="plan4_parsons" indentation="hide" adaptive="yes" language="html">
+        <statement>
+          <p>
+            Choose the subgoals that get the text from the tag that has the description of the North Quad dining hall, and put them in the right order. You do not need to use all the blocks.
+          </p>
+        </statement>
+        <blocks numbered="left">
+          <block>
+            <p># Get first tag of a certain type from the soup</p>
+            <p>tag = soup.find('span', style='font-weight: 400;')</p>
+          </block>
+          <block>
+            <p># Get first tag of a certain type from the soup</p>
+            <p>tag = soup.find('span') #paired</p>
+          </block>
+          <block>
+            <p># Get info from tag</p>
+            <p>info = tag.text</p>
+          </block>
+          <block>
+            <p># Get info from tag</p>
+            <p>info = tag.get('href') #distractor</p>
+          </block>
+          <block>
+            <p># Get all tags of a certain type from the soup</p>
+            <p>tags = soup.find_all('p')#distractor</p>
+          </block>
+        </blocks>
+      </activity>
+
+      <activity label="get_link_fill" xml:id="get_link_fill">
+        <statement>
+          <p>What is the code to get a link from a tag?</p>
+          <program language="python3" label="get_link_fill-editor">
+            <code xml:space="preserve">
+# Get first tag of a certain type from the soup
+tags = soup.find('a', class_='announcement')
+
+# Get info from tag
+info = tag. _______
+            </code>
+          </program>
+        </statement>
+      </activity>
+
+      <note>
+        <p><url href="example2.html">Click here to go back to the Faculty Pages example</url></p>
+      </note>
+    </subsection>
+  </section>

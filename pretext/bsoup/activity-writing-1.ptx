@@ -1,2 +1,49 @@
-<?xml version="1.0"?>
-<raw format="html" xml:space="preserve"/>
+<?xml version="1.0" encoding="UTF-8"?>
+  <section xml:id="section-writing-1">
+    <title>Code writing activity part 1</title>
+      <p>On this page, you will complete an activity to write code that:</p>
+      <p><strong>Scrapes all the comments on the Rate My Professor page for Prof. Ericson and Prof. Oney and prints them</strong></p>
+      <p>Here is <url href="https://www.ratemyprofessors.com/ShowRatings.jsp?tid=2454833">the link to Prof. Ericson's Rate My Professor page</url>.</p>
+      <p>Here is <url href="https://www.ratemyprofessors.com/ShowRatings.jsp?tid=2239751">the link to Prof. Oney's Rate My Professor page</url>.</p>
+      <figure xml:id="fig-ericson-1">
+        <caption>Prof. Ericson's Rate My Professor page</caption>
+        <image source="bsoup/rate_my_prof_ericson.png" width="50%"/>
+      </figure>
+      <figure xml:id="fig-oney-1">
+        <caption>Prof. Oney's Rate My Professor page</caption>
+        <image source="bsoup/rate_my_prof_oney.png" width="50%"/>
+      </figure>
+      <p>The comments all have the same tag name, which is <code>'div'</code> tag with <code>class='Comments__StyledComments-dzzyvm-0 dvnRbr'</code>.</p>
+      <figure xml:id="fig-tags-1">
+        <caption>Tags for the comments on the Rate My Professor page</caption>
+        <image source="bsoup/rate_my_prof_tags.png" width="65%"/>
+      </figure>
+      <activity label="write_code_order_plans_goals" xml:id="write_code_order_plans_goals" indentation="hide" adaptive="yes" language="html">
+        <statement>
+          <p>Choose which of the following plans you will use, and put them in the correct order.</p>
+        </statement>
+        <blocks numbered="left">
+          <block order="1">
+            <cline>Plan #3: Get a soup from multiple webpages</cline>
+          </block>
+          <block order="2" correct="no">
+            <cline>Plan #2: Get a soup from a webpage</cline>
+          </block>
+          <block order="3">
+            <cline>Plan #5: Get info from all tags of a certain type</cline>
+          </block>
+          <block order="4" correct="no">
+            <cline>Plan #4: Get info from a single tag</cline>
+          </block>
+          <block order="5" correct="no">
+            <cline>Plan #6: Get info from all tags of a certain type, within another tag</cline>
+          </block>
+          <block order="6">
+            <cline>Plan #9: Print info</cline>
+          </block>
+          <block order="7" correct="no">
+            <cline>Plan #10: Store info in a json file</cline>
+          </block>
+        </blocks>
+      </activity>
+    </section>

@@ -1,2 +1,87 @@
-<?xml version="1.0"?>
-<raw format="html" xml:space="preserve"/>
+<?xml version="1.0" encoding="UTF-8"?>
+  <section xml:id="section-writing-2">
+    <title>Code writing activity part 2</title>
+      <p>On this page, you will complete a second activity to write code that:</p>
+      <p><strong>Scrapes all the comments on the Rate My Professor page for Prof. Ericson and Prof. Oney and prints them</strong></p>
+      <p>Here is <url href="https://www.ratemyprofessors.com/ShowRatings.jsp?tid=2454833">the link to Prof. Ericson's Rate My Professor page</url>.</p>
+      <p>Here is <url href="https://www.ratemyprofessors.com/ShowRatings.jsp?tid=2239751">the link to Prof. Oney's Rate My Professor page</url>.</p>
+      <figure xml:id="fig-ericson-2">
+        <caption>Dr. Ericson's Rate My Professor page</caption>
+        <image source="bsoup/rate_my_prof_ericson.png" width="50%"/>
+      </figure>
+      <figure xml:id="fig-oney-2">
+        <caption>Prof. Oney's Rate My Professor page</caption>
+        <image source="bsoup/rate_my_prof_oney.png" width="50%"/>
+      </figure>
+      <p>The comments all have the same tag name, which is <code>'div'</code> tag with <code>class='Comments__StyledComments-dzzyvm-0 dvnRbr'</code>.</p>
+      <figure xml:id="fig-tags-2">
+        <caption>The tags on the Rate My Professor page</caption>
+        <image source="bsoup/rate_my_prof_tags.png" width="65%"/>
+      </figure>
+      <activity label="write_code_order_plans_code" xml:id="write_code_order_plans_code" indentation="hide" adaptive="yes" language="html">
+        <statement>
+          <p>Choose which of the following plans you will use, and put them in the correct order.</p>
+        </statement>
+        <blocks numbered="left">
+          <block order="1">
+            <cline># Load libraries for web scraping</cline>
+            <cline>from bs4 import BeautifulSoup</cline>
+            <cline>import requests</cline>
+            <cline># Get a soup from multiple URLs</cline>
+            <cline>base_url = ________________________________</cline>
+            <cline>endings =  ________________________________</cline>
+            <cline>for ending in endings:</cline>
+            <cline>    url = base_url + ending</cline>
+            <cline>    r = requests.get(url)</cline>
+            <cline>    soup = BeautifulSoup(r.content, 'html.parser')</cline>
+          </block>
+          <block order="2" correct="no">
+            <cline># Load libraries for web scraping</cline>
+            <cline>from bs4 import BeautifulSoup</cline>
+            <cline>import requests</cline>
+            <cline># Get a soup from a URL</cline>
+            <cline>url = _________________________</cline>
+            <cline>r = requests.get(url)</cline>
+            <cline>soup = BeautifulSoup(r.content, 'html.parser')</cline>
+          </block>
+          <block order="3">
+            <cline># Get all tags of a certain type from the soup</cline>
+            <cline>tags = soup.find_all(___________)</cline>
+            <cline># Collect info from the tags</cline>
+            <cline>collect_info = []</cline>
+            <cline>for tag in tags:</cline>
+            <cline>    info = tag.____________</cline>
+            <cline>    collect_info.append(info)</cline>
+          </block>
+          <block order="4" correct="no">
+            <cline># Get first tag of a certain type from the soup</cline>
+            <cline>tag = soup.find(___________)</cline>
+            <cline># Get info from the tag</cline>
+            <cline>info = tag.____________</cline>
+          </block>
+          <block order="5" correct="no">
+            <cline># Get first tag of a certain type from the soup</cline>
+            <cline>first_tag = soup.find(___________)</cline>
+            <cline># Get all tags of a certain type from the first tag</cline>
+            <cline>tags = first_tag.find_all(____________)</cline>
+            <cline># Collect info from the tags</cline>
+            <cline>collect_info = []</cline>
+            <cline>for tag in tags:</cline>
+            <cline>    info = tag.____________</cline>
+            <cline>    collect_info.append(info)</cline>
+          </block>
+          <block order="6">
+            <cline># Print the info</cline>
+            <cline>print(____________)</cline>
+          </block>
+          <block order="7" correct="no">
+            <cline># Load library for json files</cline>
+            <cline>import json</cline>
+            <cline># Put info into file</cline>
+            <cline>f = open(____________, 'w')</cline>
+            <cline>json.dump(____________, f)</cline>
+            <cline>f.close()</cline>
+          </block>
+        </blocks>
+      </activity>
+    </section>

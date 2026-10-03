@@ -1,2 +1,56 @@
-<?xml version="1.0"?>
-<raw format="html" xml:space="preserve"/>
+<?xml version="1.0" encoding="UTF-8"?>
+  <section xml:id="section-writing-3">
+    <title>Code writing activity part 3</title>
+      <p>On this page, you will complete the final activity to write code that:</p>
+      <p><strong>Scrapes all the comments on the Rate My Professor page for Prof. Ericson and Prof. Oney and prints them</strong></p>
+      <p>Here is <url href="https://www.ratemyprofessors.com/ShowRatings.jsp?tid=2454833" visual="the link to Prof. Ericson's Rate My Professor page">the link to Prof. Ericson's Rate My Professor page</url>.</p>
+      <p>Here is <url href="https://www.ratemyprofessors.com/ShowRatings.jsp?tid=2239751" visual="the link to Prof. Oney's Rate My Professor page">the link to Prof. Oney's Rate My Professor page</url>.</p>
+      <p>You can see that both the pages have the same layout.</p>
+      <figure xml:id="fig-ericson">
+        <image source="bsoup/rate_my_prof_ericson.png" width="50%"/>
+        <caption>Prof. Ericson's Rate My Professor page</caption>
+      </figure>
+      <figure xml:id="fig-oney">
+        <image source="bsoup/rate_my_prof_oney.png" width="50%"/>
+        <caption>Prof. Oney's Rate My Professor page</caption>
+      </figure>
+      <p>The comments all have the same tag name, which is <code>'div'</code> tag with <code>class='Comments__StyledComments-dzzyvm-0 dvnRbr'</code>. Here's what it looks like when you inspect Prof. Ericson's page:</p>
+      <figure xml:id="fig-tags">
+        <image source="bsoup/rate_my_prof_tags.png" width="65%"/>
+        <caption>Inspecting the tags on the Rate My Professor page</caption>
+      </figure>
+      <p>Here is the code that you assembled from the plans. Now that you've assembled the correct plans, fill in the blanks to complete the code.</p>
+      <activity label="write_code_fill_in" xml:id="write_code_fill_in">
+        <statement>
+          <p>Fill in the blanks to complete the code:</p>
+          <program label="write_code_fill_in-editor" language="python3">
+            <code>
+#Get the webpage
+# Load libraries for web scraping
+from bs4 import BeautifulSoup
+import requests
+# Get a soup from multiple URLs
+base_url = '___URL_goes_here___'
+endings = ['_endings_', '_go_', '_here_']
+for ending in endings:
+    url = base_url + ending
+    r = requests.get(url)
+    soup = BeautifulSoup(r.content, 'html.parser')
+
+    # Get all tags of a certain type from the soup
+    tags = soup.find_all(____tag_description_goes_here___)
+    # Collect info from the tags
+    collect_info = []
+    for tag in tags:
+        # Get info from tag
+        info = tag.______
+        collect_info.append(info)
+
+    #Do something with the info
+    # Print the info
+    print(______)
+            </code>
+          </program>
+        </statement>
+      </activity>
+    </section>
