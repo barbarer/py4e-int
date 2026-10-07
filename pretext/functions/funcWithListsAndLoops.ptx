@@ -323,7 +323,7 @@ list_trans(l1)
             <p>None</p>
           </statement>
           <feedback>
-            <p>It prints the return value from the reverse method which is None.</p>
+            <p>It prints the return value from the reverse method which is None, since lists can be modified (are mutable).</p>
           </feedback>
         </choice>
         <choice>
@@ -331,7 +331,7 @@ list_trans(l1)
             <p>[2, 5, 7]</p>
           </statement>
           <feedback>
-            <p>This would be true if it printed the value of</p>
+            <p>This would be true if <c>r</c> was set to the original values in the list, but it is not.</p>
           </feedback>
         </choice>
         <choice>
@@ -339,7 +339,7 @@ list_trans(l1)
             <p>[7, 5, 2]</p>
           </statement>
           <feedback>
-            <p>This would be true if pop removed the item at index 1, but it removes the item at index 2 and the first item is at index 0.</p>
+            <p>This would be true if <c>r</c> was set to the reversed values in the list, but lists are mutable and <c>reverse</c> modifies the list in place and doesn't return any value.</p>
           </feedback>
         </choice>
         <choice>
@@ -347,7 +347,7 @@ list_trans(l1)
             <p>Nothing, there will be an error.</p>
           </statement>
           <feedback>
-            <p>This would be true if pop removed the last item, but it removes the one at index 2.</p>
+            <p>This would be true if Python raised an error when you set a varible to the return value of a function when that function doesn't return anything, but that is not what happens. </p>
           </feedback>
         </choice>
       </choices>
