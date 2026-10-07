@@ -24,7 +24,7 @@ print(count)
             to 0 and then incremented each time an <q>r</q> is found. When the
             loop exits, <c>count</c> contains the result: the total number of
             rs.</p>
-  <activity label="str-count-mc-t">
+  <activity label="str-count-mc-t" xml:id="str-count-mc-t">
     <statement>
       <p>11-9-2: What is printed by the following:</p>
       <program language="python">
@@ -74,7 +74,7 @@ print(count)
     </choices>
   </activity>
 
-  <activity label="str-count-errors">
+  <activity label="str-count-errors" xml:id="str-count-errors">
     <statement>
       <p>
         There are four errors in the following code. Fix the function so it takes 
@@ -83,7 +83,7 @@ print(count)
       </p>
     </statement>
 
-    <program label="stringCount" interactive="activecode" language="python">
+    <program label="stringCount-editor" interactive="activecode" language="python">
       <code>
 def count(text, aChar):
   count = 1
@@ -91,7 +91,7 @@ def count(text, aChar):
     if c = aChar:
       count = count - 1
   return count
-
+====
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
