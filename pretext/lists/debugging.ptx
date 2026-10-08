@@ -170,13 +170,13 @@ t.sort()
                                 of the line to determine if we are interested in the line at all. We
                                 can use <c>continue</c> to skip lines that don't have <q>From</q>
                                 as the first word as follows:</p>
-            <datafile xml:id="mbox_count_id" label="mbox_count_id" filename='mbox-short.txt'>
-                <pre source="dictionaries/mbox-count.txt"></pre>
+            <datafile xml:id="mbox_tiny_id" label="mbox_tiny_id" filename='mbox-tiny.txt'>
+                <pre source="files/mbox-tiny.txt"></pre>
             </datafile>
 
-            <program label="listDebug_ac_print" interactive="activecode" language="python" add-files="mbox_count_id">
+            <program label="listDebug_ac_print" interactive="activecode" language="python" add-files="mbox_tiny_id">
               <code>
-fhand = open('mboxShort.txt')
+fhand = open('mbox-tiny.txt')
 for line in fhand:
     words = line.split()
     if words[0] != 'From' : continue
@@ -278,9 +278,9 @@ Details: http://source.sakaiproject.org/viewsvn/?view=rev&amp;rev=39772</pre>
                                 the first word is not there. There are many ways to protect this
                                 code; we will choose to check the number of words we have before we
                                 look at the first word:</p>
-            <program label="listDebug_file" interactive="activecode" language="python" add-files="mbox_count_id">
+            <program label="listDebug_file" interactive="activecode" language="python" add-files="mbox_tiny_id">
               <code>
-fhand = open('mboxShort1.txt')
+fhand = open('mbox-tiny.txt')
 count = 0
 for line in fhand:
     words = line.split()
