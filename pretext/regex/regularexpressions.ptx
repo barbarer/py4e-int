@@ -26,11 +26,16 @@
             your program before you can use it. The simplest use of the regular
             expression library is the <c>search()</c> function. The following
             program demonstrates a trivial use of the search function.</p>
+
+  <datafile xml:id="mbox_count_id" label="mbox_count_id" filename='mbox-short.txt'>
+      <pre source="dictionaries/mbox-count.txt"></pre>
+  </datafile>
+
   <activity label="re_ac1">
     <statement>
       <p>This code uses regular expressions to print lines that contain <q>From:</q>.</p>
     </statement>
-    <program label="re_ac1_editor" interactive="activecode" language="python">
+    <program label="re_ac1_editor" interactive="activecode" language="python" add-files="mbox_count_id">
       <code>
 import re
 hand = open('mbox-short.txt')
@@ -97,7 +102,7 @@ for line in hand:
     <statement>
       <p>Using regular expressions to print lines that contain <q>From:</q> at the beginning of the line.</p>
     </statement>
-    <program label="re-ac2_editor" interactive="activecode" language="python">
+    <program label="re-ac2_editor" interactive="activecode" language="python" add-files="mbox_count_id">
       <code>
 import re
 hand = open('mbox-short.txt')
