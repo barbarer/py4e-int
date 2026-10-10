@@ -318,7 +318,7 @@ myTests().main()
 
   <p>The next two questions are associated with the following text file which has an email address followed by the number of messages from that address.</p>
 
- <datafile xml:id="mbox_count_id" label="mbox_count_id" filename='mbox-short.txt'>
+ <datafile xml:id="mbox_count_id" label="mbox_count_id" filename='mbox-count.txt'>
       <pre source="dictionaries/mbox-count.txt"></pre>
   </datafile>
 
@@ -329,7 +329,7 @@ myTests().main()
           </statement>
           <program interactive="activecode" language="python" add-files="mbox_count_id">
             <code>
-with open("mbox-short.txt", "r") as filename:
+with open("mbox-count.txt", "r") as filename:
     message_count = {}
 
 print(message_count['cwen@iupui.edu'])
@@ -347,9 +347,9 @@ myTests().main()
           </program>
           <solution><p>Add code to the program below to figure out who has the most messages in the file. After all the data has been read and the dictionary message_count has been created, look through the dictionary using a maximum loop (see Chapter 5: Maximum and minimum loops) to find who has the most messages,
                             and print how many messages the person has. For example, message_count['cwen@iupui.edu'] should be 5.</p>
-                            <program label="dict_writecode9q_sol" language="python" interactive="activecode"><code>
+                            <program label="dict_writecode9q_sol" language="python" interactive="activecode" add-files="mbox_count_id"><code>
 # Open file in read mode
-with open("mbox-short.txt", "r") as filename:
+with open("mbox-count.txt", "r") as filename:
     # Create message_count dictionary
     message_count = {}
     # Create variable for lines of the file

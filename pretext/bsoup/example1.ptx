@@ -15,20 +15,24 @@
 
       <activity label="cottage_inn_example" xml:id="cottage_inn_example">
         <statement>
+          <p>Run the code below to see what data it collects</p>
+        </statement>
           <program language="python3" interactive="activecode" label="cottage_inn_example-editor">
             <code xml:space="preserve">
 #Get the webpage
 # Load libraries for web scraping
 from bs4 import BeautifulSoup
 import requests
+
 # Get a soup from a URL
 url = 'https://web.archive.org/web/20200427175705/https://cottageinn.com/pick-a-location/'
 r = requests.get(url)
 soup = BeautifulSoup(r.content, 'html.parser')
 
-#Extract info from the page
+# Extract info from the page
 # Get all tags of a certain type from the soup
 tags = soup.find_all('h3')
+
 # Collect info from the tags
 collect_info = []
 for tag in tags:
@@ -36,27 +40,46 @@ for tag in tags:
     info = tag.text
     collect_info.append(info)
 
-#Do something with the info
+# Do something with the info
 # Print the info
 print(collect_info)
             </code>
           </program>
-        </statement>
       </activity>
 
       <p>
         This code probably seems a bit complicated. In this ebook, we will break down web scraping into a few common "plans". This example is made up of three plans. Click on each of them to learn more.
       </p>
       <p>
-        <strong>Plan 2: Get a soup from a URL</strong>
+        <em>Plan 2: Get a soup from a URL</em>
         <url href="plan2.html"/>
+        <pre style="background-color:#FCF3CF;">
+   # Load libraries for web scraping
+   from bs4 import BeautifulSoup
+   import requests
+
+   # Get a soup from a URL
+   url = 'https://web.archive.org/web/20200427175705/https://cottageinn.com/pick-a-location/'
+   r = requests.get(url)
+   soup = BeautifulSoup(r.content, 'html.parser')</pre>
       </p>
       <p>
-        <strong>Plan 5: Get info from all tags of a certain type</strong>
+        <em>Plan 5: Get info from all tags of a certain type</em>
         <url href="plan5.html"/>
+        <pre style="background-color:#D5F5E3;">
+   # Get all tags of a certain type from the soup
+   tags = soup.find_all('h3')
+
+   # Collect info from the tags
+   collect_info = []
+   for tag in tags:
+   
+       # Get info from tag
+       info = tag.text
+       collect_info.append(info)</pre>
       </p>
       <p>
-        <strong>Plan 9: Print the info</strong>
+        <em>Plan 9: Print the info</em>
         <url href="plan9.html"/>
       </p>
     </introduction>

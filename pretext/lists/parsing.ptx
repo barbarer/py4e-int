@@ -16,14 +16,14 @@
             the line starts with <q>From </q>, <c>split</c> those lines, and then
             print out the third word in the line:</p>
 
-    <datafile xml:id="mbox_parse_id" label="mbox_parse_id" filename='mbox-tiny.txt'>
-      <pre source="files/mbox-tiny.txt"></pre>
+    <datafile xml:id="mbox_short_parse_id" label="mbox_short_parse_id" filename='mbox-short.txt'>
+      <pre source="files/mbox-short.txt"></pre>
     </datafile>
 
 
-    <program label="listParsing" interactive="activecode" language="python" add-files="mbox_parse_id">
+    <program label="listParsing" interactive="activecode" language="python" add-files="mbox_short_parse_id">
         <code>
-fhand = open('mbox-tiny.txt')
+fhand = open('mbox-short.txt')
 for line in fhand:
     line = line.rstrip()
     if not line.startswith('From '): continue
