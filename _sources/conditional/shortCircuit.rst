@@ -58,7 +58,7 @@ cause an error as follows:
     y = 0
     print(x >= 2 and y != 0 and (x/y) > 2)
 
-    x = 1
+    x = 3
     y = 0
     print(x >= 2 and y != 0 and (x/y) > 2)
 
