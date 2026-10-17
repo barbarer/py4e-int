@@ -13,8 +13,8 @@ def add_to_new_list(lst):
     # write code here
 
 print(add_to_new_list(["1","2","3"]))
-=====
-
+      </code>
+      <tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -26,7 +26,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </code>
+      </tests>
     </program>
   </activity>
 
@@ -42,8 +42,8 @@ def itemLister(items):
     # write code here
 
 print(itemLister([2,4,6.222,8]))
-=====
-
+      </code>
+      <tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -61,7 +61,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </code>
+      </tests>
     </program>
   </activity>
 
@@ -76,9 +76,8 @@ def average(aList):
     # write code here
 
 print(average([99, 100, 74, 63, 100, 100]))
-
-=====
-
+      </code>
+      <tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -90,7 +89,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </code>
+      </tests>
     </program>
   </activity>
 
@@ -106,8 +105,8 @@ def change_index3(lst):
     # write code here
 
 print(change_index3(['hi', 'goodbye', 'python', '106', '506']))
-=====
-
+      </code>
+      <tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -119,7 +118,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </code>
+      </tests>
     </program>
   </activity>
 
@@ -134,8 +133,8 @@ def capitalize(lst):
     # write code here
 
 print(capitalize([["hi"],["hello", "hey"]]))
-=====
-
+      </code>
+      <tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -146,7 +145,7 @@ class myTests(TestCaseGui):
         self.assertEqual(capitalize([['go', 'blue'],['python', 'IS', 'The', 'Best']]), ['Go', 'Blue', 'Python', 'Is', 'The', 'Best'], "capitalize([['go', 'blue'],['python', 'IS', 'The', 'Best']])")
 
 myTests().main()
-        </code>
+      </tests>
     </program>
   </activity>
 
@@ -161,7 +160,8 @@ def countWords(lst):
     # write code here
 
 print(countWords(['hello', 'hi', 'good morning', 'three', 'kitty']))
-====
+      </code>
+      <tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -174,7 +174,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </code>
+      </tests>
     </program>
   </activity>
 
@@ -189,8 +189,8 @@ def chop(lst):
     # write code here
 
 print(chop([1,2,3,4,5]))
-=====
-
+      </code>
+      <tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -201,7 +201,7 @@ class myTests(TestCaseGui):
         self.assertEqual(chop([2,9]),[],"chop([2,9])")
 
 myTests().main()
-        </code>
+      </tests>
     </program>
   </activity>
 
@@ -216,7 +216,8 @@ def reverse(lst):
     # write code here
 
 print(reverse([1,2,3]))
-====
+      </code>
+      <tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -228,7 +229,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </code>
+      </tests>
     </program>
   </activity>
 
@@ -244,8 +245,8 @@ def sumUntilEven(lst):
     # write code here
 
 print(sumUntilEven([1,2,3,4,5]))
-
-====
+      </code>
+      <tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -256,7 +257,7 @@ class myTests(TestCaseGui):
         self.assertEqual(sumUntilEven([2,4,6,7,9]),0,"sumUntilEven([2,4,6,7,9])")
 
 myTests().main()
-        </code>
+      </tests>
     </program>
   </activity>
 
@@ -271,8 +272,8 @@ def sort_by_length(lst):
     # write code here
 
 print(sort_by_length(["hello", "hi", "hey", "greetings"]))
-====
-
+      </code>
+      <tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -283,7 +284,7 @@ class myTests(TestCaseGui):
           self.assertEqual(sort_by_length(['I', 'have', 'four', 'apples']),['I', 'have', 'four', 'apples'],"sort_by_length(['I', 'have', 'four', 'apples'])")
 
 myTests().main()
-        </code>
+      </tests>
     </program>
   </activity>
 
@@ -297,9 +298,8 @@ myTests().main()
 def combine(names, ages):
 
 print(combine(["Claire", "Jennifer"],[23, 19]))
-
-====
-
+      </code>
+      <tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -312,7 +312,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </code>
+      </tests>
     </program>
   </activity>
 </section>
