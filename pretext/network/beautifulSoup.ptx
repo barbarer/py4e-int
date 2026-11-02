@@ -104,7 +104,7 @@ print(soup.find('p'))
           </choice>
           <choice>
             <cline>import requests</cline>
-            <cline>import bs : Use from bs4 import BeautifulSoup</cline>
+            <cline>import bs</cline>
           </choice>
         </block>
         <block order="7">
@@ -119,7 +119,7 @@ print(soup.find('p'))
           </choice>
           <choice>
             <cline># create the soup object</cline>
-            <cline>soup = BeautifulSoup(resp, 'html.parser') : need to use resp.content</cline>
+            <cline>soup = BeautifulSoup(resp, 'html.parser')</cline>
           </choice>
         </block>
         <block order="9">
@@ -127,7 +127,7 @@ print(soup.find('p'))
             <cline>p_list = soup.find_all('p')</cline>
           </choice>
           <choice>
-            <cline>p_list = soup.find_all(p) : the tag must be a string</cline>
+            <cline>p_list = soup.find_all(p)</cline>
           </choice>
         </block>
         <block order="5">
@@ -135,7 +135,7 @@ print(soup.find('p'))
             <cline>print(p_list[1])</cline>
           </choice>
           <choice>
-            <cline>print(p_list[2]) : the second item is at index 1</cline>
+            <cline>print(p_list[2])</cline>
           </choice>
         </block>
       </blocks>
@@ -187,7 +187,7 @@ print(tag.text)
             <cline>resp = requests.get(url)</cline>
           </choice>
           <choice>
-            <cline>resp = requests.get('url') : don't put quotes around url - it is a variable</cline>
+            <cline>resp = requests.get('url')</cline>
           </choice>
         </block>
         <block order="4">
@@ -198,7 +198,7 @@ print(tag.text)
             <cline>tag = soup.find("h3", class_="css-1pjbq1w")</cline>
           </choice>
           <choice>
-            <cline>tag = soup.find(h3, class_="css-1pjbq1w") : need quotes around h3.</cline>
+            <cline>tag = soup.find(h3, class_="css-1pjbq1w")</cline>
           </choice>
         </block>
         <block order="10">
@@ -206,7 +206,7 @@ print(tag.text)
             <cline>tag = tag.find('span')</cline>
           </choice>
           <choice>
-            <cline>tag = soup.find('span') : use tag.find</cline>
+            <cline>tag = soup.find('span')</cline>
           </choice>
         </block>
         <block order="3">
@@ -258,7 +258,7 @@ for tag in tags:
             <cline>resp = requests.get(url)</cline>
           </choice>
           <choice>
-            <cline>resp = requests.find(url) : use get</cline>
+            <cline>resp = requests.find(url)</cline>
           </choice>
         </block>
         <block order="5">
@@ -266,7 +266,7 @@ for tag in tags:
             <cline>soup = BeautifulSoup(resp.content, 'html.parser')</cline>
           </choice>
           <choice>
-            <cline>soup = BeautifulSoup(resp, 'html.parser') : must use .content</cline>
+            <cline>soup = BeautifulSoup(resp, 'html.parser')</cline>
           </choice>
         </block>
         <block order="2">
@@ -274,7 +274,7 @@ for tag in tags:
             <cline>tags = soup.find_all('a')</cline>
           </choice>
           <choice>
-            <cline>tags = soup.find_all('link') : use a for link (anchor)</cline>
+            <cline>tags = soup.find_all('link')</cline>
           </choice>
         </block>
         <block order="10">
@@ -285,7 +285,7 @@ for tag in tags:
             <cline>    print(tag.get('href', None))</cline>
           </choice>
           <choice>
-            <cline>    print(tag.get('ref', None)) : use href</cline>
+            <cline>    print(tag.get('ref', None))</cline>
           </choice>
         </block>
       </blocks>
@@ -357,7 +357,7 @@ for li in li_list:
             <cline>url = "https://www.michigandaily.com/"</cline>
           </choice>
           <choice>
-            <cline>url = https://www.michigandaily.com/ : url must be a string (in quotes)</cline>
+            <cline>url = https://www.michigandaily.com/</cline>
           </choice>
         </block>
         <block order="8">
@@ -371,7 +371,7 @@ for li in li_list:
             <cline>li_list = soup.find_all("h2", class_="entry-title")</cline>
           </choice>
           <choice>
-            <cline>li_list = soup.find_all("h2", class="entry-title") : must use class_</cline>
+            <cline>li_list = soup.find_all("h2", class="entry-title")</cline>
           </choice>
         </block>
         <block order="4">
@@ -379,7 +379,7 @@ for li in li_list:
             <cline>for li in li_list:</cline>
           </choice>
           <choice>
-            <cline>for li in tags: : use li_list</cline>
+            <cline>for li in tags:</cline>
           </choice>
         </block>
         <block order="7">
@@ -387,7 +387,7 @@ for li in li_list:
             <cline>    a_tag = li.find('a')</cline>
           </choice>
           <choice>
-            <cline>    a_tag = li.find('link') : use a (anchor)</cline>
+            <cline>    a_tag = li.find('link')</cline>
           </choice>
         </block>
         <block order="5">
