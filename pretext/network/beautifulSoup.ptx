@@ -63,7 +63,7 @@
                 create a <c>BeautifulSoup</c> object from the HTML content in the response,
                 use <c>find</c> to find the first paragraph tag, and then
                 print the first paragraph tag.</p>
-    <activity label="bs_get_print_first_para">
+    <activity label="bs_get_print_first_para" xml:id="bs_get_print_first_para">
       <statement>
         <p>This will find and print the first paragraph tag from the Michigan Daily site.
                 It will interpret the tag as HTML and show just the text of the tag.</p>
@@ -91,7 +91,7 @@ print(soup.find('p'))
     <p>
       <url href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser" visual="http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser">http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser</url>
     </p>
-    <activity label="bs_print_first_paragraph_pp" adaptive="yes" indentation="hide" language="python">
+    <activity label="bs_print_first_paragraph_pp" xml:id="bs_print_first_paragraph_pp" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the following blocks in order to print the second paragraph from the Michigan Daily website.  It uses the <c>find_all</c> method on
                 BeautifulSoup to get a list of all of the paragraphs.</p>
@@ -145,7 +145,7 @@ print(soup.find('p'))
     <title>Getting text from a tag</title>
     <p>Some tags have text like a paragraph tag or a span tag.  You can use <c>tagName.text</c> to get the text.
                 You can also find a tag with a particular CSS class.</p>
-    <activity label="bs_get_text_with_class">
+    <activity label="bs_get_text_with_class" xml:id="bs_get_text_with_class">
       <statement>
         <p>This will print the text for the site description paragraph.</p>
       </statement>
@@ -222,7 +222,7 @@ print(tag.text)
                 <c>&lt;a href="url"&gt;link text&lt;/a&gt;</c>. An example is <c>&lt;a href="https://www.w3schools.com"&gt;W3Schools&lt;/a&gt;</c>.</p>
     <activity label="bs_get_all_a_tags_and_print_hrefs">
       <statement>
-        <p>This will find all of the link tags in the New York Times site and print the href for each of them.</p>
+        <p>This will find all of the link tags in the Michigan Daily site and print the href for each of them.</p>
       </statement>
       <program label="bs_get_all_a_tags_and_print_hrefs_editor" interactive="activecode" language="python3">
         <code>
@@ -230,7 +230,7 @@ import requests
 from bs4 import BeautifulSoup
 
 # get the soup object
-url = "https://nytimes.com"
+url = "https://www.michigandaily.com/"
 resp = requests.get(url)
 soup = BeautifulSoup(resp.content, 'html.parser')
 
@@ -241,9 +241,9 @@ for tag in tags:
         </code>
       </program>
     </activity>
-    <activity label="bs_print_get_all_href_pp" adaptive="yes" indentation="hide" language="python">
+    <activity label="bs_print_get_all_href_pp" xml:id="bs_print_get_all_href_pp" adaptive="yes" indentation="hide" language="python">
       <statement>
-        <p>Put the following blocks in order to find all the link tags and print the href for each one for the Michgian Daily.</p>
+        <p>Put the following blocks in order to find all the link tags and print the href for each one for the New York Times.</p>
       </statement>
       <blocks numbered="left">
         <block order="9">
@@ -316,7 +316,7 @@ for tag in tags:
                 in the nagivation bar in the Michigan Daily webpage.
                 Use <em>find_all</em> to get all the <q>li</q> tags and then loop through those tags and use <em>find</em> to get the
                 first <q>a</q> tag in each <q>li</q> tag.</p>
-    <activity label="bs_get_mini_nav_href">
+    <activity label="bs_get_mini_nav_href" xml:id="bs_get_mini_nav_href">
       <statement>
         <p>This will print the first <q>href</q> inside each list item (li) with a class of <q>menu-item-has-children</q>.</p>
       </statement>
@@ -342,7 +342,7 @@ for li in li_list:
       <p>You don't have to use all the classes that a tag has.  Try to find a class
                     that is specific to the tags you are looking for.</p>
     </note>
-    <activity label="bs_find_all_and_find" adaptive="yes" indentation="hide" language="python">
+    <activity label="bs_find_all_and_find" xml:id="bs_find_all_and_find" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the following blocks in order to print the href for the first &#x2018;a' tag
                 in each h2 tag with a class of <q>entry-title</q></p>
