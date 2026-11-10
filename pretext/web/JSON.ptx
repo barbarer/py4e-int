@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<worksheet xml:id="web_javascript-object-notation-json">
+<section xml:id="web_javascript-object-notation-json">
   <title>JavaScript Object Notation - JSON</title>
   <introduction>
 <idx>JSON</idx>
@@ -9,9 +9,10 @@
             Python's syntax for dictionaries and lists influenced the syntax of
             JSON. So the format of JSON is nearly identical to a combination of
             Python lists and dictionaries.</p>
+  </introduction>
   <p>Here is a JSON encoding of some data. The outermost JSON structure is a dictionary
             and the value for two of the keys (phone and email) are dictionaries as well.</p>
-  <program language="json">
+  <program language="json" label="json-example-1">
     <code>
 {
  "name" : "Chuck",
@@ -26,7 +27,7 @@
 </code>
   </program>
   <p>Here is the XML equivalent.</p>
-  <program language="{.xml}">
+  <program language="{.xml}" label="xml-equiv-json">
     <code>
 &lt;person&gt;
   &lt;name&gt;Chuck&lt;/name&gt;
@@ -47,10 +48,9 @@
             And since nearly all programming languages have something equivalent to
             Python's dictionaries and lists, JSON is a very natural format to have
             two cooperating programs exchange data.</p>
- </introduction>
   
  
-  <activity label="webJSON_MC_diffs_XML">
+  <activity label="webJSON_MC_diffs_XML" xml:id="webJSON_MC_diffs_XML">
     <statement>
       <p> Which of the following are differences between JSON and XML?</p>
     </statement>
@@ -89,7 +89,7 @@
       </choice>
     </choices>
   </activity>
-  <activity label="webJSON_MC_not_diffs">
+  <activity label="webJSON_MC_not_diffs" xml:id="webJSON_MC_not_diffs">
     <statement>
       <p> Which of the following is <term>not</term> a difference between JSON and XML?</p>
     </statement>
@@ -131,7 +131,7 @@
   <p>JSON is quickly becoming the format of choice for nearly all data
             exchange between applications because of its relative simplicity
             compared to XML.</p>
-  <activity label="webJSON_MC_acro">
+  <activity label="webJSON_MC_acro" xml:id="webJSON_MC_acro">
     <statement>
       <p> JSON stands for what?</p>
     </statement>
@@ -172,11 +172,13 @@
   </activity>
 
 
-  <subexercises xml:id="web_list-of-dictionaries">
+  <subsection xml:id="web_list-of-dictionaries">
     <title>List of Dictionaries</title>
-    <introduction><p>The outermost JSON structure can be a dictionary or a list.  Here is an example
+    <introduction><p>The outermost JSON structure can be a dictionary or a list.</p>
+    </introduction>
+    <p>Here is an example
         where the outermost JSON structure is a list.  In this case it is a list of dictionaries.</p>
-    <program language="json">
+    <program label="xml-example-person-info" language="json">
       <code>
 [{
   "id": 1,
@@ -192,8 +194,8 @@
   "gender": "Non-binary",
 }]
 </code>
-    </program></introduction>
-    <activity label="webJSON_equivalent_xml">
+    </program>
+    <activity label="webJSON_equivalent_xml" xml:id="webJSON_equivalent_xml">
       <statement>
         <p> Which of the following is the correct equivalent XML to the JSON above?</p>
       </statement>
@@ -288,5 +290,5 @@
         </choice>
       </choices>
     </activity>
-  </subexercises>
-</worksheet>
+  </subsection>
+</section>

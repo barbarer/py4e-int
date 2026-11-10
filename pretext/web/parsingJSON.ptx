@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<worksheet xml:id="web_what-is-json">
+<section xml:id="web_what-is-json">
   <title>What is JSON?</title>
   <introduction>
   <p>JSON stands for JavaScript Object Notation.  It is a format for sharing data.
@@ -7,13 +7,13 @@
             You can also convert a Python dictionary or list into a JSON string.</p>
         </introduction>
        
-  <subexercises xml:id="web_converting-a-json-string-into-a-python-object">
+  <subsection xml:id="web_converting-a-json-string-into-a-python-object">
     <title>Converting a JSON String into a Python Object</title>
 <idx>JSON</idx>
     <p>In the following program, we use the built-in <c>json</c>
                 library to parse the JSON string and return a Python list of dictionaries.</p>
 
-    <activity label="web-parse-json-to-python">
+    <activity label="web-parse-json-to-python" xml:id="web-parse-json-to-python">
       <statement>
         <p>What do you think this code will print?  Run it to see what it actually
                 prints.</p>
@@ -44,7 +44,8 @@ for item in info:
         </code>
       </program>
     </activity>
-    <activity label="net_parse_xml_which_method">
+
+    <activity label="net_parse_xml_which_method" xml:id="net_parse_xml_which_method">
       <statement>
         <p> Which method of the json library is used to convert a JSON string into a Python object? <fillin width="20" mode="string" answer="loads"/>  </p>
       </statement>
@@ -61,7 +62,7 @@ for item in info:
       </evaluation>
     </activity>
     <p>Here is another example.  Run the code to see what it does.</p>
-    <activity label="web-parse-json-to-python-dictionary">
+    <activity label="web-parse-json-to-python-dictionary" xml:id="web-parse-json-to-python-dictionary">
       <statement>
         <p>What do you think this code will print?  Run it to see what it actually
                 prints.</p>
@@ -80,7 +81,7 @@ for person in people_list:
         </code>
       </program>
     </activity>
-    <activity label="net_json_what_type_returned_data">
+    <activity label="net_json_what_type_returned_data" xml:id="net_json_what_type_returned_data">
       <statement>
         <p>What type of thing (class name) is <c>data</c> in the code above? <fillin width="20" mode="string" answer="str"/>  </p>
       </statement>
@@ -96,7 +97,7 @@ for person in people_list:
           </evaluate>
       </evaluation>
     </activity>
-    <activity label="net_json_what_type_returned_d1">
+    <activity label="net_json_what_type_returned_d1" xml:id="net_json_what_type_returned_d1">
       <statement>
         <p>cWhat type of thing (class name) is <c>d1</c> in the code above? <fillin width="20" mode="string" answer="dict"/>  </p>
       </statement>
@@ -112,7 +113,7 @@ for person in people_list:
           </evaluate>
       </evaluation>
     </activity>
-    <activity label="webParsingJSON_MC_construct">
+    <activity label="webParsingJSON_MC_construct" xml:id="webParsingJSON_MC_construct">
       <statement>
         <p> Once you convert a JSON string to Python what are the two possible types for the Python object?</p>
       </statement>
@@ -143,11 +144,11 @@ for person in people_list:
         </choice>
       </choices>
     </activity>
-  </subexercises>
-  <subexercises xml:id="web_converting-a-python-object-into-a-json-string">
+  </subsection>
+  <subsection xml:id="web_converting-a-python-object-into-a-json-string">
     <title>Converting a Python object into a JSON string</title>
     <p>You can also convert a Python list or dictionary to a JSON string.</p>
-    <activity label="web-parse-json-to-string">
+    <activity label="web-parse-json-to-string" xml:id="web-parse-json-to-string">
       <statement>
         <p>What do you think this code will print?  Run it to see what it actually
                 prints.</p>
@@ -162,7 +163,7 @@ print(json.dumps(d))
         </code>
       </program>
     </activity>
-    <activity label="net_parse_json_convert_to_string_fitb">
+    <activity label="net_parse_json_convert_to_string_fitb" xml:id="net_parse_json_convert_to_string_fitb">
       <statement>
         <p>Which method of the json library is used to convert a Python object to a JSON string? <fillin width="20" mode="string" answer="dumps"/>  </p>
       </statement>
@@ -178,6 +179,5 @@ print(json.dumps(d))
           </evaluate>
       </evaluation>
     </activity>
-  </subexercises>
-  
-</worksheet>
+  </subsection>
+</section>
