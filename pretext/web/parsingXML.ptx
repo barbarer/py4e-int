@@ -1,15 +1,14 @@
 <?xml version="1.0"?>
-<worksheet xml:id="web_parsing-xml">
+<section xml:id="web_parsing-xml">
         <title>Parsing XML</title>
         
         
 <idx>Element Tree</idx>
 
    
-     <introduction>
         <p>Look at the code below and predict what will be printed.</p>
-</introduction>
-        <activity label="xml_parse_last_printed_when_no_attr">
+
+        <activity label="xml_parse_last_printed_when_no_attr" xml:id="xml_parse_last_printed_when_no_attr">
             <statement>
     <p> What is the last thing (last line of text) that will be printed when the code below runs? <fillin width="10" mode="string" answer="Attr: yes"/>  </p>
     </statement>
@@ -29,7 +28,7 @@
     <p>Here is a simple application that parses some XML and extracts some data
             elements from the XML:</p>
  
-<activity label="xml_parse_person_ac1">
+<activity label="xml_parse_person_ac1" xml:id="xml_parse_person_ac1">
     <statement>
         <p>Run this to see what it prints.</p>
     </statement>
@@ -67,13 +66,13 @@ print('Attr:', tree.find('email').get('hide'))
             allows us to extract data from XML without worrying about the rules of
             XML syntax.</p>
    
-        <subexercises xml:id="web_using-get-to-get-the-value-of-an-attribute">
+        <subsection xml:id="web_using-get-to-get-the-value-of-an-attribute">
             <title>Using <c>get</c> to get the value of an attribute</title>
             <introduction>
             <p>Why do we use <c>get</c> to get the value of an attribute?</p>
             <p>Look at the code below and predict what will be printed.</p>
             </introduction>
-        <activity label="xml_parse_last_printed">
+        <activity label="xml_parse_last_printed" xml:id="xml_parse_last_printed">
             <statement>
     <p> What is the last thing (last line of text) that will be printed when the code below runs?</p>
         <p><fillin width="10" mode="string" answer="None"/></p>
@@ -92,7 +91,7 @@ print('Attr:', tree.find('email').get('hide'))
         </activity>
 
 
-<activity label="xml_parse_person_wihtout_attr_ac1">
+<activity label="xml_parse_person_wihtout_attr_ac1" xml:id="xml_parse_person_wihtout_attr_ac1">
     <statement>
             <p>Run this to see what it prints.</p>
 
@@ -117,17 +116,17 @@ print('Attr:', tree.find('email').get('hide'))
     </program>
 
 </activity>
-        </subexercises>
+        </subsection>
         <note>
                 <p>Just like with dictionaries we can use <c>get</c> to get the value of an attribute and if the attribute isn't there the default is to return <c>None</c>.</p>
             </note>
             
-        <subexercises xml:id="web_getting-data-from-the-first-element-of-a-type-in-xml">
+        <subsection xml:id="web_getting-data-from-the-first-element-of-a-type-in-xml">
             <title>Getting Data from the First Element of a Type in XML</title>
             <introduction><p>You can use <c>find</c> to get the first element of the XML of a specified type.
                 You can the use <c>find</c> on that element to get children tags of that element.</p></introduction>
 
-<activity label="xml_parse_book_data">
+<activity label="xml_parse_book_data" xml:id="xml_parse_book_data">
     <statement>
             <p>Run the code to see what this prints.</p>
 
@@ -163,14 +162,14 @@ print('Lang:',book.find('title').get('lang'))
 
   
 </activity>
-             </subexercises>
+             </subsection>
              <p>What do you think would happen if we looked for the first &#8216;author' in <c>tree</c> rather than in <c>book</c>?  Modify the code to see what happens.</p>
      
-        <subexercises xml:id="web_fixing-errors-in-xml">
+        <subsection xml:id="web_fixing-errors-in-xml">
             <title>Fixing Errors in XML</title>
             <introduction><p>If your XML has errors, what do you think will happen?</p></introduction>
 
-<activity label="xml_parse_fix_book_data">
+<activity label="xml_parse_fix_book_data" xml:id="xml_parse_fix_book_data">
     <statement>
             <p>The following XML has errors.  Try to run the code first to see what happens and then fix the XML so that the code runs correctly.</p>
 
@@ -199,7 +198,7 @@ print('Lang:',book.find('title').get('lang'))
     </program>
 </activity>
 
-<activity label="xml_parse_fix_note_data">
+<activity label="xml_parse_fix_note_data" xml:id="xml_parse_fix_note_data">
     <statement>
             <p>The following XML has errors.  Try to run the code first to see what happens and then fix the XML so that the code runs correctly.</p>
 
@@ -236,11 +235,11 @@ print('time region:',note.find('time').get('region'))
         </code>
     </program>
 </activity>
-        </subexercises>
-        <subexercises xml:id="web_write-code-to-process-xml">
+        </subsection>
+        <subsection xml:id="web_write-code-to-process-xml">
             <title>Write Code to Process XML</title>
 
-<activity label="xml_parse_write_code_book_data_ac">
+<activity label="xml_parse_write_code_book_data_ac" xml:id="xml_parse_write_code_book_data_ac">
     <statement>
             <p>Write code to print the book title, category, author, and year.</p>
 
@@ -262,7 +261,7 @@ data = '''
     </program>
 </activity>
 
-<activity label="xml_parse_write_code_note_data_ac">
+<activity label="xml_parse_write_code_note_data_ac" xml:id="xml_parse_write_code_note_data_ac">
     <statement>
             <p>Write code to print the note's to, from, body, and time (with region).</p>
 
@@ -285,7 +284,7 @@ data = '''
         </code>
     </program>
 </activity>
-        </subexercises>
+        </subsection>
         
-    </worksheet>
+    </section>
 

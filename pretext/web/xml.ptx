@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
-<worksheet xml:id="web_extensible-markup-language-xml">
+<section xml:id="web_extensible-markup-language-xml">
   <title>eXtensible Markup Language - XML</title>
   <introduction>
 <idx>XML</idx>
   <p>XML is a mark-up language.  HTML is also a mark-up language.
-            XML looks very similar to HTML, but it is different from XML.</p>
+            XML looks very similar to HTML, but it is different from HTML.</p>
+              </introduction>
   <p>Some of the differences between XML and HTML are:</p>
   <p>
     <ul>
@@ -21,7 +22,7 @@
   </p>
   <p>For more information on XML see <url href="https://www.w3schools.com/xml/default.asp" visual="https://www.w3schools.com/xml/default.asp">https://www.w3schools.com/xml/default.asp</url>.</p>
   <p>Here is a sample of an XML document:</p>
-  <program language="{.xml}">
+  <program label="webXML_sample_document" language="{.xml}">
     <code>
 &lt;person&gt;
   &lt;name&gt;Chuck&lt;/name&gt;
@@ -38,9 +39,9 @@
             some attributes (e.g., <c>hide</c>), and other nested elements. If an XML
             element is empty (i.e., has no content), then it may be depicted by
             a self-closing tag (e.g., <c>&lt;email /&gt;</c>).</p>
-            </introduction>
+          
             
-  <activity label="webXML_MC_tags">
+  <activity label="webXML_MC_tags" xml:id="webXML_MC_tags">
     <statement>
       <p> In XML, a pair of opening and closing tags (&lt;&gt; and &lt;\&gt;) represent what? Select all that apply.</p>
     </statement>
@@ -85,7 +86,7 @@
   <figure align="">
     <image source="images/xmlTree-fixed.png" width="80%" alt="A Tree Representation of XML"/>
   </figure>
-  <activity label="webXML_email_sibling_tag">
+  <activity label="webXML_email_sibling_tag" xml:id="webXML_email_sibling_tag">
     <statement>
       <p> What are the sibling tags of the email tag?</p>
     </statement>
@@ -124,7 +125,7 @@
       </choice>
     </choices>
   </activity>
-  <activity label="xml_person_self_closing_tags_clicka">
+  <activity label="xml_person_self_closing_tags_clicka" xml:id="xml_person_self_closing_tags_clicka">
     <statement>
       <p>Click on all of the self-closing tags in the XML below.</p>
     </statement>
@@ -141,7 +142,7 @@
       <cline><area correct="no">&lt;/person&gt;</area></cline>
     </areas>
   </activity>
-  <activity label="xml_food_tag_text_clicka">
+  <activity label="xml_food_tag_text_clicka" xml:id="xml_food_tag_text_clicka">
     <statement>
       <p>Click on all of the text in the XML tags below.</p>
     </statement>
@@ -159,7 +160,7 @@
       <cline><area correct="no">&lt;/food&gt;</area></cline>
     </areas>
   </activity>
-  <activity label="xml_person_attributes_clicka">
+  <activity label="xml_person_attributes_clicka" xml:id="xml_person_attributes_clicka">
     <statement>
       <p>Click on all of the attribute names in the XML below.</p>
     </statement>
@@ -177,10 +178,10 @@
     </areas>
   </activity>
 
-  <subexercises xml:id="web_properly-formatted-xml">
+  <subsection xml:id="web_properly-formatted-xml">
     <title>Properly Formatted XML</title>
     <p>Solve the next couple of problems and think about what are the rules for properly formatted XML.</p>
-    <activity label="xml_note_pp" adaptive="yes" indentation="hide" language="python">
+    <activity label="xml_note_pp" xml:id="xml_note_pp" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the blocks into order to define just the body of simple XML document that defines a note. A note has a date, subject, and a body in that order. Indent the blocks to show the structure (parent and child).</p>
       </statement>
@@ -217,8 +218,8 @@
         </block>
       </blocks>
     </activity>
-    <activity label="xml_message_pp" adaptive="yes" indentation="hide" language="python">
-      <statement>
+    <activity label="xml_message_pp" xml:id="xml_message_pp" adaptive="yes" indentation="hide" language="python">
+      <statement> 
         <p>Put the blocks into order to define just the body of simple XML document that stores information for a message: to, from, time, subject, and body in that order.  Indent the blocks to show the structure (parent and child).</p>
       </statement>
        <blocks numbered="left">
@@ -260,7 +261,7 @@
         </block>
       </blocks>
     </activity>
-    <activity label="webXML_proper_format">
+    <activity label="webXML_proper_format" xml:id="webXML_proper_format">
       <statement>
         <p> Select all of the following that are true about XML.</p>
       </statement>
@@ -299,7 +300,7 @@
         </choice>
       </choices>
     </activity>
-    <activity label="xml_book_end_tags_clicka">
+    <activity label="xml_book_end_tags_clicka" xml:id="xml_book_end_tags_clicka">
       <statement>
         <p>Click on all of the end tags in the XML below.</p>
       </statement>
@@ -324,7 +325,7 @@
         <cline><area correct="yes">&lt;/bookstore&gt;</area></cline>
       </areas>
     </activity>
-    <activity label="webXML_child_tag_bookstore">
+    <activity label="webXML_child_tag_bookstore" xml:id="webXML_child_tag_bookstore">
       <statement>
         <p> Select the child tag of the bookstore tag.</p>
       </statement>
@@ -363,7 +364,7 @@
         </choice>
       </choices>
     </activity>
-    <activity label="webXML_bookstore_attr_names">
+    <activity label="webXML_bookstore_attr_names" xml:id="webXML_bookstore_attr_names">
       <statement>
         <p> Select all of the attribute values in the example XML for a bookstore.</p>
       </statement>
@@ -402,7 +403,7 @@
         </choice>
       </choices>
     </activity>
-    <activity label="webXML_MC_tf">
+    <activity label="webXML_MC_tf" xml:id="webXML_MC_tf">
       <statement>
         <p> Select all of the following that are true.</p>
       </statement>
@@ -449,5 +450,5 @@
         </choice>
       </choices>
     </activity>
-  </subexercises>
-</worksheet>
+  </subsection>
+</section>
