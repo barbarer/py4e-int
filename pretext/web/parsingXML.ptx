@@ -43,7 +43,8 @@ data = '''
     +1 734 303 4456
   &lt;/phone&gt;
   &lt;email hide="yes"/&gt;
-&lt;/person&gt;'''
+&lt;/person&gt;
+'''
 
 tree = ET.fromstring(data)
 print('Name:', tree.find('name').text)
@@ -75,12 +76,12 @@ print('Attr:', tree.find('email').get('hide'))
         <activity label="xml_parse_last_printed" xml:id="xml_parse_last_printed">
             <statement>
     <p> What is the last thing (last line of text) that will be printed when the code below runs?</p>
-        <p><fillin width="10" mode="string" answer="None"/></p>
+        <p><fillin width="10" mode="string" answer="Attr: None"/></p>
         </statement>
         <evaluation>
         <evaluate>
         <test correct="yes">
-        <strcmp>['&quot;]?None['&quot;]?</strcmp>
+        <strcmp>Attr: None</strcmp>
         <feedback><p>The default is to print None if there is no attribute with that name when you use <c>.get('name')</c>.</p></feedback>
         </test>
         <test>
@@ -107,7 +108,8 @@ data = '''
     +1 734 303 4456
   &lt;/phone&gt;
   &lt;email&gt;csev@umich.edu&lt;/email&gt;
-&lt;/person&gt;'''
+&lt;/person&gt;
+'''
 
 tree = ET.fromstring(data)
 print('Name:', tree.find('name').text)
