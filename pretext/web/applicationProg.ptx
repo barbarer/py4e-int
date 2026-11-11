@@ -131,7 +131,7 @@
     <p>There is a listing of free APIs that you can use
                 at <url href="https://github.com/public-apis/public-apis" visual="https://github.com/public-apis/public-apis">https://github.com/public-apis/public-apis</url></p>
     <p>One of the free APIs has dog facts.  You can get a dog fact by going to the
-                URL: <url href="https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1" visual="https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1">https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1</url>.
+                URL: <url href="https://dogapi.dog/api/v2/facts?limit=1" visual="https://dogapi.dog/api/v2/facts?limit=1">https://dogapi.dog/api/v2/facts?limit=1</url>.
                 Try entering that in a browser window.  You can also use Python to the get data
                 from an API using a URL as shown below.</p>
     <program label="web-api-get-dog-fact" interactive="activecode" language="python3">
@@ -140,7 +140,7 @@ import requests
 import json
 
 # get the data
-response = requests.get('https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1')
+response = requests.get('https://dogapi.dog/api/v2/facts?limit=1')
 data = response.text
 in_list = json.loads(data)
 in_dict = in_list[0]
@@ -150,7 +150,7 @@ print(in_dict.get("fact"))
   </subsection>
   <subsection xml:id="web_using-a-dictionary-for-url-parameters">
     <title>Using a Dictionary for URL Parameters</title>
-    <p>To add parameters to a URL you can just add them to the URL string as shown above (<c>?number=1</c>) but spaces in
+    <p>To add parameters to a URL you can just add them to the URL string as shown above (<c>?limit=1</c>) but spaces in
                 strings need to be replaced.  An easier way to add parameters to a URL is to
                 create a dictionary
                 with all the parameter names and values and then pass the dictionary to the
@@ -161,8 +161,8 @@ import requests
 import json
 
 # get the data
-parms = {'number': 1}
-response = requests.get('https://dog-facts-api.herokuapp.com/api/v1/resources/dogs', parms)
+parms = {'limit': 1}
+response = requests.get('https://dogapi.dog/api/v2/facts', parms)
 data = response.text
 in_list = json.loads(data)
 in_dict = in_list[0]
