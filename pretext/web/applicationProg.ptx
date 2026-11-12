@@ -134,7 +134,12 @@
                 URL: <url href="https://dogapi.dog/api/v2/facts?limit=1" visual="https://dogapi.dog/api/v2/facts?limit=1">https://dogapi.dog/api/v2/facts?limit=1</url>.
                 Try entering that in a browser window.  You can also use Python to the get data
                 from an API using a URL as shown below.</p>
-    <program label="web-api-get-dog-fact" interactive="activecode" language="python3">
+
+    <activity label="web-api-get-dog-fact" xml:id="web-api-get-dog-fact">
+      <statement>
+        <p>Run the following code to get a random dog fact from the API.</p>
+      </statement>  
+    <program label="web-api-get-dog-fact-editor" interactive="activecode" language="python3">
       <code>
 import requests
 import json
@@ -142,11 +147,14 @@ import json
 # get the data
 response = requests.get('https://dogapi.dog/api/v2/facts?limit=1')
 data = response.text
-in_list = json.loads(data)
-in_dict = in_list[0]
-print(in_dict.get("fact"))
+data_d = json.loads(data)
+info_list = data_d["data"]
+first = info_list[0]
+question = first["attributes"]["body"]
+print(question)
         </code>
     </program>
+    </activity>
   </subsection>
   <subsection xml:id="web_using-a-dictionary-for-url-parameters">
     <title>Using a Dictionary for URL Parameters</title>
@@ -155,7 +163,11 @@ print(in_dict.get("fact"))
                 create a dictionary
                 with all the parameter names and values and then pass the dictionary to the
                 <c>requests.get</c> after the URL as shown below.</p>
-    <program label="web-api-get-dog-fact-with-parms-dict" interactive="activecode" language="python3">
+    <activity label="web-api-get-dog-fact-with-parms-dict" xml:id="web-api-get-dog-fact-with-parms-dict">
+      <statement>
+        <p>Run the following code to get a random dog fact from the API when passing the parameters in a dictionary.</p>
+      </statement>  
+    <program label="web-api-get-dog-fact-with-parms-dict-editor" interactive="activecode" language="python3">
       <code>
 import requests
 import json
@@ -164,11 +176,14 @@ import json
 parms = {'limit': 1}
 response = requests.get('https://dogapi.dog/api/v2/facts', parms)
 data = response.text
-in_list = json.loads(data)
-in_dict = in_list[0]
-print(in_dict.get("fact"))
+data_d = json.loads(data)
+info_list = data_d["data"]
+first = info_list[0]
+question = first["attributes"]["body"]
+print(question)
         </code>
     </program>
+    </activity>
   </subsection>
 
 </section>
