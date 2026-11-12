@@ -142,9 +142,9 @@ import json
 # get the data
 response = requests.get('https://dogapi.dog/api/v2/facts?limit=1')
 data = response.text
-in_list = json.loads(data)
-in_dict = in_list[0]
-print(in_dict.get("fact"))
+in_dict = json.loads(data)
+fact = in_dict["data"][0]
+print(fact["attributes"]["body"])
         </code>
     </program>
   </subsection>
@@ -164,9 +164,9 @@ import json
 parms = {'limit': 1}
 response = requests.get('https://dogapi.dog/api/v2/facts', parms)
 data = response.text
-in_list = json.loads(data)
-in_dict = in_list[0]
-print(in_dict.get("fact"))
+in_dict = json.loads(data)
+fact = in_dict["data"][0]
+print(fact["attributes"]["body"])
         </code>
     </program>
   </subsection>
